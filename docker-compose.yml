@@ -1,0 +1,41 @@
+version: "3.1"
+services:
+  sgcommander:
+    build: docker/php
+    container_name: sgcommander
+    volumes:
+      - ./:/var/www
+    restart: always
+    ports:
+      - "8889:80"
+    expose:
+      - 8889
+    links:
+      - sgcommander-db
+    depends_on:
+      - sgcommander-db
+    command: sh -c "dockerize -wait tcp://sgcommander-db:3306 -timeout 300s -wait-retry-interval 8s /sbin/my_init"
+    networks:
+      - sgcommander-network
+  sgcommander-db:
+    image: mysql:5.5.62
+    container_name: sgcommander-db
+    volumes:
+      - "./docker/mysql/data:/var/lib/mysql"
+    restart: always
+    ports:
+      - 3306:3306
+    expose:
+      - 3306
+    environment:
+      MYSQL_ROOT_PASSWORD: p4ssw0rd
+      MYSQL_DATABASE: dev
+      MYSQL_USER: sgcommander
+      MYSQL_PASSWORD: password
+    networks:
+      - sgcommander-network
+
+networks:
+  sgcommander-network:
+    driver: bridge
+    name: sgcommander-network

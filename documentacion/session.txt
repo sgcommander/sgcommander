@@ -1,0 +1,61 @@
+//Informacion General del jugador
+* $_SESSION['infoJugador']['idUsuario'] => Almacena el identificador de usuario
+* $_SESSION['infoJugador']['ip'] --> Almacena la ipcon la qeu se ha conectado el jugador
+* $_SESSION['infoJugador']['usuario'] => Almacena el nombre original del usuario
+* $_SESSION['infoJugador']['idLogotipo'] => almacena el identificador del logotipo
+* $_SESSION['infoJugador']['idFirma'] => Almacena el identificador de la firma
+* $_SESSION['infoJugador']['idRaza'] => Almacena el identificador de la raza del usuario
+* $_SESSION['infoJugador']['lang'] => Almacena el identificador del idioma del usuario
+* $_SESSION['infoJugador']['idAlianza'] => Almacena el identificador de la alianza a la que pertenece el usuario
+* $_SESSION['infoJugador']['ultimaActualizacion'] => Almacena la fecha de ultima actualizaci�n de la cual el jugador ha sido consciente
+* $_SESSION['infoJugador']['bloqueado'] => FECHA en la cual termina el bloqueo dela cuenta o NULL
+* $_SESSION['infoJugador']['vacaciones'] => FECHA en la cual terminan las vacaciones del usuario o NULL
+* $_SESSION['infoJugador']['investigacionVelocidad'] --> Porcentaje de aumento en la velocidad de investigacion
+* $_SESSION['infoJugador']['construccionVelocidad'] --> Porcentaje de aumento en la velocidad de construccion
+* $_SESSION['infoJugador']['numeroMensajes'] --> Numero de mensajes que tiene el usuario pendientes de leer
+* $_SESSION['infoJugador']['planetaSel'] --> Id del planeta que esta actualmente seleccionado
+* $_SESSION['infoJugador']['galaxiaSel'] --> Id de la galaxia que el jugador tiene actualmente seleccionada
+* $_SESSION['infoJugador']['galaxiasGalaxiaSel'] --> Id de la galaxia que el jugador tiene actualmente seleccionada en el mapa de galaxias
+* $_SESSION['infoJugador']['galaxiasSectorSel'] --> Id del sector que el jugador tiene actualmente seleccionada en el mapa de galaxias
+* $_SESSION['infoJugador']['galaxiasCuadranteSel'] --> Id del cuadrante que el jugador tiene actualmente seleccionada en el mapa de galaxias
+
+//Recursos del jugador
+* $_SESSION['infoRecursos'][0]['nombre'] => Nombre del recurso primario
+* $_SESSION['infoRecursos'][1]['nombre'] => Nombre del recurso secundario
+* $_SESSION['infoRecursos'][2]['nombre'] => Nombre de la energia
+* $_SESSION['infoRecursos'][0]['produccion'] --> Cantidad de produccion/segundo del recurso primario
+* $_SESSION['infoRecursos'][1]['produccion'] --> Cantidad de produccion/segundo del recurso secundario
+* $_SESSION['infoRecursos'][2]['produccion'] --> Cantidad total de energia disponible
+* $_SESSION['infoRecursos'][0]['cantidad'] --> Cantidad de recurso primario
+* $_SESSION['infoRecursos'][1]['cantidad'] --> Cantidad de  recurso secundario
+* $_SESSION['infoRecursos'][2]['cantidad'] --> Cantidad no gastada de energia
+
+//Puntuacion del jugador
+* $_SESSION['infoPuntuacion']['puntosNaves'] --> Puntuacion relativa a las naves
+* $_SESSION['infoPuntuacion']['puntosSoldados'] --> Puntuacion relativa a los soldados
+* $_SESSION['infoPuntuacion']['puntosDefensas'] --> Puntuacion relativa a las defensas
+* $_SESSION['infoPuntuacion']['puntosTecnologias'] --> Puntuacion relativa a las tecnologias
+* $_SESSION['infoPuntuacion']['puntosTotales'] --> Puntuacion total del jugador
+
+//Informacion general sobre las unidades del jugador
+* $_SESSION['infoUnidades']['numNaves'] --> Numero de naves actual del jugador
+* $_SESSION['infoUnidades']['numSoldados'] --> Numero de soldados actual del jugador
+* $_SESSION['infoUnidades']['numDefensas'] --> Numero de defensas actual del jugador
+* $_SESSION['infoUnidades']['limiteSoldados'] --> Cantidad maxima de soldados permitida al usuario
+* $_SESSION['infoUnidades']['limiteMisiones'] --> Cantidad maxima de misiones simultaneas permitida al usuario
+* $_SESSION['infoUnidades']['soldadosCarga'] --> Porcentaje adicional de carga por unidad Soldado
+* $_SESSION['infoUnidades']['soldadosAtaque'] --> Porcentaje adicional de ataque por unidad Soldado
+* $_SESSION['infoUnidades']['soldadosResistencia'] --> Porcentaje adicional de resistencia por unidad Soldado
+* $_SESSION['infoUnidades']['soldadosEscudo'] --> Porcentaje adicional de escudo por unidad Soldado
+* $_SESSION['infoUnidades']['navesCarga'] --> Porcentaje adicional de carga por unidad Nave
+* $_SESSION['infoUnidades']['navesAtaque'] --> Porcentaje adicional de ataque por unidad Nave
+* $_SESSION['infoUnidades']['navesResistencia'] --> Porcentaje adicional de resistencia por unidad Nave
+* $_SESSION['infoUnidades']['navesEscudo'] --> Porcentaje adicional de escudo por unidad Nave
+* $_SESSION['infoUnidades']['navesVelocidad'] --> Porcentaje adicional de velocidad por unidad Nave
+* $_SESSION['infoUnidades']['defensasAtaque'] --> Porcentaje adicional de ataque por unidad Defensa
+* $_SESSION['infoUnidades']['defensasResistencia'] --> Porcentaje adicional de resistencia por unidad Defensa
+* $_SESSION['infoUnidades']['defensasEscudo'] --> Porcentaje adicional de escudo por unidad Defensa
+* $_SESSION['infoUnidades']['invisible'] --> Identifica si las unidades militares son invisibles o no al enemigo
+* $_SESSION['infoUnidades']['atraviesaIris'] --> Identifica si todas las unidades militares pueden atravesar el Iris
+* $_SESSION['infoUnidades']['viajeIntergalactico'] --> Indica si el jugador puede hacer viajes intergalacticos de naves
+* $_SESSION['infoUnidades']['stargateIntergalactico'] --> Indica si el jugador puede hacer viajes intergalacticos de stargate

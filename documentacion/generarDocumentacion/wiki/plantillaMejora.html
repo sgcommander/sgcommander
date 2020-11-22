@@ -1,0 +1,111 @@
+<table class="infobox" style="float:right;margin:0px 0px 1em 10px;"> 
+<tr> 
+  <th colspan="3" style="text-align: center;">
+    Datos  
+  </th>
+</tr>
+<tr>
+  <td valign="top">Raza</td>
+  <td colspan="2"  style="text-align:center;">[[{{{raza|}}}]]</td>
+</tr>
+<tr> 
+  <td valign="top">Categoria</td>
+  <td colspan="2" style="text-align:center;">[[{{{categoria}}}]]</td>
+</tr>
+<tr> 
+  <th colspan="3" style="text-align: center;>
+    Costes
+  </th>
+</tr>
+{{#if: {{{recurso1cantidad|}}} |
+<tr> 
+  <td valign="top" style="text-align:center; ">http://static.sgcommander.com/images/recursos/{{{idraza}}}/1.png</td>
+  <td>[[{{{recurso1nombre}}}]]</td>
+  <td style="text-align:center;">{{{recurso1cantidad}}}</td>
+</tr>
+}}
+{{#if: {{{recurso2cantidad|}}} |
+<tr> 
+  <td valign="top" style="text-align:center; ">http://static.sgcommander.com/images/recursos/{{{idraza}}}/2.png</td>
+  <td>[[{{{recurso2nombre}}}]]</td>
+  <td style="text-align:center;">{{{recurso2cantidad}}}</td>
+</tr>
+}}
+<tr> 
+  <td valign="top" style="text-align:center; ">http://static.sgcommander.com/images/recursos/{{{idraza}}}/tiempo.png</td>
+  <td>[[Tiempo]]</td>
+  <td style="text-align:center;">{{{costetiempo}}}</td>
+</tr>
+</table>
+<div style="float:left;margin-right:10px;margin-bottom:10px;">http://static.sgcommander.com/images/mejoras/{{{id}}}.jpg</div>
+<div style="text-align:justify;">{{{descripcion}}}</div>
+<p style="clear:left;"><br/></p>
+<div>
+	<table>
+		<tr> 
+		  <th colspan="3" style="text-align: center;">
+		    <pre>Bonificadores por nivel</pre>
+		  </th>
+		</tr>
+		{{#if: {{{bonificador0nombre|}}} |
+		<tr> 
+		  <td style="text-align:left;">{{{bonificador0nombre}}}</td>
+		  <td valign="top" colspan="2" style="text-align:center;">+{{{bonificador0porcentaje}}}%</td>
+		</tr>
+		}}
+		{{#if: {{{bonificador1nombre|}}} |
+		<tr> 
+		  <td style="text-align:left;">{{{bonificador1nombre}}}</td>
+		  <td valign="top" colspan="2" style="text-align:center;">+{{{bonificador1porcentaje}}}%</td>
+		</tr>
+		}}
+		{{#if: {{{bonificador2nombre|}}} |
+		<tr> 
+		  <td style="text-align:left;">{{{bonificador2nombre}}}</td>
+		  <td valign="top" colspan="2" style="text-align:center;">+{{{bonificador2porcentaje}}}%</td>
+		</tr>
+		}}
+		{{#if: {{{bonificadorGeneral0nombre|}}} |
+		<tr> 
+		  <td colspan="3" style="text-align:left;">{{{bonificadorGeneral0nombre}}}</td>
+		</tr>
+		}}
+		{{#if: {{{bonificadorGeneral1nombre|}}} |
+		<tr> 
+		  <td colspan="3" style="text-align:left;">{{{bonificadorGeneral1nombre}}}</td>
+		</tr>
+		}}
+		{{#if: {{{bonificadorGeneral2nombre|}}} |
+		<tr> 
+		  <td colspan="3" style="text-align:left;">{{{bonificadorGeneral2nombre}}}</td>
+		</tr>
+		}}
+	</table>
+</div>
+<noinclude>
+
+==Uso==
+Muestra la ficha de una mejora:
+<code><nowiki>
+{{Mejora | 
+ nombre=Esclavitud |
+ id=13 |
+ categoria=Recursos |
+ raza=Goa'uld |
+ idraza=2 |
+ recurso1nombre=Naquadah |
+ recurso1cantidad=40 |
+ recurso2nombre=Anfitriones |
+ recurso2cantidad=20 |
+ costetiempo=2 minutos 43 segundos |
+ bonificador0nombre=Carga Naves |
+ bonificador0porcentaje=10 |
+ bonificador1nombre=Carga Soldados |
+ bonificador1porcentaje=10 |
+ limiteTropas=5 |
+ intergal�cticos=10 |
+ descripcion=Descripci�n
+}}
+</nowiki></code>
+raza, idraza, recurso1cantidad, recurso1nombre, recurso2cantidad, recurso2nombre, recurso3cantidad, recurso3nombre, ataque, resistencia, escudos, carga, velocidad, cazas, stargate, camuflaje, autodestruccion, atraviesaescudos son opcionales.
+</noinclude>

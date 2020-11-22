@@ -1,0 +1,972 @@
+@charset "UTF-8";
+
+/*********************************************
+  Asgard
+*********************************************/
+/************************************************************************************************
+  Enlaces
+************************************************************************************************/
+a:link {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+a:active {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+/************************************************************************************************
+  Formulario
+************************************************************************************************/
+select {
+	font-size: 11px;
+	color: white;
+	background-color: #40302B;
+	border: 1px solid white;
+}
+
+option {
+	background-color: #40302B;
+}
+
+select:focus {
+	background-color: #85645a;
+}
+
+input, button {
+	cursor: pointer;
+	font-size: 12px;
+	background-color: #40302B;
+	border: 1px solid white;
+	color: white;
+}
+
+input.disabled, input.disabled:hover {
+	cursor: default;
+	font-size: 12px;
+	background-color: #999999;
+	border: 1px solid #333333;
+	color: #666666;
+}
+
+input:hover, button:hover {
+	background-color: #85645a;
+}
+
+textarea {
+	font-size: 12px;
+	background-color: #40302B;
+	border: 1px solid white;
+	color: white;
+}
+
+textarea:focus {
+	background-color: #85645a;
+}
+
+#indexLstPlanetas {
+	width: 237px;
+}
+
+/************************************************************************************************
+  Contenedores
+************************************************************************************************/
+body {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial,Helvetica, sans-serif;
+	font-size: 11px;
+	color: white;
+	text-align: center;
+	margin: 0px auto;
+	background-color: #191624;
+}
+
+#indexDivContenedor {
+	position: relative;
+	width: 800px;
+	min-height: 200px;
+	border: 1px solid black;
+	background-color: #897868;
+	margin: 0px auto;
+	text-align: left;
+}
+
+/************************************************************************************************
+  Recursos
+************************************************************************************************/
+#indexDivRecursoPri {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 226px;
+	height: 27px;
+	background-image: url(/images/estilos/asgard/recursopri.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivRecursoPri div.textoRecurso {
+	position: absolute;
+	top: 5px;
+	left: 105px;
+	font-weight: bold;
+}
+
+#indexDivRecursoSec {
+	position: absolute;
+	top: 0px;
+	left: 226px;
+	width: 204px;
+	height: 27px;
+	background-image: url(/images/estilos/asgard/recursosec.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivRecursoSec div.textoRecurso {
+	position: absolute;
+	top: 5px;
+	left: 77px;
+	font-weight: bold;
+}
+
+#indexDivRecursoEnergia {
+	position: absolute;
+	top: 0px;
+	left: 430px;
+	width: 370px;
+	height: 27px;
+	background-image: url(/images/estilos/asgard/recursoenergia.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivRecursoEnergia div.textoRecurso {
+	position: absolute;
+	top: 5px;
+	left: 78px;
+	font-weight: bold;
+}
+
+/************************************************************************************************
+  Logo
+************************************************************************************************/
+#indexDivLogo {
+	position: absolute;
+	top: 27px;
+	left: 0px;
+	width: 197px;
+	height: 220px;
+	background-repeat: no-repeat;
+}
+
+/************************************************************************************************
+  Planeta
+************************************************************************************************/
+#indexDivPlaneta {
+	position: absolute;
+	top: 27px;
+	left: 197px;
+	width: 502px;
+	height: 98px;
+}
+
+#indexDivPlanetaImagen {
+	padding-left: 9px;
+	padding-top: 12px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 103px;
+	height: 103px;
+	background-image: url(/images/estilos/asgard/planetaimagen.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivPlanetaDatos {
+	position: absolute;
+	top: 0px;
+	left: 103px;
+	width: 249px;
+	height: 103px;
+	background-image: url(/images/estilos/asgard/planetadatos.png);
+	background-color: #897868;
+	background-repeat: no-repeat;
+}
+
+#indexDivnombrePlaneta {
+	position: absolute;
+	top: 21px;
+	left: 34px;
+	font-size: 11px;
+	font-weight: bold;
+	color: white;
+}
+
+#indexDivcoordenadas {
+	position: absolute;
+	top: 39px;
+	left: 39px;
+}
+
+#indexDivBotonesPlaneta {
+	position: absolute;
+	top: 66px;
+	left: 12px;
+	width: 239px;
+	text-align: center;
+}
+
+#indexDivLogoPlanetaResto {
+	position: absolute;
+	top: 27px;
+	left: 549px;
+	width: 251px;
+	height: 103px;
+	background-image: url(/images/estilos/asgard/planetaresto.png);
+	background-repeat: no-repeat;
+}
+
+#indexLblPlanetasLista {
+	position: absolute;
+	top: 0px;
+	left: 5px;
+	width: 240px;
+	text-align: center;
+}
+
+#layer {
+	position: absolute;
+	height: 18px;
+	top: 0px;
+	left: 0px;
+	width: 240px;
+}
+
+#divlistaplanetas {
+	background: #897868;
+	border: 1px solid #FFFFFF;
+	left: 0px;
+	top: 18px;
+	overflow: auto;
+	position: absolute;
+	width: 235px;
+	margin-left: 2px;
+	margin-top: -1px;
+	display: none;
+	z-index: 10;
+	cursor:pointer;
+}
+
+#divlistaplanetas div {
+	display: block;
+	text-align: left;
+	width: 235px;
+	height: 54px;
+}
+
+#divlistaplanetas div:hover {
+	background-color: #40302B;
+}
+
+#divlistaplanetas img {
+	float: left;
+	margin: 3px;
+	width: 48px;
+	height: 48px;
+}
+
+#divlistaplanetas span {
+	float: left;
+	margin-top: 17px;
+}
+
+#indexDivConstruccion {
+	position: absolute;
+	top: 25px;
+	left: 5px;
+	width: 247px;
+}
+
+#indexLblNoCons {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	width: 200px;
+	padding: 5px;
+	font-weight: bold;
+	border: 1px solid white;
+	background-color: #40302B;
+	text-align: center;
+}
+
+#indexDivConsTropas {
+	padding-left: 0px;
+	float: left;
+}
+
+#indexDivConsNaves {
+	padding-left: 2px;
+	float: left;
+}
+
+#indexDivConsDefensas {
+	padding-left: 2px;
+	float: left;
+}
+
+#especialesLblNoEsp {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:5px;
+	margin-bottom:5px;
+	
+	width: 200px;
+	padding: 5px;
+	font-weight: bold;
+	border: 1px solid white;
+	background-color: #40302B;
+	text-align: center;
+}
+
+.percentage{
+	height: 7px;
+	background-color: #40302B;
+}
+
+.box{
+	border: 1px white solid;
+	height: 7px;
+	width: 78px;
+	background-color: white;
+}
+
+/************************************************************************************************
+  Botones
+************************************************************************************************/
+#indexDivBotonera {
+	position: absolute;
+	top: 240px;
+	left: 0px;
+	width: 239px;
+	min-height: 359px;
+	background-image: url(/images/estilos/asgard/botonera.png);
+	background-color: #897868;
+	background-repeat: no-repeat;
+}
+
+#indexDivBoton1 {
+	text-align:center;
+	width:75px;
+	position: absolute;
+	top: 21px;
+	left: 118px;
+	font-weight: bold;
+}
+
+#indexDivBoton2 {
+	position: absolute;
+	text-align:center;
+	width:67px;
+	top: 37px;
+	left: 115px;
+	font-weight: bold;
+}
+
+#indexDivBoton3 {
+	position: absolute;
+	text-align:center;
+	width:70px;
+	top: 54px;
+	left: 120px;
+	font-weight: bold;
+}
+
+#indexDivBoton4 {
+	position: absolute;
+	text-align:center;
+	width:65px;
+	top: 69px;
+	left: 132px;
+	font-weight: bold;
+}
+
+#indexDivBoton5 {
+	position: absolute;
+	text-align:center;
+	width:60px;
+	top: 68px;
+	left: 56px;
+	font-weight: bold;
+}
+
+#indexDivBoton6 {
+	position: absolute;
+	text-align:center;
+	width:50px;
+	top: 53px;
+	left: 59px;
+	font-weight: bold;
+}
+
+#indexDivBoton7 {
+	position: absolute;
+	text-align:center;
+	width:75px;
+	top: 82px;
+	left: 48px;
+	font-weight: bold;
+}
+
+#indexDivBoton8 {
+	position: absolute;
+	text-align:center;
+	width:90px;
+	top: 97px;
+	left: 43px;
+	font-weight: bold;
+}
+
+#indexDivBoton9 {
+	position: absolute;
+	top: 140px;
+	left: 70px;
+	font-weight: bold;
+}
+
+#indexDivBoton10 {
+	position: absolute;
+	top: 155px;
+	left: 70px;
+	font-weight: bold;
+}
+
+#indexDivBoton11 {
+	position: absolute;
+	top: 170px;
+	left: 70px;
+	font-weight: bold;
+}
+
+#indexDivBoton12 {
+	position: absolute;
+	top: 185px;
+	left: 70px;
+	font-weight: bold;
+	z-index: 10;
+}
+
+#indexDivBoton13 {
+	position: absolute;
+	top: 200px;
+	left: 70px;
+	font-weight: bold;
+	z-index: 10;
+}
+
+#indexDivBoton14 {
+	position: absolute;
+	top: 215px;
+	left: 70px;
+	font-weight: bold;
+	z-index: 10;
+}
+
+#indexDivBoton15 {
+	position: absolute;
+	top: 240px;
+	left: 0px;
+	font-weight: bold;
+	z-index: 0;
+}
+
+#indexDivBoton15 #indexImgSalir {
+	border: 0px;
+}
+
+/************************************************************************************************
+  Centro
+************************************************************************************************/
+#indexDivCentro {
+	margin-left: 197px;
+	padding-top: 130px;
+	width: 603px;
+	height: auto !important; /* para los browsers buenos */
+	height: 469px; /* para IE5+ */
+	min-height: 469px; /* para los browsers buenos */
+}
+
+#titulo {
+	width: 603px;
+	height: 117px;
+	background-image: url(/images/estilos/asgard/titulo.png);
+	background-color: #897868;
+	background-repeat: no-repeat;
+}
+
+#pestanas {
+	width: 603px;
+	height: 100px;
+	background-image: url(/images/estilos/asgard/pestanas.png);
+	background-color: #897868;
+	background-repeat: no-repeat;
+}
+
+#contenido {
+	width: 567px;
+	background-color: #897868;
+	background-repeat: no-repeat;
+	margin-top: -45px;
+	margin-left: 35px;
+	z-index: 20;
+}
+
+.mensaje {
+	text-align: center;
+}
+
+.mensajes {
+	background-color: #68523D;
+	border: 2px solid black;
+	border-top:  solid black;
+}
+
+#mensajesDivCabecera{
+	height: 25px;
+	background-color:black;
+	cursor: move;
+}
+
+#mensajesDivContenido {
+	margin-left: -7px;
+}
+
+#mensajesDivAviso {
+	position: relative;
+	float: left;
+	padding-left:15px;
+	padding-right:15px;
+	padding-top:3px;
+	padding-bottom:3px;
+	background-color: #40302B;
+	border: 1px solid #ffffff;
+	color: #FFFFFF;
+	font-size: 11px;
+	font-weight: bold;
+	z-index: 50;
+	display:none;
+}
+
+.comercios {
+	background-color: #68523D;
+	border: 2px solid black;
+	border-top:  solid black;
+}
+
+#comerciosDivCabecera{
+	height: 25px;
+	background-color:black;
+	cursor: move;
+}
+
+.especiales {
+	background-color: #68523D;
+	border: 2px solid black;
+}
+
+.lblNoHay {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:5px;
+	margin-bottom:5px;
+	
+	width: 200px;
+	padding: 5px;
+	font-weight: bold;
+	border: 1px solid white;
+	background-color: #40302B;
+	text-align: center;
+}
+
+/************************************************************************************************
+  Pie
+************************************************************************************************/
+#indexDivPie {
+	position: relative;
+	margin: 0px auto;
+	width: 800px;
+	height: 30px;
+	background-image: url(/images/estilos/asgard/pie.png);
+	background-repeat: no-repeat;
+}
+
+/************************************************************************************************
+  Pestañas
+************************************************************************************************/
+.morphtabs_title {
+	list-style-image: none;
+	list-style-type: none;
+	margin-top:0px;
+	margin-left: 30px;
+	padding-top: 34px;
+	padding-left: 0px;
+	height: 76px;
+}
+
+.morphtabs_title li {
+	float: left;
+	font-weight: bold;
+	padding: 7px 8px 2px 8px;
+	cursor: pointer;
+	color: white;
+	height: 22px;
+	width: 93px;
+	line-height: 20px;
+	background-image: url(/images/estilos/asgard/tablanivel4.png);
+	text-align:center;
+}
+
+.morphtabs_title li.over {
+	background-image: url(/images/estilos/asgard/tablanivel5.png);
+}
+
+.morphtabs_title li.active {
+	background-image: url(/images/estilos/asgard/tablanivel3.png);
+}
+
+* :first-child+html .morphtabs_panelwrap {
+	margin-left: -20px; /* Hack para IE que valida*/
+}
+
+.morphtabs_panel div {
+
+}
+
+.morpthtabs_panel p {
+	
+}
+
+#pestanasBatalla ul{
+	list-style-image: none;
+	list-style-type: none;
+	margin-top:0px;
+	margin-left: 10px;
+	padding-top: 0px;
+	padding-left: 0px;
+	height: 30px;
+}
+
+/************************************************************************************************
+  Tablas
+************************************************************************************************/
+.tablaCentral {
+	width: 550px;
+	margin-left: 7px;
+	margin-bottom: 10px;
+	border: 0px solid black;
+	text-align:center;
+}
+
+.tablaTitulo {
+	height: 25px;
+	width: 550px;
+	margin-left: 7px;
+	margin-top: 10px;
+	background-image: url(/images/estilos/asgard/tablatitulo.png);
+	font-weight: bold;
+	padding-top: 6px;
+	text-align: center;
+}
+
+.tablaCentral td {
+	background-color: #68523D;
+	padding: 3px;
+}
+
+.tablaCentral th {
+	padding: 5px;
+}
+
+.th1 {
+	font-weight: bold;
+	background-image: url(/images/estilos/asgard/tablanivel1.png);
+	
+}
+
+.th2 {
+	font-weight: bold;
+	background-image: url(/images/estilos/asgard/tablanivel2.png);
+}
+
+.tablaSegundoNivel td {
+	background-color:#40302B;
+}
+
+/************************************************************************************************
+  Preloader
+************************************************************************************************/
+#preloader div {
+	position: relative;
+	float: right;
+	width: 200px;
+	height: 18px;
+	background-color: #40302B;
+	border: 1px solid #ffffff;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding-left: 5px;
+	padding-top: 2px;
+	z-index: 50;
+}
+
+.preloaderPlaneta {
+	background: url('/images/estilos/asgard/loaderPlaneta.gif');
+	position: relative;
+	top: 50%;
+	left: 50%;
+	width: 24px;
+	height: 24px;
+	margin-left: -12px;
+	margin-top: -12px;
+}
+
+/************************************************************************************************
+  Reportes
+************************************************************************************************/
+#sbox-overlay {
+	position: absolute;
+	background-color: #000;
+	left: 0px;
+	top: 0px;
+	zoom: 1;
+}
+
+#sbox-window {
+	margin-top:15px;
+	position: absolute;
+	background-color: #897868;
+	text-align: left;
+	overflow: visible;
+	padding: 10px;
+	/* invalid values, but looks smoother! */
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#sbox-btn-close {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	/*right: -20px;*/
+	right:20px;
+	top: 12px;
+	background: url(/images/SqueezeBox/asgard/closebox.png) no-repeat center;
+	border: none;
+}
+
+.sbox-window-ie6 #sbox-btn-close {
+	background-image: url(/images/SqueezeBox/asgard/closebox.gif);
+}
+
+.sbox-loading #sbox-content {
+	background-image: url(/images/SqueezeBox/asgard/spinner.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#sbox-content {
+	clear: both;
+	overflow:hidden;
+	background-color: #897868;
+	height: 100%;
+	width: 100%;
+}
+
+.sbox-content-image#sbox-content {
+	overflow: visible;
+}
+
+#sbox-image {
+	display: block;
+}
+
+.sbox-content-image img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.sbox-content-iframe#sbox-content {
+	overflow: visible;
+}
+
+/* Hides scrollbars */
+.body-overlayed {
+	overflow: hidden;
+}
+/* Hides flash (Firefox problem) and selects (IE) */
+.body-overlayed embed, .body-overlayed object, .body-overlayed select {
+	visibility: hidden;
+}
+#sbox-window embed, #sbox-window object, #sbox-window select {
+	visibility: visible;
+}
+
+/* Shadows */
+.sbox-bg {
+	position: absolute;
+	width: 80px;
+	height: 103px;
+}
+
+.sbox-bg-n {
+	left: 12px;
+	top: -93px;
+	width: 740px;
+	height: 103px;
+	background: url(/images/SqueezeBox/asgard/bg_n.png) no-repeat;
+}
+.sbox-bg-ne {
+	right: -75px;
+	top: -93px;
+	width:94px;
+	height:103px;
+	background: url(/images/SqueezeBox/asgard/bg_ne.png) no-repeat;
+}
+.sbox-bg-e {
+	right: -75px;
+	top: 10px;
+	width:94px;
+	height: 442px;
+	background: url(/images/SqueezeBox/asgard/bg_e.png) no-repeat;
+}
+.sbox-bg-se {
+	right: -75px;
+	bottom: -34px;
+	width: 94px;
+	height: 52px;
+	background: url(/images/SqueezeBox/asgard/bg_se.png) no-repeat;
+}
+.sbox-bg-s {
+	left: 12px;
+	bottom: -34px;
+	width: 724px;
+	height: 52px;
+	background: url(/images/SqueezeBox/asgard/bg_s.png) no-repeat;
+}
+.sbox-bg-sw {
+	left: -68px;
+	bottom: -34px;
+	width: 82px;
+	height: 52px;
+	background: url(/images/SqueezeBox/asgard/bg_sw.png) no-repeat;
+}
+.sbox-bg-w {
+	left: -68px;
+	top: 10px;
+	height: 442px;
+	width: 82px;
+	background: url(/images/SqueezeBox/asgard/bg_w.png) no-repeat;
+}
+.sbox-bg-nw {
+	width:82px;
+	height:103px;
+	left: -68px;
+	top: -93px;
+	background: url(/images/SqueezeBox/asgard/bg_nw.png) no-repeat;
+}
+
+/************************************************************************************************
+  Alertas
+************************************************************************************************/
+#SexyAlertBox-Box {
+  padding-bottom: 24px;
+  background: url('/images/alerta/asgard/bg-box-bottom.png') bottom left no-repeat;
+}
+
+#SexyAlertBox-InBox {
+  padding-top: 24px;
+  background: url('/images/alerta/asgard/bg-box-top.png') top left no-repeat;	
+}
+
+#SexyAlertBox-BoxContent {
+  background: url('/images/alerta/asgard/bg-box-body.png') top left repeat-y;
+  padding: 0px 25px;
+}
+
+#SexyAlertBox-BoxContenedor {
+  padding: 10px 10px 25px 150px;
+  text-align: left;
+  font-family:Verdana;
+  font-size:12px;
+  color:#FFFFFF;
+}
+
+#SexyAlertBox-BoxContenedor h1,#SexyAlertBox-BoxContenedor h2,#SexyAlertBox-BoxContenedor h3,#SexyAlertBox-BoxContenedor b,#SexyAlertBox-BoxContenedor strong{
+  text-align: left;
+  font-family:Verdana;
+  font-size:12px;
+  color:#000;
+  font-weight:bold;
+  margin:0px;
+  padding:0px;
+}
+
+#SexyAlertBox-Buttons{
+  text-align:right;
+}
+
+#SexyAlertBox-Buttons input {
+  margin: 10px 10px;
+}
+
+#SexyAlertBox-BoxContenedor #BoxPromptInput{
+  margin-top:5px;
+}
+
+#SexyAlertBox-Box .BoxAlert {
+  background: url('/images/alerta/asgard/dialog-information.png') top left no-repeat;
+}
+
+#SexyAlertBox-Box .BoxConfirm {
+  background: url('/images/alerta/asgard/dialog-information.png') top left no-repeat;
+}
+
+#SexyAlertBox-Box .BoxPrompt {
+  background: url('/images/alerta/asgard/dialog-information.png') top left no-repeat;
+}
+
+#SexyAlertBox-Box .BoxInfo {
+  background: url('/images/alerta/asgard/dialog-information.png') top left no-repeat;
+}
+
+#SexyAlertBox-Box .BoxError {
+  background: url('/images/alerta/asgard/dialog-information.png') top left no-repeat;
+}
+
+/************************************************************************************************
+  Vacaciones y Bloqueo
+************************************************************************************************/
+#vacacionesMensaje{
+	background: url('/images/notificaciones/asgard.png') top left no-repeat;
+	margin:20px auto;
+	width: 650px;
+	height: 580px;
+}
+
+#vacacionesMensaje div{
+	padding-top:330px;
+	margin:0px 115px;
+	width: 250px;
+	height: 100px;
+	color:#FFFFFF;
+	font-size:12px;
+}

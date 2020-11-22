@@ -1,0 +1,1 @@
+<span class='error'>{MENSAJE}</span>

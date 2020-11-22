@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+body{
+	background-color:black;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+	font-size: 14px;
+}
+
+div{
+	margin: auto;
+	height: 500px;
+	width: 850px;
+	background-image: url(/images/index.png);
+}
+
+fieldset{
+	border:0px;
+	margin-left:50px;
+	height: 90px;
+	width: 280px;
+}
+
+label{
+	width:200px;
+}
+
+input{
+	margin:3px;
+}
+
+#usuario{
+	margin-left:35px;
+	width:150px;
+}
+
+#pass{
+	margin-left:10px;
+	width:150px;
+}
+
+

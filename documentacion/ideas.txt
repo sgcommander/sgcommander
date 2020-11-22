@@ -1,0 +1,5 @@
+- Generar accesos rapidos a los menus y opciones Ej: (Ctrl + N) lleva al menu de naves (mootools 1.3 permite hacerlo facilmente, aunque en html tambiéns e podria hacer)
+- Tips:
+	-Mostrar un tip en todas las imagenes de unidades donde se muestre la descripcion de la unidad
+-Mostrar en las caracteristicas de las unidades el ataque o propiedad normal + el aumento gracias a la mejora.
+-Hacer una leyenda con descripcion de los iconos con su significado.

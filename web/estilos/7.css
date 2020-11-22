@@ -1,0 +1,981 @@
+@charset "UTF-8";
+
+/*********************************************
+  Replicantes
+*********************************************/
+/************************************************************************************************
+  Enlaces
+************************************************************************************************/
+a:link {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+a:active {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+/************************************************************************************************
+  Formulario
+************************************************************************************************/
+select {
+	font-size: 11px;
+	color: white;
+	background-color: #32374e;
+	border: 1px solid #FFFFFF;
+}
+
+option {
+	background-color: #32374e;
+}
+
+select:focus {
+	background-color: #545c83;
+}
+
+input, button {
+	cursor: pointer;
+	font-size: 12px;
+	background-color: #32374e;
+	border: 1px solid #FFFFFF;
+	color: white;
+}
+
+input.disabled, input.disabled:hover {
+	cursor: default;
+	font-size: 12px;
+	background-color: #999999;
+	border: 1px solid #333333;
+	color: #666666;
+}
+
+input:hover, button:hover {
+	background-color: #545c83;
+}
+
+textarea {
+	font-size: 12px;
+	background-color: #32374e;
+	border: 1px solid #FFFFFF;
+	color: white;
+}
+
+textarea:focus {
+	background-color: #545c83;
+}
+
+#indexLstPlanetas {
+	width: 180px;
+}
+
+/************************************************************************************************
+  Contenedores
+************************************************************************************************/
+body {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial,Helvetica, sans-serif;
+	font-size: 11px;
+	color: white;
+	text-align: center;
+	margin: 0px auto;
+	background-color: #333333;
+}
+
+#indexDivContenedor {
+	position: relative;
+	width: 800px;
+	min-height: 200px;
+	border: 1px solid black;
+	background-color: #45464a;
+	margin: 0px auto;
+	text-align: left;
+}
+
+/************************************************************************************************
+  Recursos
+************************************************************************************************/
+#indexDivRecursoPri {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 238px;
+	height: 27px;
+	background-image: url(/images/estilos/replicantes/recursopri.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivRecursoPri div.textoRecurso {
+	position: absolute;
+	top: 5px;
+	left: 95px;
+	font-weight: bold;
+}
+
+#indexDivRecursoSec {
+	position: absolute;
+	top: 0px;
+	left: 238px;
+	width: 201px;
+	height: 27px;
+	background-image: url(/images/estilos/replicantes/recursosec.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivRecursoSec div.textoRecurso {
+	position: absolute;
+	top: 5px;
+	left: 57px;
+	font-weight: bold;
+}
+
+#indexDivRecursoEnergia {
+	position: absolute;
+	top: 0px;
+	left: 439px;
+	width: 361px;
+	height: 27px;
+	background-image: url(/images/estilos/replicantes/recursoenergia.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivRecursoEnergia div.textoRecurso {
+	position: absolute;
+	top: 5px;
+	left: 58px;
+	font-weight: bold;
+}
+
+/************************************************************************************************
+  Logo
+************************************************************************************************/
+#indexDivLogo {
+	position: absolute;
+	top: 27px;
+	left: 0px;
+	width: 210px;
+	height: 208px;
+	background-repeat: no-repeat;
+}
+
+/************************************************************************************************
+  Planeta
+************************************************************************************************/
+#indexDivPlaneta {
+	position: absolute;
+	top: 235px;
+	left: 0px;
+	width: 225px;
+	height: 98px;
+}
+
+#indexDivPlanetaImagen {
+	padding-left: 103px;
+	padding-top: 13px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 128px;
+	height: 115px;
+	background-image: url(/images/estilos/replicantes/planetaimagen.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivPlanetaDatos {
+	position: absolute;
+	top: 128px;
+	left: 0px;
+	width: 225px;
+	height: 136px;
+	background-image: url(/images/estilos/replicantes/planetadatos.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivnombrePlaneta {
+	position: absolute;
+	top: 13px;
+	left: 34px;
+	font-size: 11px;
+	font-weight: bold;
+	color: white;
+}
+
+#indexDivcoordenadas {
+	position: absolute;
+	top: 30px;
+	left: 34px;
+}
+
+#indexDivBotonesPlaneta {
+	position: absolute;
+	top: 60px;
+	left: 27px;
+	width: 209px;
+	text-align: center;
+}
+
+#indexDivLogoPlanetaResto {
+	position: absolute;
+	top: 499px;
+	left: 0px;
+	width: 231px;
+	height: 151px;
+	background-image: url(/images/estilos/replicantes/planetaresto.png);
+	background-repeat: no-repeat;
+}
+
+#indexLblPlanetasLista {
+	position: absolute;
+	top: -20px;
+	left: 34px;
+	width: 180px;
+	text-align: center;
+}
+
+#layer {
+	position: absolute;
+	height: 18px;
+	top: 0px;
+	left: 0px;
+	width: 220px;
+}
+
+#divlistaplanetas {
+	background: #545c83;
+	border: 1px solid #FFFFFF;
+	left: 0px;
+	top: 18px;
+	overflow: auto;
+	position: absolute;
+	width: 235px;
+	margin-left: 2px;
+	margin-top: -1px;
+	display: none;
+	z-index: 10;
+	cursor:pointer;
+}
+
+#divlistaplanetas div {
+	display: block;
+	text-align: left;
+	width: 235px;
+	height: 54px;
+}
+
+#divlistaplanetas div:hover {
+	background-color: #32374e;
+}
+
+#divlistaplanetas img {
+	float: left;
+	margin: 3px;
+	width: 48px;
+	height: 48px;
+}
+
+#divlistaplanetas span {
+	float: left;
+	margin-top: 17px;
+}
+
+#indexDivConstruccion {
+	position: absolute;
+	top: 0px;
+	left: 30px;
+	width: 200px;
+}
+
+#indexLblNoCons {
+	position: absolute;
+	top: 20px;
+	left: 0px;
+	width: 180px;
+	padding: 5px;
+	font-weight: bold;
+	border: 1px solid white;
+	background-color: #32374e;
+	text-align: center;
+}
+
+#indexDivConsTropas {
+	padding-left: 0px;
+	float: left;
+}
+
+#indexDivConsNaves {
+	padding-left: 2px;
+	float: left;
+}
+
+#indexDivConsDefensas {
+	padding-top:3px;
+	position:relative;
+	padding-left: 45px;
+	clear:both;
+	z-index:1;
+}
+
+#especialesLblNoEsp {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:5px;
+	margin-bottom:5px;
+	
+	width: 200px;
+	padding: 5px;
+	font-weight: bold;
+	border: 1px solid white;
+	background-color: #32374e;
+	text-align: center;
+}
+
+.percentage{
+	height: 7px;
+	background-color: #282a32;
+}
+
+.box{
+	border: 1px white solid;
+	height: 7px;
+	width: 78px;
+	background-color: white;
+}
+
+/************************************************************************************************
+  Botones
+************************************************************************************************/
+#indexDivBotonera {
+	position: absolute;
+	top: 27px;
+	left: 210px;
+	width: 463px;
+	height: 124px;
+	background-image: url(/images/estilos/replicantes/botonera.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivBoton1 {
+	position: absolute;
+	text-align:center;
+	width:70px;
+	top: 18px;
+	left: -10px;
+	font-weight: bold;
+}
+
+#indexDivBoton2 {
+	position: absolute;
+	text-align:center;
+	width:70px;
+	top: 318px;
+	left: -101px;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+#indexDivBoton3 {
+	position: absolute;
+	text-align:center;
+	width:70px;
+	top: 22px;
+	left: 69px;
+	font-weight: bold;
+}
+
+#indexDivBoton4 {
+	position: absolute;
+	text-align:center;
+	width:70px;
+	top: -17px;
+	left: 499px;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+#indexDivBoton5 {
+	position: absolute;
+	text-align:center;
+	width:70px;
+	top: 22px;
+	left: 318px;
+	font-weight: bold;
+}
+
+#indexDivBoton6 {
+	position: absolute;
+	text-align:center;
+	width:70px;
+	top: 29px;
+	left: 239px;
+	font-weight: bold;
+}
+
+#indexDivBoton7 {
+	position: absolute;
+	text-align:center;
+	width:70px;
+	top: 16px;
+	left: 397px;
+	font-weight: bold;
+}
+
+#indexDivBoton8 {
+	position: absolute;
+	text-align:center;
+	width:70px;
+	top: 94px;
+	left: -5px;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+#indexDivBoton9 {
+	position: absolute;
+	text-align:center;
+	width:70px;
+	top: 29px;
+	left: 148px;
+	font-weight: bold;
+}
+
+#indexDivBoton10 {
+	position: absolute;
+	text-align:center;
+	width:70px;
+	top: 86px;
+	left: 318px;
+	font-weight: bold;
+}
+
+#indexDivBoton11 {
+	position: absolute;
+	text-align:center;
+	width:70px;
+	top: 77px;
+	left: 239px;
+	font-weight: bold;
+}
+
+#indexDivBoton12 {
+	position: absolute;
+	text-align:center;
+	width:70px;
+	top: 94px;
+	left: 397px;
+	font-weight: bold;
+}
+
+#indexDivBoton13 {
+	position: absolute;
+	text-align:center;
+	width:70px;
+	top: 76px;
+	left: 148px;
+	font-weight: bold;
+}
+
+#indexDivBoton14 {
+	position: absolute;
+	text-align:center;
+	width:70px;
+	top: 86px;
+	left: 71px;
+	font-weight: bold;
+}
+
+#indexDivBoton15 {
+	position: absolute;
+	top: 0px;
+	left: 463px;
+	font-weight: bold;
+	z-index: 0;
+}
+
+#indexDivBoton15 #indexImgSalir {
+	border: 0px;
+}
+
+/************************************************************************************************
+  Centro
+************************************************************************************************/
+#indexDivCentro {
+	margin-left: 210px;
+	padding-top: 151px;
+	width: 603px;
+	height: auto !important; /* para los browsers buenos */
+	height: 503px; /* para IE5+ */
+	min-height: 503px; /* para los browsers buenos */
+}
+
+#titulo {
+	width: 603px;
+	height: 84px;
+	background-image: url(/images/estilos/replicantes/titulo.png);
+	background-repeat: no-repeat;
+}
+
+#pestanas {
+	width: 603px;
+	height: 84px;
+	background-image: url(/images/estilos/replicantes/pestanas.png);
+	background-repeat: no-repeat;
+}
+
+#contenido {
+	width: 567px;
+	background-repeat: no-repeat;
+	margin-top: -5px;
+	margin-left: 22px;
+	z-index: 20;
+}
+
+.mensaje {
+	text-align: center;
+}
+
+.mensajes {
+	background-color: #282a32;
+	border: 2px solid black;
+	border-top:  solid black;
+}
+
+#mensajesDivCabecera{
+	height: 25px;
+	background-color:black;
+	cursor: move;
+}
+
+#mensajesDivContenido {
+	margin-left: -7px;
+}
+
+#mensajesDivAviso {
+	position: relative;
+	float: left;
+	padding-left:15px;
+	padding-right:15px;
+	padding-top:3px;
+	padding-bottom:3px;
+	background-color: #32374e;
+	border: 1px solid #ffffff;
+	color: #FFFFFF;
+	font-size: 11px;
+	font-weight: bold;
+	z-index: 50;
+	display:none;
+}
+
+.comercios {
+	background-color: #282a32;
+	border: 2px solid black;
+	border-top:  solid black;
+}
+
+#comerciosDivCabecera{
+	height: 25px;
+	background-color:black;
+	cursor: move;
+}
+
+.especiales {
+	background-color: #282a32;
+	border: 2px solid black;
+}
+
+.lblNoHay {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:5px;
+	margin-bottom:5px;
+	
+	width: 200px;
+	padding: 5px;
+	font-weight: bold;
+	border: 1px solid white;
+	background-color: #32374e;
+	text-align: center;
+}
+
+/************************************************************************************************
+  Pie
+************************************************************************************************/
+#indexDivPie {
+	position: relative;
+	margin: 0px auto;
+	width: 800px;
+	height: 25px;
+	background-image: url(/images/estilos/replicantes/pie.png);
+	background-repeat: no-repeat;
+}
+
+/************************************************************************************************
+  Pestañas
+************************************************************************************************/
+.morphtabs_title {
+	list-style-image: none;
+	list-style-type: none;
+	margin-top:0px;
+	margin-left: 30px;
+	padding-top: 45px;
+	padding-left: 0px;
+	height: 36px;
+}
+
+.morphtabs_title li {
+	float: left;
+	font-weight: bold;
+	padding: 7px 8px 2px 8px;
+	cursor: pointer;
+	color: white;
+	height: 22px;
+	width: 93px;
+	line-height: 20px;
+	background-image: url(/images/estilos/replicantes/tablanivel4.png);
+	text-align:center;
+}
+
+.morphtabs_title li.over {
+	background-image: url(/images/estilos/replicantes/tablanivel5.png);
+}
+
+.morphtabs_title li.active {
+	background-image: url(/images/estilos/replicantes/tablanivel3.png);
+}
+
+* :first-child+html .morphtabs_panelwrap {
+	margin-left: -20px; /* Hack para IE que valida*/
+}
+
+.morphtabs_panel div {
+
+}
+
+.morpthtabs_panel p {
+	
+}
+
+#pestanasBatalla ul{
+	list-style-image: none;
+	list-style-type: none;
+	margin-top:0px;
+	margin-left: 10px;
+	padding-top: 0px;
+	padding-left: 0px;
+	height: 30px;
+}
+
+/************************************************************************************************
+  Tablas
+************************************************************************************************/
+.tablaCentral {
+	width: 550px;
+	margin-left: 7px;
+	margin-bottom: 10px;
+	border: 0px solid black;
+	text-align:center;
+}
+
+.tablaTitulo {
+	height: 21px;
+	width: 550px;
+	margin-left: 7px;
+	margin-top: 10px;
+	background-image: url(/images/estilos/replicantes/tablatitulo.png);
+	font-weight: bold;
+	padding-top: 10px;
+	text-align: center;
+}
+
+.tablaCentral td {
+	background-color: #282a32;
+	padding: 3px;
+}
+
+.tablaCentral th {
+	padding: 5px;
+}
+
+.th1 {
+	font-weight: bold;
+	background-image: url(/images/estilos/replicantes/tablanivel1.png);
+	
+}
+
+.th2 {
+	font-weight: bold;
+	background-image: url(/images/estilos/replicantes/tablanivel2.png);
+}
+
+.tablaSegundoNivel td {
+	background-color:#32374e;
+}
+
+/************************************************************************************************
+  Preloader
+************************************************************************************************/
+#preloader div{
+	position: relative;
+	float: right;
+	width: 200px;
+	height: 18px;
+	background-color: #282a32;
+	border: 1px solid #ffffff;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding-left: 5px;
+	padding-top: 2px;
+	z-index: 50;
+}
+
+.preloaderPlaneta {
+	background: url(/images/estilos/replicantes/loaderPlaneta.gif);
+	position: relative;
+	top: 35%;
+	left: 50%;
+	width: 24px;
+	height: 24px;
+	margin-left: -12px;
+	margin-top: -12px;
+}
+
+/************************************************************************************************
+  Reportes
+************************************************************************************************/
+#sbox-overlay {
+	position: absolute;
+	background-color: #000;
+	left: 0px;
+	top: 0px;
+	zoom: 1;
+}
+
+#sbox-window {
+	margin-top:15px;
+	position: absolute;
+	background-color: #45464a;
+	text-align: left;
+	overflow: visible;
+	padding: 10px;
+	/* invalid values, but looks smoother! */
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#sbox-btn-close {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	right: 10px;
+	top: 15px;
+	background: url(/images/SqueezeBox/replicantes/closebox.png) no-repeat center;
+	border: none;
+}
+
+.sbox-window-ie6 #sbox-btn-close {
+	background-image: url(/images/SqueezeBox/replicantes/closebox.gif);
+}
+
+.sbox-loading #sbox-content {
+	background-image: url(/images/SqueezeBox/replicantes/spinner.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#sbox-content {
+	clear: both;
+	overflow:hidden;
+	background-color: #45464a;
+	height: 100%;
+	width: 100%;
+}
+
+.sbox-content-image#sbox-content {
+	overflow: visible;
+}
+
+#sbox-image {
+	display: block;
+}
+
+.sbox-content-image img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.sbox-content-iframe#sbox-content {
+	overflow: visible;
+}
+
+/* Hides scrollbars */
+.body-overlayed {
+	overflow: hidden;
+}
+/* Hides flash (Firefox problem) and selects (IE) */
+.body-overlayed embed, .body-overlayed object, .body-overlayed select {
+	visibility: hidden;
+}
+#sbox-window embed, #sbox-window object, #sbox-window select {
+	visibility: visible;
+}
+
+/* Shadows */
+.sbox-bg {
+	position: absolute;
+	width: 82px;
+	height: 103px;
+}
+
+.sbox-bg-n {
+	left: 16px;
+	top: -92px;
+	width: 722px;
+	height: 105px;
+	background: url(/images/SqueezeBox/replicantes/bg_n.png) no-repeat;
+}
+.sbox-bg-ne {
+	right: -78px;
+	top: -94px;
+	width:96px;
+	height:105px;
+	background: url(/images/SqueezeBox/replicantes/bg_ne.png) no-repeat;
+}
+.sbox-bg-e {
+	right: -78px;
+	top: 11px;
+	width:94px;
+	height: 438px;
+	background: url(/images/SqueezeBox/replicantes/bg_e.png) no-repeat;
+}
+.sbox-bg-se {
+	right: -78px;
+	bottom: -38px;
+	width: 94px;
+	height: 59px;
+	background: url(/images/SqueezeBox/replicantes/bg_se.png) no-repeat;
+}
+.sbox-bg-s {
+	left: 16px;
+	bottom: -38px;
+	width: 724px;
+	height: 59px;
+	background: url(/images/SqueezeBox/replicantes/bg_s.png) no-repeat;
+}
+.sbox-bg-sw {
+	left: -66px;
+	bottom: -38px;
+	width: 82px;
+	height: 59px;
+	background: url(/images/SqueezeBox/replicantes/bg_sw.png) no-repeat;
+}
+.sbox-bg-w {
+	left: -66px;
+	top: 11px;
+	height: 438px;
+	width: 82px;
+	background: url(/images/SqueezeBox/replicantes/bg_w.png) no-repeat;
+}
+.sbox-bg-nw {
+	width:82px;
+	height:103px;
+	left: -66px;
+	top: -92px;
+	background: url(/images/SqueezeBox/replicantes/bg_nw.png) no-repeat;
+}
+
+/************************************************************************************************
+  Alertas
+************************************************************************************************/
+#SexyAlertBox-Box {
+  padding-bottom: 24px;
+  background: url(/images/alerta/replicantes/bg-box-bottom.png) bottom left no-repeat;
+}
+
+#SexyAlertBox-InBox {
+  padding-top: 24px;
+  background: url(/images/alerta/replicantes/bg-box-top.png) top left no-repeat;	
+}
+
+#SexyAlertBox-BoxContent {
+  background: url(/images/alerta/replicantes/bg-box-body.png) top left repeat-y;
+  padding: 0px 25px;
+}
+
+#SexyAlertBox-BoxContenedor {
+  padding: 10px 10px 25px 150px;
+  text-align: left;
+  font-family:Verdana;
+  font-size:12px;
+  color:#FFFFFF;
+}
+
+#SexyAlertBox-BoxContenedor h1,#SexyAlertBox-BoxContenedor h2,#SexyAlertBox-BoxContenedor h3,#SexyAlertBox-BoxContenedor b,#SexyAlertBox-BoxContenedor strong{
+  text-align: left;
+  font-family:Verdana;
+  font-size:12px;
+  color:#000;
+  font-weight:bold;
+  margin:0px;
+  padding:0px;
+}
+
+#SexyAlertBox-Buttons{
+  text-align:right;
+}
+
+#SexyAlertBox-Buttons input {
+  margin: 10px 10px;
+}
+
+#SexyAlertBox-BoxContenedor #BoxPromptInput{
+  margin-top:5px;
+}
+
+#SexyAlertBox-Box .BoxAlert {
+  background: url(/images/alerta/replicantes/dialog-information.png) top left no-repeat;
+}
+
+#SexyAlertBox-Box .BoxConfirm {
+  background: url(/images/alerta/replicantes/dialog-information.png) top left no-repeat;
+}
+
+#SexyAlertBox-Box .BoxPrompt {
+  background: url(/images/alerta/replicantes/dialog-information.png) top left no-repeat;
+}
+
+#SexyAlertBox-Box .BoxInfo {
+  background: url(/images/alerta/replicantes/dialog-information.png) top left no-repeat;
+}
+
+#SexyAlertBox-Box .BoxError {
+  background: url(/images/alerta/replicantes/dialog-information.png) top left no-repeat;
+}
+
+/************************************************************************************************
+  Vacaciones y Bloqueo
+************************************************************************************************/
+#vacacionesMensaje{
+	background: url(/images/notificaciones/replicantes.png) top left no-repeat;
+	margin:0px auto;
+	width: 650px;
+	height: 580px;
+}
+
+#vacacionesMensaje div{
+	padding-top:460px;
+	margin:0px auto;
+	width: 475px;
+	height: 100px;
+	color:#FFFFFF;
+	font-size:12px;
+}

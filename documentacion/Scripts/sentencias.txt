@@ -1,0 +1,532 @@
+/*********************************************
+*	MensajesModel.php
+*********************************************/
+SELECT m.id, m.nombreUsuario, m.asunto, m.fecha, m.contenido, rm.leido
+FROM mensaje AS m LEFT JOIN recibeMensaje AS rm ON m.id=rm.idMensaje
+WHERE rm.idJugador=\''.$idJugador.'\'
+LIMIT '.$inicio.','.$cantidad
+
+DELETE FROM recibeMensaje
+WHERE idMensaje IN (\''.implode('\',\'',$idMensajes).'\') AND idJugador=\''.$idJugador.'\''
+
+UPDATE recibeMensaje SET leido=\''.$leido.'\'
+WHERE idMensaje IN (\''.implode('\',\'',$idMensajes).'\')
+AND idJugador=\''.$idJugador.'\''
+
+SELECT m.id, asunto, contenido, fecha, m.nombreUsuario AS nombreEmisor, m.idJugador AS idEmisor
+FROM mensaje m JOIN recibeMensaje r ON m.id=r.idMensaje
+WHERE id=\''.$idMensaje.'\'
+AND r.idJugador=\''.$idJugador.'\''
+
+INSERT INTO mensaje (idJugador, asunto, contenido)
+VALUES (\''.$idEmisor.'\', \''.$asunto.'\', \''.$contenido.'\')'
+
+SELECT id
+FROM usuario
+WHERE nombre IN(\''.implode('\',\'', $destinatarios).'\')'
+
+INSERT INTO recibeMensaje (idMensaje, idJugador)
+VALUES (LAST_INSERT_ID(), \''.$idReceptor.'\')'
+
+SELECT asunto, contenido
+FROM mensaje
+WHERE id=\''.$idMensaje.'\''
+
+SELECT asunto, idJugador
+FROM mensaje
+WHERE id=\''.$idMensaje.'\''
+
+'SELECT numeroMensajes
+FROM jugadorInfoGeneral
+WHERE idJugador=\''.$idJugador.'\''
+
+SELECT count(1) AS destinatarios
+FROM usuario
+WHERE nombre IN(\''.implode('\',\'', $destinatarios).'\')'
+
+
+
+
+/*********************************************
+*	AccesoModel.php
+*********************************************/
+'SELECT u.id AS idUsuario, ' .
+'j.idLogotipo, j.idFirma, j.idRaza, j.idAlianza, '.
+'j.bloqueado, j.vacaciones '.
+'FROM usuario AS u JOIN jugador AS j '.
+'ON u.id=j.idUsuario '.
+'WHERE UPPER(nombre)=\''.strtoupper($usuario).'\' '.
+'AND pass=\''.sha1($pass).'\''
+
+'UPDATE usuario
+SET ultimoAcceso=NOW(),
+ipUltimoAcceso=\''.$_SERVER['REMOTE_ADDR'].'\'
+WHERE id=\''.$idUsuario.'\''
+
+
+
+
+/*********************************************
+*	ResumirEventosModel.php
+*********************************************/
+
+SELECT UNIX_TIMESTAMP(ultimaActualizacion)
+FROM jugador
+WHERE idUsuario='.$this->idJugador
+
+
+
+UPDATE tipoRecursoUsuario
+SET cantidad=cantidad+('.$produccion[$key]['produccion'].'*'.$tTranscurrido.')
+WHERE idJugador='.$this->idJugador.' AND idTipoRecurso='.($key+1)
+
+
+UPDATE jugador
+SET ultimaActualizacion=FROM_UNIXTIME('.$fecha.')
+WHERE idUsuario='.$this->idJugador.'
+'
+
+'SELECT * FROM (
+SELECT "mejorar" AS tipo, UNIX_TIMESTAMP(tiempoFinal) AS tiempoFin, idMejora AS id1, NULL AS id2, NULL AS id3
+FROM jugadorMejoraInvestiga
+WHERE idJugador='.$this->idJugador.'
+
+UNION
+
+SELECT "construir" AS tipo, UNIX_TIMESTAMP(fechaConstruccionFinal) AS tiempoFin, idGalaxia AS id1, idPlaneta AS id2, idUnidad AS id3
+FROM unidadConstruir
+WHERE idJugador='.$this->idJugador.'
+
+UNION
+
+SELECT "mision" AS tipo, UNIX_TIMESTAMP(fechaSalida)+tiempoTrayecto AS tiempoFin, id AS id1, idJugadorExploradorOrigen AS id2, idJugadorExploradorDestino AS id3
+FROM mision
+WHERE idJugadorExploradorOrigen='.$this->idJugador.' OR idJugadorExploradorDestino='.$this->idJugador.'
+
+UNION
+
+SELECT "finEspecialActivo" AS tipo, UNIX_TIMESTAMP(finEspecial) AS tiempoFin, idEspecial AS id1, NULL AS id2, NULL AS id3
+FROM jugadorEspecialActivo
+WHERE idJugador='.$this->idJugador.'
+
+UNION
+
+SELECT "finEspecialEspera" AS tipo, UNIX_TIMESTAMP(tiempoFinalEspera) AS tiempoFin, idEspecial AS id1, NULL AS id2, NULL AS id3
+FROM jugadorEspecialEspera
+WHERE idJugador='.$this->idJugador.'
+) AS sb
+WHERE tiempoFin <= '.$this->fechaFin.'
+ORDER BY tiempoFin ASC'
+
+
+DELETE FROM jugadorMejoraInvestiga
+WHERE idJugador=\''.$idJugador.'\' AND idMejora=\''.$idMejora.'\''
+
+
+
+DELETE FROM unidadConstruir
+WHERE idGalaxia=\''.$idGalaxia.'\' AND idPlaneta=\''.$idPlaneta.'\' AND idUnidad=\''.$idUnidad.'\'
+'
+
+'SELECT cantidad
+FROM tipoRecursoUsuario
+WHERE idJugador=\''.$idJugador.'\''
+
+
+
+
+/*********************************************
+*	PlanetaModel.php
+*********************************************/
+'SELECT p.idPlaneta,p.idGalaxia,
+p.nombrePlaneta,p.nombreSGC,
+p.coord1,p.coord2,p.coord3,p.coord4,p.coord5,p.coord6,p.coord7,
+p.riqueza, IFNULL(pe.imagen,CONCAT(p.riqueza,".jpg")) AS imagen
+FROM planeta AS p
+LEFT JOIN planetaEspecial pe
+ON p.idPlaneta=pe.idPlanetaEsp AND p.idGalaxia=pe.idGalaxia
+WHERE p.idGalaxia=\''.$idGalaxia.'\'
+AND p.idPlaneta=\''.$idPlaneta.'\'
+LIMIT 0,1'
+
+'SELECT p.idPlaneta,p.idGalaxia,pc.idJugador,
+pc.principal,p.nombrePlaneta,p.nombreSGC,
+p.coord1,p.coord2,p.coord3,p.coord4,p.coord5,p.coord6,p.coord7,
+p.riqueza, IFNULL(pe.imagen,CONCAT(p.riqueza,".jpg")) AS imagen
+FROM (planetaColonizado AS pc JOIN planeta AS p
+ON pc.idPlaneta=p.idPlaneta AND pc.idGalaxia=p.idGalaxia)
+LEFT JOIN planetaEspecial pe
+ON p.idPlaneta=pe.idPlanetaEsp AND p.idGalaxia=pe.idGalaxia
+WHERE idJugador=\''.$idUsuario.'\' ORDER BY pc.principal DESC',cachear,$idUsuario.'-planetasUsuario'
+
+sql
+
+'SELECT p.idPlaneta,p.idGalaxia,pe.idJugador,
+pe.idPropietario,p.nombrePlaneta,p.nombreSGC,
+p.coord1,p.coord2,p.coord3,p.coord4,p.coord5,p.coord6,p.coord7,
+p.riqueza, IFNULL(px.imagen,CONCAT(p.riqueza,".jpg")) AS imagen,
+pe.nota, a.id AS idAlianza, a.titulo AS alianza, u.nombre AS propietario
+FROM (planetaExplorado AS pe JOIN planeta AS p
+ON pe.idPlaneta=p.idPlaneta AND pe.idGalaxia=p.idGalaxia)
+JOIN jugador AS g ON g.idUsuario=pe.idPropietario
+JOIN usuario AS u ON u.id=g.idUsuario
+LEFT JOIN alianza AS a ON a.id=g.idAlianza
+LEFT JOIN planetaEspecial AS px
+ON p.idPlaneta=px.idPlanetaEsp AND p.idGalaxia=px.idGalaxia
+WHERE pe.idPropietario IN
+(SELECT ju.idUsuario FROM jugador AS ju, jugador AS j WHERE ju.idAlianza=j.idAlianza
+AND j.idUsuario=\''.$idUsuario.'\') AND pe.idJugador=\''.$idUsuario.'\' AND pe.idPropietario<>\''.$idUsuario.'\''
+
+'SELECT p.idPlaneta,p.idGalaxia,pe.idJugador,
+pe.idPropietario,p.nombrePlaneta,p.nombreSGC,
+p.coord1,p.coord2,p.coord3,p.coord4,p.coord5,p.coord6,p.coord7,
+p.riqueza, IFNULL(px.imagen,CONCAT(p.riqueza,".jpg")) AS imagen,
+pe.nota, a.id AS idAlianza, a.titulo AS alianza, u.nombre AS propietario
+FROM (planetaExplorado AS pe JOIN planeta AS p
+ON pe.idPlaneta=p.idPlaneta AND pe.idGalaxia=p.idGalaxia)
+JOIN jugador AS g ON g.idUsuario=pe.idPropietario
+JOIN usuario AS u ON u.id=g.idUsuario
+LEFT JOIN alianza AS a ON a.id=g.idAlianza
+LEFT JOIN planetaEspecial AS px
+ON p.idPlaneta=px.idPlanetaEsp AND p.idGalaxia=px.idGalaxia
+WHERE pe.idPropietario NOT IN
+(SELECT ju.idUsuario FROM jugador AS ju, jugador AS j WHERE ju.idAlianza=j.idAlianza
+AND j.idUsuario=\''.$idUsuario.'\') AND pe.idJugador=\''.$idUsuario.'\' AND pe.idPropietario <> \''.$idUsuario.'\''
+
+'SELECT p.idPlaneta,p.idGalaxia,pe.idJugador,
+pe.idPropietario,p.nombrePlaneta,p.nombreSGC,
+p.coord1,p.coord2,p.coord3,p.coord4,p.coord5,p.coord6,p.coord7,
+p.riqueza, IFNULL(px.imagen,CONCAT(p.riqueza,".jpg")) AS imagen,
+pe.nota
+FROM (planetaExplorado AS pe JOIN planeta AS p
+ON pe.idPlaneta=p.idPlaneta AND pe.idGalaxia=p.idGalaxia)
+LEFT JOIN planetaEspecial AS px
+ON p.idPlaneta=px.idPlanetaEsp AND p.idGalaxia=px.idGalaxia
+WHERE pe.idPropietario IS NULL AND pe.idJugador=\''.$idUsuario.'\''
+
+'SELECT p.idPlaneta,p.idGalaxia,pe.idJugador,
+pe.idPropietario,p.nombrePlaneta,p.nombreSGC,
+p.coord1,p.coord2,p.coord3,p.coord4,p.coord5,p.coord6,p.coord7,
+p.riqueza, IFNULL(px.imagen,CONCAT(p.riqueza,".jpg")) AS imagen
+FROM (planetaExplorado AS pe JOIN planeta AS p
+ON pe.idPlaneta=p.idPlaneta AND pe.idGalaxia=p.idGalaxia)
+LEFT JOIN planetaEspecial AS px
+ON p.idPlaneta=px.idPlanetaEsp AND p.idGalaxia=px.idGalaxia
+WHERE pe.idJugador=\''.$idUsuario.'\' AND (pe.idPropietario <> \''.$idUsuario.'\'
+OR pe.idPropietario IS NULL)'
+
+'UPDATE planeta SET
+nombrePlaneta=\''.$nombre.'\'
+WHERE idGalaxia=\''.$idGalaxia.'\'
+AND idPlaneta=\''.$idPlaneta.'\''
+
+'UPDATE planetaExplorado SET
+visible=0
+WHERE idGalaxia=\''.$idGalaxia.'\'
+AND idPlaneta=\''.$idPlaneta.'\'
+AND idJugador=\''.$idUsuario.'\''
+
+'UPDATE planetaExplorado SET
+visible=1
+WHERE idGalaxia=\''.$idGalaxia.'\'
+AND idPlaneta=\''.$idPlaneta.'\'
+AND idJugador=\''.$idUsuario.'\''
+
+'DELETE FROM planetaColonizado
+WHERE idGalaxia=\''.$idGalaxia.'\'
+AND idPlaneta=\''.$idPlaneta.'\'
+AND principal <> 1'
+
+'UPDATE planetaexplorado SET
+nota=\''.$nota.'\'
+WHERE idGalaxia=\''.$idGalaxia.'\'
+AND idPlaneta=\''.$idPlaneta.'\'
+AND idJugador=\''.$idUsuario.'\''
+
+'SELECT COUNT(*) propio FROM
+planetaColonizado
+WHERE idGalaxia=\''.$idGalaxia.'\'
+AND idPlaneta=\''.$idPlaneta.'\'
+AND idJugador=\''.$idJugador.'\''
+
+'SELECT count(*) AS ocultos
+FROM planetaExplorado
+WHERE idJugador=\''.$idJugador.'\'
+AND visible=0'
+
+
+
+
+/*********************************************
+*	InfoJugadorModel.php
+*********************************************/
+
+SELECT investigacionVelocidad, construccionVelocidad, numeroMensajes, numNaves, numSoldados,
+limiteSoldados, numDefensas, produccionPrimario, produccionSecundario, produccionEnergia
+FROM jugadorInfoGeneral WHERE idJugador='.$idJugador
+
+
+
+SELECT puntosNaves, puntosSoldados, puntosDefensas, puntosTecnologias, puntosTotales
+FROM jugadorInfoPuntuaciones
+WHERE idJugador='.$idJugador
+
+
+
+SELECT soldadosCarga, soldadosAtaque, soldadosResistencia, soldadosEscudo, navesCarga, navesAtaque,
+navesResistencia, navesEscudo, navesVelocidad, defensasAtaque, defensasResistencia,
+defensasEscudo, invisible, atraviesaIris
+FROM jugadorInfoUnidades
+WHERE idJugador='.$idJugador
+
+
+
+
+
+/*********************************************
+*	NaveModel.php
+*********************************************/
+'SELECT u.id, u.nombre, t.nombre AS tipoNave, cantidad-cantidadEnMision AS cantidad, u.ataque, u.resistencia, u.escudo, u.invisible, u.atraviesaEscudo, n.carga, n.stargate, n.hiperespacio, n.velocidad, n.cazas
+FROM ((unidadJugadorPlaneta up JOIN unidad u ON u.id=up.idUnidad) JOIN nave n ON u.id=n.idUnidad) JOIN tipoNave t ON n.idTipoNave=t.idTipoNave
+WHERE up.idGalaxia=\''.$idGalaxia.'\'
+AND up.idPlaneta=\''.$idPlaneta.'\'
+AND up.idJugador=\''.$idJugador.'\''
+
+'SELECT n.carga, n.stargate, n.hiperespacio, n.velocidad, n.cazas
+FROM nave n
+WHERE n.idUnidad IN (\''.implode('\',\'',$unidades).'\')'
+
+
+
+
+/*********************************************
+*	LogotipoModel.php
+*********************************************/
+'SELECT id, idRaza, nombre, ruta '.
+'FROM logotipo '.
+'WHERE id=\''.$idLogotipo.'\' '
+
+
+
+
+/*********************************************
+*	EstadisticasModel.php
+*********************************************/
+'SELECT puntosTotales AS puntuacion,
+puntosNaves, puntosSoldados, puntosDefensas, puntosTecnologias
+FROM jugadorInfoPuntuaciones
+WHERE idJugador=\''.$idJugador.'\' '
+
+'SELECT count(*)+1 AS posicion
+FROM jugadorInfoPuntuaciones
+WHERE puntosTotales > (
+SELECT puntosTotales
+FROM jugadorInfoPuntuaciones
+WHERE idJugador=\''.$idJugador.'\' )'
+
+'SELECT numNaves, numSoldados, numDefensas, limiteSoldados
+FROM jugadorInfoGeneral
+WHERE idJugador=\''.$idJugador.'\' '
+
+
+
+
+/*********************************************
+*	ComercioModel.php
+*********************************************/
+
+'(SELECT e.idTipoRecurso AS tipo, IFNULL(e.cantidad,0) AS origen, IFNULL(r.cantidad,0) AS destino '.
+'FROM comercioEnviaTipoRecurso e LEFT OUTER JOIN comercioRecibeTipoRecurso r ON e.idComercio=r.idComercio AND e.idTipoRecurso=r.idTipoRecurso '.
+'WHERE e.idComercio=\''.$idComercio.'\') '.
+'UNION '.
+'(SELECT r.idTipoRecurso AS tipo, IFNULL(e.cantidad,0) AS origen, IFNULL(r.cantidad,0) AS destino '.
+'FROM comercioEnviaTipoRecurso e RIGHT OUTER JOIN comercioRecibeTipoRecurso r ON r.idComercio=e.idComercio AND r.idTipoRecurso=e.idTipoRecurso '.
+'WHERE r.idComercio=\''.$idComercio.'\')'
+
+INSERT INTO comercio (idJugadorDest, idJugadorOrig)
+VALUES (\''.$idJugadorDest.'\', \''.$idJugadorOrig.'\')'
+
+INSERT INTO comercioEnviaTipoRecurso (idComercio, idTipoRecurso, cantidad)
+VALUES (\''.$idComercio.'\',\'1\', \''.$cantidadO1.'\')'
+
+INSERT INTO comercioEnviaTipoRecurso (idComercio, idTipoRecurso, cantidad)
+VALUES (\''.$idComercio.'\',\'2\', \''.$cantidadO2.'\')'
+
+INSERT INTO comercioRecibeTipoRecurso (idComercio, idTipoRecurso, cantidad)
+VALUES (\''.$idComercio.'\',\'1\', \''.$cantidadD1.'\')'
+
+INSERT INTO comercioRecibeTipoRecurso (idComercio, idTipoRecurso, cantidad)
+VALUES (\''.$idComercio.'\',\'2\', \''.$cantidadD2.'\')'
+
+SELECT c.id, idJugadorDest, u.nombre AS jugadorDest, fechaPeticion ' .
+'FROM comercio c JOIN usuario u ON c.idJugadorDest=u.id WHERE idJugadorOrig=\''.$idJugador.'\''
+
+SELECT c.id, idJugadorOrig, u.nombre AS jugadorOrig, fechaPeticion ' .
+'FROM comercio c JOIN usuario u ON c.idJugadorOrig=u.id WHERE idJugadorDest=\''.$idJugador.'\''
+
+SELECT idJugadorOrig ' .
+'FROM comercio WHERE id=\''.$idComercio.'\' AND idJugadorDest=\''.$idJugador.'\''
+
+UPDATE tipoRecursoUsuario
+SET cantidad=cantidad+(\''.($datos['destino']-$datos['origen']).'\')
+WHERE idTipoRecurso=\''.$datos['tipo'].'\'
+AND idJugador=\''.$idJugadorOrig.'\''
+
+UPDATE tipoRecursoUsuario
+SET cantidad=cantidad+(\''.($datos['origen']-$datos['destino']).'\')
+WHERE idTipoRecurso=\''.$datos['tipo'].'\'
+AND idJugador=\''.$idJugador.'\''
+
+'DELETE FROM comercio
+WHERE id=\''.$idComercio.'\'
+AND (idJugadorDest=\''.$idJugador.'\' OR idJugadorOrig=\''.$idJugador.'\')'
+
+'DELETE FROM comercio
+WHERE DATEDIFF(NOW(), fechaPeticion)>=1'
+
+
+
+
+/*********************************************
+*	UnidadModel.php
+*********************************************/
+INSERT INTO unidadConstruir (idUnidad, idGalaxia, idPlaneta, idJugador, cantidad)
+VALUES(\''.$idUnidad.'\',\''.$idGalaxia.'\',\''.$idPlaneta.'\',\''.$idJugador.'\',\''.$cantidad.'\')'
+
+DELETE FROM unidadConstruir
+WHERE idJugador=\''.$idJugador.'\'
+AND idGalaxia=\''.$idGalaxia.'\'
+AND idPlaneta=\''.$idPlaneta.'\'
+AND idUnidad IN (SELECT idUnidad FROM '.$this->tabla.')'
+
+'SELECT uc.idUnidad, uc.cantidad, TIMESTAMPDIFF(SECOND,NOW(),uc.fechaConstruccionFinal) AS tiempo
+FROM unidadConstruir uc JOIN '.$this->tabla.' t
+WHERE uc.idJugador=\''.$idJugador.'\'
+AND uc.idGalaxia=\''.$idGalaxia.'\'
+AND uc.idPlaneta=\''.$idPlaneta.'\''
+
+
+SELECT id, nombre, descripcion, tiempo, ataque, resistencia, escudo, invisible, atraviesaEscudo
+FROM unidad
+WHERE id IN (SELECT pu.idUnidad
+FROM planetaUnidad pu JOIN '.$this->tabla.' n ON pu.idUnidad=n.idUnidad
+WHERE idPlanetaEsp=\''.$idPlaneta.'\' AND idGalaxia=\''.$idGalaxia.'\'
+UNION
+SELECT u.id
+FROM ((unidad AS u JOIN '.$this->tabla.' AS n ON u.id=n.idUnidad)
+JOIN unidadMejora AS um ON u.id=um.idUnidad)
+LEFT JOIN jugadorMejora AS jm ON jm.idMejora=um.idMejora AND jm.idJugador=\''.$idJugador.'\'
+WHERE u.idRaza=\''.$idRaza.'\'
+GROUP BY u.id
+HAVING MIN(COALESCE(jm.nivel,0)-um.nivel)>=0)'
+
+'SELECT u.id, u.nombre
+FROM unidad u JOIN '.$this->tabla.' n ON u.id=n.idUnidad
+WHERE u.idRaza=\''.$idRaza.'\'',
+cachear,$idRaza.'-'.$this->tabla
+
+'SELECT u.id, m.nombre, um.nivel, um.nivel<=IFNULL(jm.nivel,0) AS cumple
+FROM (((unidad u JOIN '.$this->tabla.' t ON u.id=t.idUnidad)
+JOIN unidadMejora um ON u.id=um.idUnidad)
+JOIN mejora m ON um.idMejora=m.id)
+LEFT JOIN jugadorMejora jm ON jm.idMejora=m.id AND jm.idJugador=\''.$idJugador.'\'
+WHERE u.idRaza=\''.$idRaza.'\''
+
+'SELECT idUnidad, idTipoRecurso, cantidad
+FROM recursoUnidad
+WHERE idUnidad IN (\''.implode('\',\'',$unidades).'\')'
+
+'SELECT ur.idUnidadRequerida AS id, ur.idUnidadRequiere, u.nombre, ur.cantidad, IFNULL(up.cantidad,0)-IFNULL(up.cantidadEnMision,0) AS disponibles
+FROM (unidadRequerida ur JOIN unidad u ON ur.idUnidadRequiere=u.id)
+LEFT JOIN unidadJugadorPlaneta up ON ur.idUnidadRequiere=up.idUnidad
+AND up.idGalaxia=\''.$idGalaxia.'\'
+AND up.idPlaneta=\''.$idPlaneta.'\'
+AND up.idJugador=\''.$idJugador.'\'
+WHERE ur.idUnidadRequerida IN (\''.implode('\',\'',$unidades).'\')'
+
+'UPDATE unidadJugadorPlaneta SET cantidad=cantidad-\''.$cantidad.'\'
+WHERE idGalaxia=\''.$idGalaxia.'\'
+AND idPlaneta=\''.$idPlaneta.'\'
+AND idUnidad=\''.$idUnidad.'\'
+AND idJugador=\''.$idJugador.'\''
+
+
+
+
+/*********************************************
+*	RazaModel.php
+*********************************************/
+'SELECT id, nombre
+FROM raza
+WHERE id=\''.$idRaza.'\'',
+cachear,$idRaza.'-raza'
+
+
+
+
+/*********************************************
+*	RecursosModel.php
+*********************************************/
+'SELECT idTipoRecurso, cantidad
+FROM tipoRecursoUsuario
+WHERE idJugador=\''.$idUsuario.'\'
+ORDER BY idTipoRecurso'
+
+'SELECT idTipoRecurso, cantidad
+FROM tipoRecursoUsuario
+WHERE idJugador=\''.$idUsuario.'\'
+AND idTipoRecurso=\''.$idTipo.'\''
+
+'UPDATE tipoRecursoUsuario SET
+cantidad=cantidad-\''.$cantidad.'\'
+WHERE idTipoRecurso=\''.$idTipoRecursoRestar.'\'
+AND idJugador=\''.$idJugador.'\''
+
+'UPDATE tipoRecursoUsuario SET
+cantidad=cantidad+\''.$cantidad.'\'
+WHERE idTipoRecurso=\''.$idTipoRecursoSumar.'\'
+AND idJugador=\''.$idJugador.'\''
+
+SELECT idTipoRecurso, nombre FROM recursoRaza WHERE idRaza='.$idRaza
+
+
+
+
+/*********************************************
+*	MejoraModel.php
+*********************************************/
+'SELECT id, nombre, descripcion, tiempo, p.cantidad AS primario, s.cantidad AS secundario
+FROM ((mejora m JOIN mejoraNormal n ON m.id=n.idMejora)
+JOIN recursoMejora p ON p.idMejora=m.id)
+JOIN recursoMejora s ON s.idMejora=m.id
+WHERE n.idRaza=\''.$idRaza.'\'
+AND n.idGrupo=\''.$idGrupo.'\'
+AND p.idTipoRecurso=1
+AND s.idTipoRecurso=2'
+
+INSERT INTO jugadorMejoraInvestiga (idMejora,idJugador)
+VALUES(\''.$idMejora.'\',\''.$idJugador.'\')'
+
+DELETE FROM jugadorMejoraInvestiga
+WHERE idJugador=\''.$idJugador.'\''
+
+'SELECT idMejora,nivel FROM jugadorMejora
+WHERE idJugador=\''.$idJugador.'\'
+AND idMejora IN (\''.implode('\',\'',$idMejoras).'\')'
+
+'SELECT id,nombre FROM grupoMejora
+WHERE id IN(
+SELECT idGrupo FROM mejoraNormal
+WHERE idRaza=\''.$idRaza.'\')'
+
+'SELECT idMejora
+FROM jugadorMejoraInvestiga
+WHERE idJugador=\''.$idJugador.'\''
+
+'SELECT TIMESTAMPDIFF(SECOND,NOW(),tiempoFinal) AS tiempo
+FROM jugadorMejoraInvestiga
+WHERE idJugador=\''.$idJugador.'\''
+
+
+
+

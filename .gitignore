@@ -1,0 +1,30 @@
+## generic files to ignore
+*~
+*.lock
+*.swp
+*.out
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+dead.letter
+.bash_history
+.initialized
+.mysql_history
+
+## Docker
+docker/mysql/data/*
+docker/mysql/data/empty
+
+## SGCommander
+/logs/*
+!/logs/empty
+/templates/default/cache/*
+!/templates/default/cache/empty
+/web/images/firmas/jugador/*
+!/web/images/firmas/jugador/empty
+/config.php
+/docker-compose-production.yml

@@ -1,0 +1,22 @@
+GENERAL
+-------
+recargar          -> Indica si el modulo actual debe ser recargado en caso de cambiar de planeta seleccionado
+controlador       -> Indica el controlador del modulo cargado
+accion            -> Indica la accion a ejecutar del modulo, en caso de que el planeta seleccionado cambie
+raza			  -> Nombre de la raza del jugador en minusculas y sin caracteres extra�os, ejemplo: goauld
+idRaza			  -> Identificador de la raza del jugador
+
+INDEX
+-----
+indexIdPlanetaSel -> Indica el id del planeta que esta seleccionado en estos momentos 
+indexIdGalaxiaSel -> Indica la galaxia seleccionada en estos momentos
+indexNombreSel    -> Indica el nombre que el usuario le ha dado al planeta NO el PX-304
+indexNomCompletoSel  -> Nombre completo del planeta seleccionado
+indexRecursoPri -> Cantidad exacta del recurso primario con decimales
+indexRecursoSec -> Cantidad exacta del recurso secundario con decimales
+indexRecursoEne -> Cantidad exacta de energia
+indexRecursoPriPro	-> Producci�n del recurso primario
+indexRecursoSecPro	-> Producci�n del recurso secundario
+stargateIntergalactico -> Indica si el usuario tiene stargate intergalactico
+	
+

@@ -1,0 +1,986 @@
+@charset "UTF-8";
+
+/*********************************************
+  Wraith
+*********************************************/
+/************************************************************************************************
+  Enlaces
+************************************************************************************************/
+a:link 
+{
+   color: #FFFFFF;
+	text-decoration:none;
+}
+
+a:visited 
+{
+   color: #FFFFFF;
+	text-decoration:none;
+}
+
+a:hover 
+{
+   color: #FFFFFF;
+	text-decoration:underline;
+}
+
+a:active 
+{
+   color: #FFFFFF;
+	text-decoration:none;
+}
+
+/************************************************************************************************
+  Formulario
+************************************************************************************************/
+select
+{
+	font-size:11px;
+	color:white;
+	background-color:#101010;
+	border: 1px solid white;
+}
+
+select:focus{
+	background-color:#355d7f;
+}
+
+option {
+	background-color: #355d7f;
+}
+
+input, button{
+	cursor: pointer;
+	font-size:12px;
+	background-color:#101010;
+	border: 1px solid white;
+	color:white;
+}
+
+input.disabled, input.disabled:hover {
+	cursor: default;
+	font-size: 12px;
+	background-color: #999999;
+	border: 1px solid #333333;
+	color: #666666;
+}
+
+input:hover, button:hover{
+	background-color:#355d7f;
+}
+
+textarea{
+	font-size:12px;
+	background-color:#101010;
+	border: 1px solid white;
+	color:white;
+}
+
+textarea:focus{
+	background-color: #355d7f;
+}
+
+#indexLstPlanetas {
+	width:237px;
+}
+
+/************************************************************************************************
+  Contenedores
+************************************************************************************************/
+body{
+	font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif; 
+	font-size:11px;
+	color: white;
+	text-align:center;
+	margin:0px auto;
+	background-color:#191624;
+}
+
+#indexDivContenedor{
+	position:relative;
+	width:800px;
+	min-height:605px;
+	border:1px solid black;
+	background-color:#101010;
+	margin:0px auto;
+	text-align:left;
+}
+
+
+/************************************************************************************************
+  Recursos
+************************************************************************************************/
+#indexDivRecursoPri {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:226px;
+	height:27px;
+	background-image:url(/images/estilos/wraith/recursopri.png);
+	background-repeat:no-repeat;
+}
+
+#indexDivRecursoPri div.textoRecurso {
+	position:absolute;
+	top:5px;
+	left:95px;
+	font-weight:bold;
+}
+
+#indexDivRecursoSec {
+	position:absolute;
+	top:0px;
+	left:226px;
+	width:204px;
+	height:27px;
+	background-image:url(/images/estilos/wraith/recursosec.png);
+	background-repeat:no-repeat;
+}
+
+#indexDivRecursoSec div.textoRecurso {
+	position:absolute;
+	top:5px;
+	left:70px;
+	font-weight:bold;
+}
+
+#indexDivRecursoEnergia {
+	position:absolute;
+	top:0px;
+	left:430px;
+	width:370px;
+	height:27px;
+	background-image:url(/images/estilos/wraith/recursoenergia.png);
+	background-repeat:no-repeat;
+}
+
+#indexDivRecursoEnergia div.textoRecurso {
+	position:absolute;
+	top:5px;
+	left:66px;
+	font-weight:bold;
+}
+
+/************************************************************************************************
+  Logo
+************************************************************************************************/
+#indexDivLogo {
+	position:absolute;
+	top:27px;
+	left:0px;
+	width:197px;
+	height:220px;
+	background-repeat:no-repeat;
+}
+
+/************************************************************************************************
+  Planeta
+************************************************************************************************/
+#indexDivPlaneta {
+	position:absolute;
+	top:27px;
+	left:197px;
+	width:502px;
+	height:98px;
+}
+
+#indexDivPlanetaImagen {
+	padding-left:9px;
+	padding-top:12px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:101px;
+	height:101px;
+	background-image:url(/images/estilos/wraith/planetaimagen.png);
+	background-repeat:no-repeat;
+}
+
+#indexDivPlanetaDatos {
+	position:absolute;
+	top:0px;
+	left:103px;
+	width:249px;
+	height:110px;
+	background-image:url(/images/estilos/wraith/planetadatos.png);
+	background-repeat:no-repeat;
+}
+
+#indexDivnombrePlaneta {
+	position:absolute;
+	top:17px;
+	left:27px;
+	font-size:11px;
+	font-weight:bold;
+	color: white;
+}
+
+#indexDivcoordenadas {
+	position:absolute;
+	top:39px;
+	left:38px;
+}
+
+#indexDivBotonesPlaneta {
+	position:absolute;
+	top:71px;
+	left:12px;
+	width:239px;
+	text-align:center;
+}
+
+#indexDivLogoPlanetaResto {
+	position:absolute;
+	top:27px;
+	left:549px;
+	width:257px;
+	height:106px;
+	background-image:url(/images/estilos/wraith/planetaresto.png);
+	background-repeat:no-repeat;
+}
+
+#indexLblPlanetasLista {
+	position:absolute;
+	top:4px;
+	left:8px;
+	width:240px;
+	text-align:center;
+	background-color:#101010;
+}
+
+#layer {
+	position: absolute;
+	height: 18px;
+	top: 0px;
+	left: 0px;
+	width: 240px;
+}
+
+#divlistaplanetas {
+	background: #1E1E1E;
+	border: 1px solid #FFFFFF;
+	left: 0px;
+	top: 18px;
+	overflow: auto;
+	position: absolute;
+	width: 235px;
+	margin-left: 2px;
+	margin-top: -1px;
+	display: none;
+	z-index: 10;
+	cursor:pointer;
+}
+
+#divlistaplanetas div {
+	display: block;
+	text-align: left;
+	width: 235px;
+	height: 54px;
+}
+
+#divlistaplanetas div:hover {
+	background-color: #56284d;
+}
+
+#divlistaplanetas img {
+	float: left;
+	margin: 3px;
+	width: 48px;
+	height: 48px;
+}
+
+#divlistaplanetas span {
+	float: left;
+	margin-top: 17px;
+}
+
+#indexDivConstruccion {
+	position:absolute;
+	top:25px;
+	left:5px;
+	width:247px;
+}
+
+#indexLblNoCons {
+	position:absolute;
+	top:20px;
+	left:20px;
+	width:200px;
+	padding:5px;
+	font-weight:bold;
+	border:1px solid white;
+	background-color:#101010;
+	text-align:center;
+}
+
+#indexDivConsTropas {
+	padding-left:0px;
+	float:left;
+}
+
+#indexDivConsNaves {
+	padding-left:2px;
+	float:left;
+}
+
+#indexDivConsDefensas {
+	padding-left:2px;
+	float:left;
+}
+
+#especialesLblNoEsp {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:5px;
+	margin-bottom:5px;
+	
+	width: 200px;
+	padding: 5px;
+	font-weight: bold;
+	border: 1px solid white;
+	background-color: #101010;
+	text-align: center;
+}
+
+.percentage{
+	height: 7px;
+	background-color: #56284d;
+}
+
+.box{
+	border: 1px white solid;
+	height: 7px;
+	width: 78px;
+	background-color: white;
+}
+
+/************************************************************************************************
+  Botones
+************************************************************************************************/
+#indexDivBotonera {
+	position:absolute;
+	top:240px;
+	left:0px;
+	width:239px;
+	min-height:359px;
+	background-image:url(/images/estilos/wraith/botonera.png);
+	background-color:#101010;
+	background-repeat:no-repeat;
+	z-index:0;
+}
+
+#indexDivBoton1 {
+	position:absolute;
+	text-align:center;
+	width:75px;
+	top:45px;
+	left:45px;
+	font-weight:bold;
+}
+
+#indexDivBoton2 {
+	position:absolute;
+	text-align:center;
+	width:75px;
+	top:66px;
+	left:45px;
+	font-weight:bold;
+}
+
+#indexDivBoton3 {
+	position:absolute;
+	text-align:center;
+	width:75px;
+	top:87px;
+	left:45px;
+	font-weight:bold;
+}
+
+#indexDivBoton4 {
+	position:absolute;
+	text-align:center;
+	width:75px;
+	top:109px;
+	left:45px;
+	font-weight:bold;
+}
+
+#indexDivBoton5 {
+	position:absolute;
+	text-align:center;
+	width:75px;
+	top:45px;
+	left:122px;
+	font-weight:bold;
+}
+
+#indexDivBoton6 {
+	position:absolute;
+	text-align:center;
+	width:75px;
+	top:66px;
+	left:122px;
+	font-weight:bold;
+}
+
+#indexDivBoton7 {
+	position:absolute;
+	text-align:center;
+	width:75px;
+	top:87px;
+	left:122px;
+	font-weight:bold;
+}
+
+#indexDivBoton8 {
+	position:absolute;
+	text-align:center;
+	width:75px;
+	top:109px;
+	left:122px;
+	font-weight:bold;
+}
+
+#indexDivBoton9 {
+	position:absolute;
+	text-align:center;
+	width:75px;
+	top:129px;
+	left:45px;
+	font-weight:bold;
+}
+
+#indexDivBoton10 {
+	position:absolute;
+	text-align:center;
+	width:75px;
+	top:150px;
+	left:45px;
+	font-weight:bold;
+}
+
+#indexDivBoton11 {
+	position:absolute;
+	text-align:center;
+	width:75px;
+	top:172px;
+	left:45px;
+	font-weight:bold;
+}
+
+#indexDivBoton12 {
+	position:absolute;
+	top:130px;
+	left:130px;
+	font-weight:bold;
+	z-index:10;
+}
+
+#indexDivBoton13 {
+	position:absolute;
+	text-align:center;
+	width:75px;
+	top:150px;
+	left:122px;
+	font-weight:bold;
+	z-index:10;
+}
+
+#indexDivBoton14 {
+	position:absolute;
+	text-align:center;
+	width:75px;
+	top:172px;
+	left:122px;
+	font-weight:bold;
+	z-index:10;
+}
+
+#indexDivBoton15 {
+	position:absolute;
+	top:239px;
+	left:0px;
+	font-weight:bold;
+	z-index:0;
+}
+
+#indexDivBoton15 #indexImgSalir {
+	border:0px;
+}
+
+/************************************************************************************************
+  Centro
+************************************************************************************************/
+#indexDivCentro {
+	margin-left: 197px;
+	padding-top: 130px;
+	width: 603px;
+	height: auto !important; /* para los browsers buenos */
+	height: 469px; /* para IE5+ */
+	min-height: 469px; /* para los browsers buenos */
+}
+
+#titulo {
+	width:603px;
+	height:117px;
+	background-image:url(/images/estilos/wraith/titulo.png);
+	background-color:#101010;
+	background-repeat:no-repeat;
+}
+
+#pestanas {
+	width: 603px;
+	height: 117px;
+	background-image: url(/images/estilos/wraith/pestanas.png);
+	background-color: #101010;
+	background-repeat: no-repeat;
+}
+
+#contenido {
+	width: 567px;
+	background-color: #101010;
+	background-repeat: no-repeat;
+	margin-top: -52px;
+	margin-left: 35px;
+	z-index: 20;
+}
+
+.mensaje {
+	text-align: center;
+}
+
+.mensajes {
+	background-color: #1E1E1E;
+	border: 2px solid #56284d;
+	border-top:  solid #56284d;
+}
+
+#mensajesDivCabecera{
+	height: 25px;
+	background-color: #56284d;
+	cursor: move;
+}
+
+#mensajesDivContenido {
+	margin-left: -14px;
+}
+
+#mensajesDivAviso {
+	position: relative;
+	float: left;
+	padding-left:15px;
+	padding-right:15px;
+	padding-top:3px;
+	padding-bottom:3px;
+	background-color: #1E1E1E;
+	border: 1px solid #56284d;
+	color: #FFFFFF;
+	font-size: 11px;
+	font-weight: bold;
+	z-index: 50;
+	display:none;
+}
+
+.comercios {
+	background-color: #1E1E1E;
+	border: 2px solid #56284d;
+	border-top:  solid #56284d;
+}
+
+#comerciosDivCabecera{
+	height: 25px;
+	background-color:#56284d;
+	cursor: move;
+}
+
+.especiales {
+	background-color: #1E1E1E;
+	border: 2px solid #56284d;
+}
+
+.lblNoHay {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:5px;
+	margin-bottom:5px;
+	
+	width: 200px;
+	padding: 5px;
+	font-weight: bold;
+	border: 1px solid white;
+	background-color: #101010;
+	text-align: center;
+}
+
+/************************************************************************************************
+  Pie
+************************************************************************************************/
+#indexDivPie {
+	position:relative;
+	margin:0px auto;
+	width:800px;
+	height:30px;
+	background-image:url(/images/estilos/wraith/pie.png);
+	background-repeat:no-repeat;
+}
+
+/************************************************************************************************
+  Pestanas
+************************************************************************************************/
+.morphtabs_title {
+	list-style-image: none;
+	list-style-type: none;
+	margin-top:0px;
+	margin-left: 40px;
+	padding-top: 34px;
+	padding-left: 8px;
+	height: 87px;
+}
+
+.morphtabs_title li {
+	float: left;
+	font-weight: bold;
+	padding: 7px 8px 2px 8px;
+	cursor: pointer;
+	color: white;
+	height: 22px;
+	width: 93px;
+	line-height: 20px;
+	background-image: url(/images/estilos/wraith/tablanivel4.png);
+	text-align:center;
+}
+
+.morphtabs_title li.over {
+	background-image: url(/images/estilos/wraith/tablanivel5.png);
+}
+
+.morphtabs_title li.active {
+	background-image: url(/images/estilos/wraith/tablanivel3.png);
+}
+
+* :first-child+html .morphtabs_panelwrap {
+	margin-left: -20px; /* Hack para IE que valida*/
+}
+
+.morphtabs_panel div {
+
+}
+
+.morpthtabs_panel p {
+	
+}
+
+#pestanasBatalla ul{
+	list-style-image: none;
+	list-style-type: none;
+	margin-top:0px;
+	margin-left: 10px;
+	padding-top: 0px;
+	padding-left: 0px;
+	height: 30px;
+}
+
+/************************************************************************************************
+  Tablas
+************************************************************************************************/
+.tablaCentral {
+	width:550px;
+	margin-left:14px;
+	margin-bottom:15px;
+	border:0px solid black;
+	text-align:center;
+}
+
+.tablaTitulo {
+	height:21px;
+	width:550px;
+	margin-left:14px;
+	margin-top:15px;
+	background-image:url(/images/estilos/wraith/tablatitulo.png);
+	font-weight:bold;
+	padding-top:10px;
+	text-align:center;
+}
+
+.tablaCentral td{
+	background-color: #1E1E1E;
+	padding: 3px;
+}
+
+.tablaCentral th{
+	padding: 5px;
+}
+
+.th1{
+	font-weight: bold;
+	background-image: url(/images/estilos/wraith/tablanivel1.png);
+}
+.th2{
+	font-weight: bold;
+	background-image: url(/images/estilos/wraith/tablanivel2.png);
+}
+
+.tablaSegundoNivel td {
+	background-color:#56284d;
+}
+
+/************************************************************************************************
+  Preloader
+************************************************************************************************/
+#preloader div{
+	position: relative;
+	float: right;
+	width: 200px;
+	height: 18px;
+	background-color: #56284d;
+	border: 1px solid #ffffff;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding-left: 5px;
+	padding-top: 2px;
+	z-index: 50;
+}
+
+.preloaderPlaneta {
+	background: url('/images/estilos/wraith/loaderPlaneta.gif');
+	position: relative;
+	top: 50%;
+	left: 50%;
+	width: 24px;
+	height: 24px;
+	margin-left: -12px;
+	margin-top: -12px;
+}
+
+/************************************************************************************************
+  Reportes
+************************************************************************************************/
+#sbox-overlay {
+	position: absolute;
+	background-color: #000;
+	left: 0px;
+	top: 0px;
+	zoom: 1;
+}
+
+#sbox-window {
+	margin-top:15px;
+	position: absolute;
+	background-color: #101010;
+	text-align: left;
+	overflow: visible;
+	padding: 10px;
+	/* invalid values, but looks smoother! */
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#sbox-btn-close {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	right: -10px;
+	top: -20px;
+	background: url(/images/SqueezeBox/wraith/closebox.png) no-repeat center;
+	border: none;
+}
+
+.sbox-window-ie6 #sbox-btn-close {
+	background-image: url(/images/SqueezeBox/wraith/closebox.gif);
+}
+
+.sbox-loading #sbox-content {
+	background-image: url(/images/SqueezeBox/wraith/spinner.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#sbox-content {
+	clear: both;
+	overflow:hidden;
+	background-color: #101010;
+	height: 100%;
+	width: 100%;
+}
+
+.sbox-content-image#sbox-content {
+	overflow: visible;
+}
+
+#sbox-image {
+	display: block;
+}
+
+.sbox-content-image img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.sbox-content-iframe#sbox-content {
+	overflow: visible;
+}
+
+/* Hides scrollbars */
+.body-overlayed {
+	overflow: hidden;
+}
+/* Hides flash (Firefox problem) and selects (IE) */
+.body-overlayed embed, .body-overlayed object, .body-overlayed select {
+	visibility: hidden;
+}
+#sbox-window embed, #sbox-window object, #sbox-window select {
+	visibility: visible;
+}
+
+/* Shadows */
+.sbox-bg {
+	position: absolute;
+	width: 82px;
+	height: 113px;
+}
+
+.sbox-bg-n {
+	left: 16px;
+	top: -102px;
+	width: 722px;
+	height: 113px;
+	background: url(/images/SqueezeBox/wraith/bg_n.png) no-repeat;
+}
+.sbox-bg-ne {
+	right: -78px;
+	top: -102px;
+	width:95px;
+	height:113px;
+	background: url(/images/SqueezeBox/wraith/bg_ne.png) no-repeat;
+}
+.sbox-bg-e {
+	right: -78px;
+	top: 9px;
+	width:95px;
+	height: 438px;
+	background: url(/images/SqueezeBox/wraith/bg_e.png) no-repeat;
+}
+.sbox-bg-se {
+	right: -78px;
+	bottom: -32px;
+	width: 93px;
+	height: 59px;
+	background: url(/images/SqueezeBox/wraith/bg_se.png) no-repeat;
+}
+.sbox-bg-s {
+	left: 16px;
+	bottom: -32px;
+	width: 724px;
+	height: 59px;
+	background: url(/images/SqueezeBox/wraith/bg_s.png) no-repeat;
+}
+.sbox-bg-sw {
+	left: -66px;
+	bottom: -32px;
+	width: 82px;
+	height: 59px;
+	background: url(/images/SqueezeBox/wraith/bg_sw.png) no-repeat;
+}
+.sbox-bg-w {
+	left: -66px;
+	top: 9px;
+	height: 438px;
+	width: 82px;
+	background: url(/images/SqueezeBox/wraith/bg_w.png) no-repeat;
+}
+.sbox-bg-nw {
+	width:82px;
+	height:113px;
+	left: -66px;
+	top: -102px;
+	background: url(/images/SqueezeBox/wraith/bg_nw.png) no-repeat;
+}
+
+/************************************************************************************************
+  Alertas
+************************************************************************************************/
+#SexyAlertBox-Box {
+  padding-bottom: 24px;
+  background: url('/images/alerta/wraith/bg-box-bottom.png') bottom left no-repeat;
+}
+
+#SexyAlertBox-InBox {
+  padding-top: 24px;
+  background: url('/images/alerta/wraith/bg-box-top.png') top left no-repeat;	
+}
+
+#SexyAlertBox-BoxContent {
+  background: url('/images/alerta/wraith/bg-box-body.png') top left repeat-y;
+  padding: 0px 25px;
+}
+
+#SexyAlertBox-BoxContenedor {
+  padding: 10px 10px 25px 150px;
+  text-align: left;
+  font-family:Verdana;
+  font-size:12px;
+  color:#FFFFFF;
+}
+
+#SexyAlertBox-BoxContenedor h1,#SexyAlertBox-BoxContenedor h2,#SexyAlertBox-BoxContenedor h3,#SexyAlertBox-BoxContenedor b,#SexyAlertBox-BoxContenedor strong{
+  text-align: left;
+  font-family:Verdana;
+  font-size:12px;
+  color:#000;
+  font-weight:bold;
+  margin:0px;
+  padding:0px;
+}
+
+#SexyAlertBox-Buttons{
+  text-align:right;
+}
+
+#SexyAlertBox-Buttons input {
+  margin: 10px 10px;
+}
+
+#SexyAlertBox-BoxContenedor #BoxPromptInput{
+  margin-top:5px;
+}
+
+#SexyAlertBox-Box .BoxAlert {
+  background: url('/images/alerta/wraith/dialog-information.png') top left no-repeat;
+}
+
+#SexyAlertBox-Box .BoxConfirm {
+  background: url('/images/alerta/wraith/dialog-information.png') top left no-repeat;
+}
+
+#SexyAlertBox-Box .BoxPrompt {
+  background: url('/images/alerta/wraith/dialog-information.png') top left no-repeat;
+}
+
+#SexyAlertBox-Box .BoxInfo {
+  background: url('/images/alerta/wraith/dialog-information.png') top left no-repeat;
+}
+
+#SexyAlertBox-Box .BoxError {
+  background: url('/images/alerta/wraith/dialog-information.png') top left no-repeat;
+}
+
+/************************************************************************************************
+  Vacaciones y Bloqueo
+************************************************************************************************/
+#vacacionesMensaje{
+	background: url('/images/notificaciones/wraith.png') top left no-repeat;
+	margin:0px auto;
+	width: 650px;
+	height: 580px;
+}
+
+#vacacionesMensaje div{
+	padding-top:250px;
+	margin:0px auto;
+	width: 275px;
+	height: 100px;
+	color:#FFFFFF;
+	font-size:12px;
+}

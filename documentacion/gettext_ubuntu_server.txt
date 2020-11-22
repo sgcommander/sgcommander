@@ -1,0 +1,12 @@
+I do know you need your locale installed on your system:
+Add your locale to -> /var/lib/locales/supported.d/local
+
+Then run "dpkg-reconfigure locales" to configure the system.
+
+However, even though I've done this, I still can't get gettext strings translated.
+
+Reiniciar o hacer reload del server.
+
+My translations work fine under a Gentoo system, just not any Ubuntu servers. So I know my script works.
+
+Anyways, help would be appreciated.

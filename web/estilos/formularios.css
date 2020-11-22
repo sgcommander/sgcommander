@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+form.formular {
+	margin-left:5%;
+	margin-right:5%;
+}
+
+.formular fieldset {
+	margin-top: 5px;
+	padding : 15px;
+	border:2px solid;	
+}
+
+.formular legend {
+	font-weight:bold;
+}
+
+.formular fieldset label {
+	float: none;
+	text-align: inherit;
+	width: auto;
+}
+
+.formular label span {
+	display : block;
+}
+
+.formular input, .formular select, .formular textarea {
+	margin-bottom: 5px;
+}
+
+.formular .text-input {
+	width: 250px;
+	margin-top: 4px;	
+}
+
+.formular .infos {
+	background: #FFF;
+	color: #333;
+	font-size: 12px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.formular span.checkbox, .formular .checkbox {
+	display: inline;
+}
+
+.formular .submit {
+	padding: 4px;
+	margin-top: 20px;
+	margin:5px auto;
+	cursor: pointer;
+	font-weight:bold;
+}
+
+.formular .botoncampo{
+	margin-left:10px;
+	cursor: pointer;
+	font-weight:bold;
+}
+
+.formular .submit:hover {
+}
+
+.formular hr {
+	clear: both;
+	visibility: hidden;
+}
+
+.formular .fc-error {
+	width: 350px;
+	color: #555;
+	padding: 4px;
+	border: 1px solid #B5B8C8;
+	font-size: 12px;
+	margin-bottom: 15px;
+	background: #FFEAEA;
+}
+
+.formular div{
+	margin:5px auto;
+	text-align:justify;
+}

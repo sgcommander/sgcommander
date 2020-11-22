@@ -1,0 +1,17 @@
+
+
+Instalando:
+
+# gpg --keyserver  hkp://keys.gnupg.net --recv-keys 1C4CBDCDCD2EFD2A
+
+Añadir las siguientes filas a /etc/apt/sources.lst
+	deb http://repo.percona.com/apt lenny main
+	deb-src http://repo.percona.com/apt lenny main
+	
+# apt-get update
+# apt-get install xtrabackup
+
+
+Realizando las copias de seguridad
+
+xtrabackup --backup --target-dir=/ruta/al/path

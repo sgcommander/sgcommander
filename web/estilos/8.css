@@ -1,0 +1,1032 @@
+@charset "UTF-8";
+
+/*********************************************
+  Ori
+*********************************************/
+/************************************************************************************************
+  Enlaces
+************************************************************************************************/
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #000000;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000000;
+	text-decoration: underline;
+}
+
+a:active {
+	color: #000000;
+	text-decoration: none;
+}
+
+/************************************************************************************************
+  Formulario
+************************************************************************************************/
+select {
+	font-size: 11px;
+	color: white;
+	background-color: #778a86;
+	border: 1px solid #FFFFFF;
+}
+
+select:focus {
+	background-color: #5c6a67;
+}
+
+option {
+	background-color: #5c6a67;
+}
+
+
+input, button {
+	cursor: pointer;
+	font-size: 12px;
+	background-color: #778a86;
+	border: 1px solid #FFFFFF;
+	color: white;
+}
+
+input.disabled, input.disabled:hover {
+	cursor: default;
+	font-size: 12px;
+	background-color: #999999;
+	border: 1px solid #333333;
+	color: #666666;
+}
+
+input:hover, button:hover {
+	background-color: #5c6a67;
+}
+
+textarea {
+	font-size: 12px;
+	background-color: #778a86;
+	border: 1px solid #FFFFFF;
+	color: white;
+}
+
+textarea:focus {
+	background-color: #5c6a67;
+}
+
+#indexLstPlanetas {
+	width: 180px;
+}
+
+/************************************************************************************************
+  Contenedores
+************************************************************************************************/
+body {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial,Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-align: center;
+	margin: 0px auto;
+	background-color: #525c58;
+}
+
+#indexDivContenedor {
+	position: relative;
+	width: 800px;
+	min-height: 200px;
+	border: 1px solid black;
+	background-color: #96a2a6;
+	margin: 0px auto;
+	text-align: left;
+}
+
+/************************************************************************************************
+  Recursos
+************************************************************************************************/
+#indexDivRecursoPri {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 239px;
+	height: 27px;
+	background-image: url(/images/estilos/ori/recursopri.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivRecursoPri div.textoRecurso {
+	position: absolute;
+	top: 5px;
+	left: 100px;
+	font-weight: bold;
+	color:#FFFFFF;
+}
+
+#indexDivRecursoSec {
+	position: absolute;
+	top: 0px;
+	left: 239px;
+	width: 195px;
+	height: 27px;
+	background-image: url(/images/estilos/ori/recursosec.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivRecursoSec div.textoRecurso {
+	position: absolute;
+	top: 5px;
+	left: 62px;
+	font-weight: bold;
+	color:#FFFFFF;
+}
+
+#indexDivRecursoEnergia {
+	position: absolute;
+	top: 0px;
+	left: 434px;
+	width: 366px;
+	height: 27px;
+	background-image: url(/images/estilos/ori/recursoenergia.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivRecursoEnergia div.textoRecurso {
+	position: absolute;
+	top: 5px;
+	left: 67px;
+	font-weight: bold;
+	color:#FFFFFF;
+}
+
+/************************************************************************************************
+  Logo
+************************************************************************************************/
+#indexDivLogo {
+	position: absolute;
+	top: 27px;
+	left: 0px;
+	width: 197px;
+	height: 190px;
+	background-repeat: no-repeat;
+}
+
+/************************************************************************************************
+  Planeta
+************************************************************************************************/
+#indexDivPlaneta {
+	position: absolute;
+	top: 217px;
+	left: 0px;
+	width: 231px;
+}
+
+#indexDivPlanetaImagen {
+	padding-left: 64px;
+	padding-top: 27px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 167px;
+	height: 131px;
+	background-image: url(/images/estilos/ori/planetaimagen.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivPlanetaDatos {
+	position: absolute;
+	top: 131px;
+	left: 0px;
+	width: 231px;
+	height: 136px;
+	background-image: url(/images/estilos/ori/planetadatos.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivnombrePlaneta {
+	position: absolute;
+	top: 15px;
+	left: 25px;
+	font-size: 11px;
+	font-weight: bold;
+	color: white;
+}
+
+#indexDivcoordenadas {
+	position: absolute;
+	top: 32px;
+	left: 25px;
+}
+
+#indexDivBotonesPlaneta {
+	position: absolute;
+	top: 62px;
+	left: -3px;
+	width: 239px;
+	text-align: center;
+}
+
+#indexDivBotonesPlaneta input{
+	background-color: #613a1d;
+}
+
+#indexDivBotonesPlaneta input:hover{
+	background-color: #502b0b;
+}
+
+#indexDivLogoPlanetaResto {
+	position: absolute;
+	padding-top:20px;
+	top: 441px;
+	left: 0px;
+	width: 231px;
+	height: 214px;
+	background-image: url(/images/estilos/ori/planetaresto.png);
+	background-repeat: no-repeat;
+}
+
+#indexLblPlanetasLista {
+	position: absolute;
+	top: 20px;
+	left: 24px;
+	width: 180px;
+	text-align: center;
+}
+
+#indexLblPlanetasLista select{
+	background-color: #613a1d;
+}
+
+#indexLblPlanetasLista select:focus{
+	background-color: #502b0b;
+}
+
+
+#layer {
+	position: absolute;
+	height: 18px;
+	top: 0px;
+	left: 0px;
+	width: 180px;
+}
+
+#divlistaplanetas {
+	background: #613a1d;
+	border: 1px solid #FFFFFF;
+	left: 0px;
+	top: 18px;
+	overflow: auto;
+	position: absolute;
+	width: 235px;
+	margin-left: 2px;
+	margin-top: -1px;
+	display: none;
+	z-index: 10;
+	cursor:pointer;
+}
+
+#divlistaplanetas div {
+	display: block;
+	text-align: left;
+	width: 235px;
+	height: 54px;
+}
+
+#divlistaplanetas div:hover {
+	background-color: #502b0b;
+}
+
+#divlistaplanetas img {
+	float: left;
+	margin: 3px;
+	width: 48px;
+	height: 48px;
+}
+
+#divlistaplanetas span {
+	float: left;
+	margin-top: 17px;
+}
+
+#indexDivConstruccion {
+	position: absolute;
+	top: 45px;
+	left: 15px;
+	width: 224px;
+}
+
+#indexLblNoCons {
+	position: absolute;
+	top: 50px;
+	left: 0px;
+	width: 180px;
+	padding: 5px;
+	font-weight: bold;
+	border: 1px solid white;
+	background-color: #502b0b;
+	text-align: center;
+}
+
+#indexDivConsTropas {
+	padding-left: 0px;
+	float: left;
+}
+
+#indexDivConsNaves {
+	padding-left: 2px;
+	float: left;
+}
+
+#indexDivConsDefensas {
+	padding-top:3px;
+	position:relative;
+	padding-left: 45px;
+	clear:both;
+	z-index:1;
+}
+
+#especialesLblNoEsp {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:5px;
+	margin-bottom:5px;
+	
+	width: 200px;
+	padding: 5px;
+	font-weight: bold;
+	border: 1px solid white;
+	background-color: #5c6a67;
+	text-align: center;
+}
+
+.percentage{
+	height: 7px;
+	background-color: #282a32;
+}
+
+.box{
+	border: 1px white solid;
+	height: 7px;
+	width: 78px;
+	background-color: white;
+}
+
+/************************************************************************************************
+  Botones
+************************************************************************************************/
+#indexDivBotonera {
+	position: absolute;
+	top: 27px;
+	left: 197px;
+	width: 603px;
+	height: 100px;
+	background-image: url(/images/estilos/ori/botonera.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivBotonera a {
+	color:#000000;
+}
+
+#indexDivBoton1 {
+	position: absolute;
+	text-align:center;
+	width:65px;
+	top: 28px;
+	left: 39px;
+	font-weight: bold;
+}
+
+#indexDivBoton1 a{
+	color:#FFFFFF;
+}
+
+#indexDivBoton2 {
+	position: absolute;
+	text-align:center;
+	width:65px;
+	top: 65px;
+	left: 17px;
+	font-weight: bold;
+}
+
+#indexDivBoton2 a{
+	color:#FFFFFF;
+}
+
+#indexDivBoton3 {
+	position: absolute;
+	text-align:center;
+	width:65px;
+	top: 7px;
+	left: 118px;
+	font-weight: bold;
+}
+
+#indexDivBoton4 {
+	position: absolute;
+	text-align:center;
+	width:65px;
+	top: 65px;
+	left: 290px;
+	font-weight: bold;
+}
+
+#indexDivBoton4 a{
+	color:#FFFFFF;
+}
+
+#indexDivBoton5 {
+	position: absolute;
+	text-align:center;
+	width:65px;
+	top: 7px;
+	left: 195px;
+	font-weight: bold;
+}
+
+#indexDivBoton6 {
+	position: absolute;
+	text-align:center;
+	width:65px;
+	top: 22px;
+	left: 195px;
+	font-weight: bold;
+}
+
+#indexDivBoton7 {
+	position: absolute;
+	text-align:center;
+	width:65px;
+	top: 36px;
+	left: 195px;
+	font-weight: bold;
+}
+
+#indexDivBoton8 {
+	position: absolute;
+	text-align:center;
+	width:65px;
+	top: 50px;
+	left: 195px;
+	font-weight: bold;
+}
+
+#indexDivBoton9 {
+	position: absolute;
+	text-align:center;
+	width:65px;
+	top: 64px;
+	left: 195px;
+	font-weight: bold;
+}
+
+#indexDivBoton10 {
+	position: absolute;
+	text-align:center;
+	width:65px;
+	top: 20px;
+	left: 271px;
+	font-weight: bold;
+}
+
+#indexDivBoton10 a{
+	color:#FFFFFF;
+}
+
+#indexDivBoton11 {
+	position: absolute;
+	text-align:center;
+	width:65px;
+	top: 22px;
+	left: 118px;
+	font-weight: bold;
+}
+
+#indexDivBoton12 {
+	position: absolute;
+	text-align:center;
+	width:65px;
+	top: 36px;
+	left: 118px;
+	font-weight: bold;
+}
+
+#indexDivBoton13 {
+	position: absolute;
+	text-align:center;
+	width:65px;
+	top: 50px;
+	left: 118px;
+	font-weight: bold;
+}
+
+#indexDivBoton14 {
+	position: absolute;
+	text-align:center;
+	width:65px;
+	top: 65px;
+	left: 118px;
+	font-weight: bold;
+}
+
+#indexDivBoton15 {
+	position: absolute;
+	top: 0px;
+	left: 493px;
+	font-weight: bold;
+	z-index: 0;
+}
+
+#indexDivBoton15 #indexImgSalir {
+	border: 0px;
+}
+
+/************************************************************************************************
+  Centro
+************************************************************************************************/
+#indexDivCentro {
+	margin-left: 188px;
+	padding-top: 127px;
+	width: 603px;
+	height: auto !important; /* para los browsers buenos */
+	height: 515px; /* para IE5+ */
+	min-height: 515px; /* para los browsers buenos */
+}
+
+#titulo {
+	width: 603px;
+	height: 90px;
+	background-image: url(/images/estilos/ori/titulo.png);
+	background-repeat: no-repeat;
+	margin-left:9px;
+}
+
+#pestanas {
+	width: 603px;
+	height: 90px;
+	margin-left:9px;
+	background-image: url(/images/estilos/ori/pestanas.png);
+	background-repeat: no-repeat;
+}
+
+#contenido {
+	width: 567px;
+	background-repeat: no-repeat;
+	margin-top: -17px;
+	margin-left: 45px;
+	z-index: 20;
+}
+
+.mensaje {
+	text-align: center;
+}
+
+.mensajes {
+	background-color: #646464;
+	border: 2px solid black;
+	border-top:  solid black;
+}
+
+#mensajesDivCabecera{
+	height: 25px;
+	background-color:black;
+	cursor: move;
+}
+
+#mensajesDivContenido {
+	margin-left: -7px;
+}
+
+#mensajesDivContenido a{
+	color:#FFFFFF;
+}
+
+#mensajesDivAviso {
+	position: relative;
+	float: left;
+	padding-left:15px;
+	padding-right:15px;
+	padding-top:3px;
+	padding-bottom:3px;
+	background-color: #502b0b;
+	border: 1px solid #ffffff;
+	color: #ffffff;
+	font-size: 11px;
+	font-weight: bold;
+	z-index: 50;
+	display:none;
+}
+
+#mensajesDivAviso a{
+	color:#FFFFFF;
+}
+
+.comercios {
+	background-color: #96A2A6;
+	border: 2px solid black;
+	border-top:  solid black;
+}
+
+#comerciosDivCabecera{
+	height: 25px;
+	background-color:black;
+	cursor: move;
+}
+
+.especiales {
+	background-color: #646464;
+	border: 2px solid black;
+}
+
+.lblNoHay {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:5px;
+	margin-bottom:5px;
+	
+	width: 200px;
+	padding: 5px;
+	font-weight: bold;
+	border: 1px solid white;
+	background-color: #5c6a67;
+	text-align: center;
+}
+
+/************************************************************************************************
+  Pie
+************************************************************************************************/
+#indexDivPie {
+	position: relative;
+	margin: 0px auto;
+	width: 800px;
+	height: 29px;
+	background-image: url(/images/estilos/ori/pie.png);
+	background-repeat: no-repeat;
+}
+
+/************************************************************************************************
+  Pestañas
+************************************************************************************************/
+.morphtabs_title {
+	list-style-image: none;
+	list-style-type: none;
+	margin-top:0px;
+	margin-left: 30px;
+	padding-top: 45px;
+	padding-left: 0px;
+	height: 45px;
+}
+
+.morphtabs_title li {
+	float: left;
+	font-weight: bold;
+	padding: 7px 8px 2px 8px;
+	cursor: pointer;
+	color: white;
+	height: 22px;
+	width: 93px;
+	line-height: 20px;
+	background-image: url(/images/estilos/ori/tablanivel4.png);
+	text-align:center;
+}
+
+.morphtabs_title li.over {
+	background-image: url(/images/estilos/ori/tablanivel5.png);
+}
+
+.morphtabs_title li.active {
+	background-image: url(/images/estilos/ori/tablanivel3.png);
+	color:#000000;
+}
+
+* :first-child+html .morphtabs_panelwrap {
+	margin-left: -20px; /* Hack para IE que valida*/
+}
+
+.morphtabs_panel div {
+
+}
+
+.morpthtabs_panel p {
+	
+}
+
+#pestanasBatalla ul{
+	list-style-image: none;
+	list-style-type: none;
+	margin-top:0px;
+	margin-left: 10px;
+	padding-top: 0px;
+	padding-left: 0px;
+	height: 30px;
+}
+
+/************************************************************************************************
+  Tablas
+************************************************************************************************/
+.tablaCentral {
+	width: 550px;
+	margin-left: 7px;
+	margin-bottom: 10px;
+	border: 0px solid black;
+	text-align:center;
+}
+
+.tablaTitulo {
+	height: 25px;
+	width: 550px;
+	margin-left: 7px;
+	margin-top: 10px;
+	background-image: url(/images/estilos/ori/tablatitulo.png);
+	font-weight: bold;
+	padding-top: 6px;
+	text-align: center;
+	color:#000000;
+}
+
+.tablaCentral td {
+	background-color: #646464;
+	padding: 3px;
+}
+
+.tablaCentral th {
+	padding: 5px;
+	color:#000000;
+}
+
+.th1 {
+	font-weight: bold;
+	background-image: url(/images/estilos/ori/tablanivel1.png);
+}
+
+.th2 {
+	font-weight: bold;
+	background-image: url(/images/estilos/ori/tablanivel2.png);
+}
+
+.tablaSegundoNivel td {
+	background-color:#778a86;
+}
+
+/************************************************************************************************
+  Preloader
+************************************************************************************************/
+#preloader div{
+	position: relative;
+	float: right;
+	width: 200px;
+	height: 18px;
+	background-color: #502b0b;
+	border: 1px solid #ffffff;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding-left: 5px;
+	padding-top: 2px;
+	z-index: 50;
+}
+
+.preloaderPlaneta {
+	background: url('/images/estilos/ori/loaderPlaneta.gif');
+	position: relative;
+	top: 35%;
+	left: 50%;
+	width: 24px;
+	height: 24px;
+	margin-left: -12px;
+	margin-top: -12px;
+}
+
+/************************************************************************************************
+  Reportes
+************************************************************************************************/
+#sbox-overlay {
+	position: absolute;
+	background-color: #000;
+	left: 0px;
+	top: 0px;
+	zoom: 1;
+}
+
+#sbox-window {
+	margin-top:15px;
+	position: absolute;
+	background-color: #96A2A6;
+	text-align: left;
+	overflow: visible;
+	padding: 10px;
+	/* invalid values, but looks smoother! */
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#sbox-btn-close {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	/*right: -20px;*/
+	right:0px;
+	top: 10px;
+	background: url(/images/SqueezeBox/ori/closebox.png) no-repeat center;
+	border: none;
+}
+
+.sbox-window-ie6 #sbox-btn-close {
+	background-image: url(/images/SqueezeBox/ori/closebox.gif);
+}
+
+.sbox-loading #sbox-content {
+	background-image: url(/images/SqueezeBox/ori/spinner.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#sbox-content {
+	clear: both;
+	overflow:hidden;
+	background-color: #96A2A6;
+	height: 100%;
+	width: 100%;
+}
+
+.sbox-content-image#sbox-content {
+	overflow: visible;
+}
+
+#sbox-image {
+	display: block;
+}
+
+.sbox-content-image img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.sbox-content-iframe#sbox-content {
+	overflow: visible;
+}
+
+/* Hides scrollbars */
+.body-overlayed {
+	overflow: hidden;
+}
+/* Hides flash (Firefox problem) and selects (IE) */
+.body-overlayed embed, .body-overlayed object, .body-overlayed select {
+	visibility: hidden;
+}
+#sbox-window embed, #sbox-window object, #sbox-window select {
+	visibility: visible;
+}
+
+/* Shadows */
+.sbox-bg {
+	position: absolute;
+	width: 82px;
+	height: 103px;
+}
+
+.sbox-bg-n {
+	left: 10px;
+	top: -93px;
+	width: 724px;
+	height: 103px;
+	background: url(/images/SqueezeBox/ori/bg_n.png) no-repeat;
+}
+.sbox-bg-ne {
+	right: -72px;
+	top: -93px;
+	width:94px;
+	height:103px;
+	background: url(/images/SqueezeBox/ori/bg_ne.png) no-repeat;
+}
+.sbox-bg-e {
+	right: -72px;
+	top: 10px;
+	width:94px;
+	height: 442px;
+	background: url(/images/SqueezeBox/ori/bg_e.png) no-repeat;
+}
+.sbox-bg-se {
+	right: -72px;
+	bottom: -34px;
+	width: 94px;
+	height: 52px;
+	background: url(/images/SqueezeBox/ori/bg_se.png) no-repeat;
+}
+.sbox-bg-s {
+	left: 10px;
+	bottom: -34px;
+	width: 724px;
+	height: 52px;
+	background: url(/images/SqueezeBox/ori/bg_s.png) no-repeat;
+}
+.sbox-bg-sw {
+	left: -72px;
+	bottom: -34px;
+	width: 82px;
+	height: 52px;
+	background: url(/images/SqueezeBox/ori/bg_sw.png) no-repeat;
+}
+.sbox-bg-w {
+	left: -72px;
+	top: 10px;
+	height: 442px;
+	width: 82px;
+	background: url(/images/SqueezeBox/ori/bg_w.png) no-repeat;
+}
+.sbox-bg-nw {
+	width:82px;
+	height:103px;
+	left: -72px;
+	top: -93px;
+	background: url(/images/SqueezeBox/ori/bg_nw.png) no-repeat;
+}
+
+/************************************************************************************************
+  Alertas
+************************************************************************************************/
+#SexyAlertBox-Box {
+  padding-bottom: 24px;
+  background: url('/images/alerta/ori/bg-box-bottom.png') bottom left no-repeat;
+}
+
+#SexyAlertBox-InBox {
+  padding-top: 24px;
+  background: url('/images/alerta/ori/bg-box-top.png') top left no-repeat;	
+}
+
+#SexyAlertBox-BoxContent {
+  background: url('/images/alerta/ori/bg-box-body.png') top left repeat-y;
+  padding: 0px 20px;
+}
+
+#SexyAlertBox-BoxContenedor {
+  padding: 10px 10px 25px 150px;
+  text-align: left;
+  font-family:Verdana;
+  font-size:12px;
+  color:#000;
+}
+
+#SexyAlertBox-BoxContenedor h1,#SexyAlertBox-BoxContenedor h2,#SexyAlertBox-BoxContenedor h3,#SexyAlertBox-BoxContenedor b,#SexyAlertBox-BoxContenedor strong{
+  text-align: left;
+  font-family:Verdana;
+  font-size:12px;
+  color:#000;
+  font-weight:bold;
+  margin:0px;
+  padding:0px;
+}
+
+#SexyAlertBox-Buttons{
+  text-align:right;
+}
+
+#SexyAlertBox-Buttons input {
+  margin: 10px 10px;
+}
+
+#SexyAlertBox-BoxContenedor #BoxPromptInput{
+  margin-top:5px;
+}
+
+#SexyAlertBox-Box .BoxAlert {
+  background: url('/images/alerta/ori/dialog-information.png') top left no-repeat;
+}
+
+#SexyAlertBox-Box .BoxConfirm {
+  background: url('/images/alerta/ori/dialog-information.png') top left no-repeat;
+}
+
+#SexyAlertBox-Box .BoxPrompt {
+  background: url('/images/alerta/ori/dialog-information.png') top left no-repeat;
+}
+
+#SexyAlertBox-Box .BoxInfo {
+  background: url('/images/alerta/ori/dialog-information.png') top left no-repeat;
+}
+
+#SexyAlertBox-Box .BoxError {
+  background: url('/images/alerta/ori/dialog-information.png') top left no-repeat;
+}
+
+/************************************************************************************************
+  Vacaciones y Bloqueo
+************************************************************************************************/
+#vacacionesMensaje{
+	background: url('/images/notificaciones/ori.png') top left no-repeat;
+	margin:20px auto;
+	width: 650px;
+	height: 580px;
+}
+
+#vacacionesMensaje div{
+	padding-top:200px;
+	margin:0px 132px;
+	width: 270px;
+	height: 100px;
+	color:#000000;
+	font-size:12px;
+}

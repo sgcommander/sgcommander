@@ -1,0 +1,56 @@
+body {
+	text-align:center;
+	background-color:black;
+}
+
+#container{
+	width:699px;
+	height: 500px;
+	margin:0 auto 0 auto;
+	text-align:left;
+	background-image: url('bg.jpg');
+}
+
+#mensaje{
+	font-family:Arial, Helvetica, sans-serif;
+	color:white;
+	width:340px;
+	height:172px;
+	position:relative;
+	top:125px;
+	left:151px;
+	text-align:justify;
+	padding:70px 20px 20px 20px;
+}
+
+#menu{
+	width:699px;
+	height:30px;
+	position:relative;
+	top:240px;
+	left:110px;
+}
+
+#menu ul{
+	list-style:none;
+	padding:0px;
+	margin:0px;
+}
+
+#menu ul li{
+	float:left;
+	width:150px;
+	color:white;
+}
+
+#menu ul li a{
+	color:white;
+	text-decoration:none;
+}
+
+
+span{
+	color:#C0C0C0;
+	font-weight:bolder;
+	text-decoration:underline;
+}

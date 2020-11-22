@@ -1,0 +1,1 @@
+<span class='info'>{MENSAJE}</span>

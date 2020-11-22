@@ -1,0 +1,706 @@
+@charset "UTF-8";
+
+/*********************************************
+  Replicantes
+*********************************************/
+/************************************************************************************************
+  Enlaces
+************************************************************************************************/
+a:link {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+a:active {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+/************************************************************************************************
+  Formulario
+************************************************************************************************/
+select {
+	font-size: 11px;
+	color: white;
+	background-color: #32374e;
+	border: 1px solid #FFFFFF;
+}
+
+select:focus {
+	background-color: #545c83;
+}
+
+input, button {
+	cursor: pointer;
+	font-size: 12px;
+	background-color: #32374e;
+	border: 1px solid #FFFFFF;
+	color: white;
+}
+
+input.disabled, input.disabled:hover {
+	cursor: default;
+	font-size: 12px;
+	background-color: #999999;
+	border: 1px solid #333333;
+	color: #666666;
+}
+
+input:hover, button:hover {
+	background-color: #545c83;
+}
+
+textarea {
+	font-size: 12px;
+	background-color: #32374e;
+	border: 1px solid #FFFFFF;
+	color: white;
+}
+
+textarea:focus {
+	background-color: #545c83;
+}
+
+#indexLstPlanetas {
+	width: 180px;
+}
+
+/************************************************************************************************
+  Contenedores
+************************************************************************************************/
+body {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial,Helvetica, sans-serif;
+	font-size: 11px;
+	color: white;
+	text-align: center;
+	margin: 0px auto;
+	background-color: #333333;
+}
+
+#indexDivContenedor {
+	position: relative;
+	width: 800px;
+	min-height: 200px;
+	border: 1px solid black;
+	background-color: #45464a;
+	margin: 0px auto;
+	text-align: left;
+}
+
+/************************************************************************************************
+  Recursos
+************************************************************************************************/
+#indexDivRecursoPri {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 238px;
+	height: 27px;
+	background-image: url(/images/estilos/replicantes/recursopri.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivRecursoPri div.textoRecurso {
+	position: absolute;
+	top: 5px;
+	left: 95px;
+	font-weight: bold;
+}
+
+#indexDivRecursoSec {
+	position: absolute;
+	top: 0px;
+	left: 238px;
+	width: 201px;
+	height: 27px;
+	background-image: url(/images/estilos/replicantes/recursosec.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivRecursoSec div.textoRecurso {
+	position: absolute;
+	top: 5px;
+	left: 57px;
+	font-weight: bold;
+}
+
+#indexDivRecursoEnergia {
+	position: absolute;
+	top: 0px;
+	left: 439px;
+	width: 361px;
+	height: 27px;
+	background-image: url(/images/estilos/replicantes/recursoenergia.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivRecursoEnergia div.textoRecurso {
+	position: absolute;
+	top: 5px;
+	left: 58px;
+	font-weight: bold;
+}
+
+/************************************************************************************************
+  Logo
+************************************************************************************************/
+#indexDivLogo {
+	position: absolute;
+	top: 27px;
+	left: 0px;
+	width: 210px;
+	height: 208px;
+	background-repeat: no-repeat;
+}
+
+/************************************************************************************************
+  Planeta
+************************************************************************************************/
+#indexDivPlaneta {
+	position: absolute;
+	top: 235px;
+	left: 0px;
+	width: 251px;
+	height: 98px;
+}
+
+#indexDivPlanetaImagen {
+	padding-left: 103px;
+	padding-top: 13px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 148px;
+	height: 115px;
+	background-image: url(/images/estilos/replicantes/planetaimagen.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivPlanetaDatos {
+	position: absolute;
+	top: 128px;
+	left: 0px;
+	width: 251px;
+	height: 136px;
+	background-image: url(/images/estilos/replicantes/planetadatos.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivnombrePlaneta {
+	position: absolute;
+	top: 13px;
+	left: 34px;
+	font-size: 11px;
+	font-weight: bold;
+	color: white;
+}
+
+#indexDivcoordenadas {
+	position: absolute;
+	top: 30px;
+	left: 34px;
+}
+
+#indexDivBotonesPlaneta {
+	position: absolute;
+	top: 60px;
+	left: 12px;
+	width: 239px;
+	text-align: center;
+}
+
+#indexDivLogoPlanetaResto {
+	position: absolute;
+	top: 499px;
+	left: 0px;
+	width: 251px;
+	height: 111px;
+	background-image: url(/images/estilos/replicantes/planetaresto.png);
+	background-repeat: no-repeat;
+}
+
+#indexLblPlanetasLista {
+	position: absolute;
+	top: -20px;
+	left: 34px;
+	width: 180px;
+	text-align: center;
+}
+
+#layer {
+	position: absolute;
+	height: 18px;
+	top: 0px;
+	left: 0px;
+	width: 240px;
+}
+
+#divlistaplanetas {
+	background: #545c83;
+	border: 1px solid #FFFFFF;
+	left: 0px;
+	top: 18px;
+	overflow: auto;
+	position: absolute;
+	width: 235px;
+	margin-left: 2px;
+	margin-top: -1px;
+	display: none;
+	z-index: 10;
+	cursor:pointer;
+}
+
+#divlistaplanetas div {
+	display: block;
+	text-align: left;
+	width: 235px;
+	height: 54px;
+}
+
+#divlistaplanetas div:hover {
+	background-color: #32374e;
+}
+
+#divlistaplanetas img {
+	float: left;
+	margin: 3px;
+	width: 48px;
+	height: 48px;
+}
+
+#divlistaplanetas span {
+	float: left;
+	margin-top: 17px;
+}
+
+#indexDivConstruccion {
+	position: absolute;
+	top: 0px;
+	left: 30px;
+	width: 247px;
+}
+
+#indexLblNoCons {
+	position: absolute;
+	top: 20px;
+	left: 0px;
+	width: 180px;
+	padding: 5px;
+	font-weight: bold;
+	border: 1px solid white;
+	background-color: #32374e;
+	text-align: center;
+}
+
+#indexDivConsTropas {
+	padding-left: 0px;
+	float: left;
+}
+
+#indexDivConsNaves {
+	padding-left: 2px;
+	float: left;
+}
+
+#indexDivConsDefensas {
+	padding-left: 2px;
+	float: left;
+}
+
+#especialesLblNoEsp {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:5px;
+	margin-bottom:5px;
+	
+	width: 200px;
+	padding: 5px;
+	font-weight: bold;
+	border: 1px solid white;
+	background-color: #32374e;
+	text-align: center;
+}
+
+.percentage{
+	height: 7px;
+	background-color: #282a32;
+}
+
+.box{
+	border: 1px white solid;
+	height: 7px;
+	width: 78px;
+	background-color: white;
+}
+
+/************************************************************************************************
+  Botones
+************************************************************************************************/
+#indexDivBotonera {
+	position: absolute;
+	top: 27px;
+	left: 210px;
+	width: 463px;
+	height: 124px;
+	background-image: url(/images/estilos/replicantes/botonera.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivBoton1 {
+	position: absolute;
+	top: 18px;
+	left: 10px;
+	font-weight: bold;
+}
+
+#indexDivBoton2 {
+	position: absolute;
+	top: 318px;
+	left: -91px;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+#indexDivBoton3 {
+	position: absolute;
+	top: 22px;
+	left: 77px;
+	font-weight: bold;
+}
+
+#indexDivBoton4 {
+	position: absolute;
+	top: -17px;
+	left: 511px;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+#indexDivBoton5 {
+	position: absolute;
+	top: 22px;
+	left: 331px;
+	font-weight: bold;
+}
+
+#indexDivBoton6 {
+	position: absolute;
+	top: 29px;
+	left: 255px;
+	font-weight: bold;
+}
+
+#indexDivBoton7 {
+	position: absolute;
+	top: 16px;
+	left: 402px;
+	font-weight: bold;
+}
+
+#indexDivBoton8 {
+	position: absolute;
+	top: 94px;
+	left: 0px;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+#indexDivBoton9 {
+	position: absolute;
+	top: 29px;
+	left: 158px;
+	font-weight: bold;
+}
+
+#indexDivBoton10 {
+	position: absolute;
+	top: 86px;
+	left: 334px;
+	font-weight: bold;
+}
+
+#indexDivBoton11 {
+	position: absolute;
+	top: 77px;
+	left: 249px;
+	font-weight: bold;
+}
+
+#indexDivBoton12 {
+	position: absolute;
+	top: 94px;
+	left: 398px;
+	font-weight: bold;
+}
+
+#indexDivBoton13 {
+	position: absolute;
+	top: 76px;
+	left: 158px;
+	font-weight: bold;
+}
+
+#indexDivBoton14 {
+	position: absolute;
+	top: 86px;
+	left: 76px;
+	font-weight: bold;
+}
+
+#indexDivBoton15 {
+	position: absolute;
+	top: 0px;
+	left: 463px;
+	font-weight: bold;
+	z-index: 0;
+}
+
+#indexDivBoton15 #indexImgSalir {
+	border: 0px;
+}
+
+/************************************************************************************************
+  Centro
+************************************************************************************************/
+#indexDivCentro {
+	margin-left: 210px;
+	padding-top: 151px;
+	width: 603px;
+	height: auto !important; /* para los browsers buenos */
+	height: 469px; /* para IE5+ */
+	min-height: 469px; /* para los browsers buenos */
+}
+
+#titulo {
+	width: 603px;
+	height: 84px;
+	background-image: url(/images/estilos/replicantes/titulo.png);
+	background-repeat: no-repeat;
+}
+
+#pestanas {
+	width: 603px;
+	height: 84px;
+	background-image: url(/images/estilos/replicantes/pestanas.png);
+	background-repeat: no-repeat;
+}
+
+#contenido {
+	width: 567px;
+	background-repeat: no-repeat;
+	margin-top: 0px;
+	margin-left: 22px;
+	z-index: 20;
+}
+
+.mensaje {
+	text-align: center;
+}
+
+.mensajes {
+	background-color: #282a32;
+	border: 2px solid black;
+	border-top:  solid black;
+}
+
+#mensajesDivCabecera{
+	height: 25px;
+	background-color:black;
+	cursor: move;
+}
+
+#mensajesDivContenido {
+	margin-left: -7px;
+}
+
+#mensajesDivAviso {
+	position: relative;
+	float: left;
+	padding-left:15px;
+	padding-right:15px;
+	padding-top:3px;
+	padding-bottom:3px;
+	background-color: #32374e;
+	border: 1px solid #ffffff;
+	color: #FFFFFF;
+	font-size: 11px;
+	font-weight: bold;
+	z-index: 50;
+	display:none;
+}
+
+.comercios {
+	background-color: #282a32;
+	border: 2px solid black;
+	border-top:  solid black;
+}
+
+#comerciosDivCabecera{
+	height: 25px;
+	background-color:black;
+	cursor: move;
+}
+
+.especiales {
+	background-color: #282a32;
+	border: 2px solid black;
+}
+
+.lblNoHay {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:5px;
+	margin-bottom:5px;
+	
+	width: 200px;
+	padding: 5px;
+	font-weight: bold;
+	border: 1px solid white;
+	background-color: #32374e;
+	text-align: center;
+}
+
+/************************************************************************************************
+  Pie
+************************************************************************************************/
+#indexDivPie {
+	position: relative;
+	margin: 0px auto;
+	width: 800px;
+	height: 25px;
+	background-image: url(/images/estilos/replicantes/pie.png);
+	background-repeat: no-repeat;
+}
+
+/************************************************************************************************
+  Pestañas
+************************************************************************************************/
+.morphtabs_title {
+	list-style-image: none;
+	list-style-type: none;
+	margin-top:0px;
+	margin-left: 30px;
+	padding-top: 45px;
+	padding-left: 0px;
+	height: 36px;
+}
+
+.morphtabs_title li {
+	float: left;
+	font-weight: bold;
+	padding: 7px 8px 2px 8px;
+	margin-right: 2px;
+	cursor: pointer;
+	color: white;
+	height: 22px;
+	width: 93px;
+	line-height: 20px;
+	background-image: url(/images/estilos/replicantes/tablanivel4.png);
+	text-align:center;
+}
+
+.morphtabs_title li.over {
+	background-image: url(/images/estilos/replicantes/tablanivel5.png);
+}
+
+.morphtabs_title li.active {
+	background-image: url(/images/estilos/replicantes/tablanivel3.png);
+}
+
+* :first-child+html .morphtabs_panelwrap {
+	margin-left: -20px; /* Hack para IE que valida*/
+}
+
+.morphtabs_panel div {
+
+}
+
+.morpthtabs_panel p {
+	
+}
+
+/************************************************************************************************
+  Tablas
+************************************************************************************************/
+.tablaCentral {
+	width: 550px;
+	margin-left: 7px;
+	margin-bottom: 10px;
+	border: 0px solid black;
+	text-align:center;
+}
+
+.tablaTitulo {
+	height: 25px;
+	width: 550px;
+	margin-left: 7px;
+	margin-top: 10px;
+	background-image: url(/images/estilos/replicantes/tablatitulo.png);
+	font-weight: bold;
+	padding-top: 6px;
+	text-align: center;
+}
+
+.tablaCentral td {
+	background-color: #282a32;
+	padding: 3px;
+}
+
+.tablaCentral th {
+	padding: 5px;
+}
+
+.th1 {
+	font-weight: bold;
+	background-image: url(/images/estilos/replicantes/tablanivel1.png);
+	
+}
+
+.th2 {
+	font-weight: bold;
+	background-image: url(/images/estilos/replicantes/tablanivel2.png);
+}
+
+.tablaSegundoNivel td {
+	background-color:#32374e;
+}
+
+/************************************************************************************************
+  Preloader
+************************************************************************************************/
+#preloader {
+	position: relative;
+	float: right;
+	width: 200px;
+	height: 18px;
+	background-color: #282a32;
+	border: 1px solid #ffffff;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding-left: 5px;
+	padding-top: 2px;
+	z-index: 50;
+	display: none;
+}
+
+.preloaderPlaneta {
+	background: url('/images/estilos/replicantes/loaderPlaneta.gif');
+	position: relative;
+	top: 35%;
+	left: 50%;
+	width: 24px;
+	height: 24px;
+	margin-left: -12px;
+	margin-top: -12px;
+}

@@ -1,0 +1,1 @@
+<span id="indexLblNoCons">{_NOCONSTRUCCIONES}</span>

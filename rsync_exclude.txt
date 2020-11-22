@@ -1,0 +1,22 @@
+# Project files
+/documentacion/admin
+/documentacion/cron
+/documentacion/generarDocumentacion
+/documentacion/Scripts
+/documentacion/uml
+/documentacion/gettext_ubuntu_server.txt
+/documentacion/ideas.txt
+/documentacion/js.txt
+/documentacion/session.txt
+
+# SCM files
+.arch-params
+.bzr
+_darcs
+.git
+.hg
+.monotone
+.svn
+CVS
+Thumbs.db
+.DS_Store

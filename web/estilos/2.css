@@ -1,0 +1,1017 @@
+@charset "UTF-8";
+
+/*********************************************
+  Goaulds
+*********************************************/
+/************************************************************************************************
+  Enlaces
+************************************************************************************************/
+a:link {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+a:active {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+/************************************************************************************************
+  Formulario
+************************************************************************************************/
+select {
+	font-size: 11px;
+	color: white;
+	background-color: #530b04;
+	border: 1px solid #FFFFFF;
+}
+
+option {
+	background-color: #530b04;
+}
+
+select:focus {
+	background-color: #811107;
+}
+
+input, button {
+	cursor: pointer;
+	font-size: 12px;
+	background-color: #530b04;
+	border: 1px solid #FFFFFF;
+	color: white;
+}
+
+input.disabled, input.disabled:hover {
+	cursor: default;
+	font-size: 12px;
+	background-color: #999999;
+	border: 1px solid #333333;
+	color: #666666;
+}
+
+input:hover, button:hover {
+	background-color: #811107;
+}
+
+textarea {
+	font-size: 12px;
+	background-color: #530b04;
+	border: 1px solid #FFFFFF;
+	color: white;
+}
+
+textarea:focus {
+	background-color: #811107;
+}
+
+#indexLstPlanetas {
+	width: 180px;
+}
+
+/************************************************************************************************
+  Contenedores
+************************************************************************************************/
+body {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial,Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-align: center;
+	margin: 0px auto;
+	background-color: #530b04;
+}
+
+#indexDivContenedor {
+	position: relative;
+	width: 800px;
+	min-height: 200px;
+	border: 1px solid black;
+	background-color: #b1651f;
+	margin: 0px auto;
+	text-align: left;
+}
+
+/************************************************************************************************
+  Recursos
+************************************************************************************************/
+#indexDivRecursoPri {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 242px;
+	height: 27px;
+	background-image: url(/images/estilos/goauld/recursopri.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivRecursoPri div.textoRecurso {
+	position: absolute;
+	top: 3px;
+	left: 110px;
+	font-weight: bold;
+	color:#FFFFFF;
+}
+
+#indexDivRecursoSec {
+	position: absolute;
+	top: 0px;
+	left: 242px;
+	width: 197px;
+	height: 27px;
+	background-image: url(/images/estilos/goauld/recursosec.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivRecursoSec div.textoRecurso {
+	position: absolute;
+	top: 3px;
+	left: 65px;
+	font-weight: bold;
+	color:#FFFFFF;
+}
+
+#indexDivRecursoEnergia {
+	position: absolute;
+	top: 0px;
+	left: 439px;
+	width: 361px;
+	height: 27px;
+	background-image: url(/images/estilos/goauld/recursoenergia.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivRecursoEnergia div.textoRecurso {
+	position: absolute;
+	top: 3px;
+	left: 70px;
+	font-weight: bold;
+	color:#FFFFFF;
+}
+
+/************************************************************************************************
+  Logo
+************************************************************************************************/
+#indexDivLogo {
+	position: absolute;
+	top: 27px;
+	left: 0px;
+	width: 197px;
+	height: 199px;
+	background-repeat: no-repeat;
+}
+
+/************************************************************************************************
+  Planeta
+************************************************************************************************/
+#indexDivPlaneta {
+	position: absolute;
+	top: 226px;
+	left: 0px;
+	width: 231px;
+}
+
+#indexDivPlanetaImagen {
+	padding-left: 67px;
+	padding-top: 14px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 163px;
+	height: 122px;
+	background-image: url(/images/estilos/goauld/planetaimagen.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivPlanetaDatos {
+	position: absolute;
+	top: 122px;
+	left: 0px;
+	width: 230px;
+	height: 93px;
+	background-image: url(/images/estilos/goauld/planetadatos.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivnombrePlaneta {
+	position: absolute;
+	top: 10px;
+	left: 21px;
+	font-size: 11px;
+	font-weight: bold;
+	color: white;
+}
+
+#indexDivcoordenadas {
+	position: absolute;
+	top: 28px;
+	left: 19px;
+}
+
+#indexDivBotonesPlaneta {
+	position: absolute;
+	top: 56px;
+	left: -10px;
+	width: 239px;
+	text-align: center;
+}
+
+#indexDivBotonesPlaneta input{
+	background-color: #530b04;
+}
+
+#indexDivBotonesPlaneta input:hover{
+	background-color: #811107;
+}
+
+#indexDivLogoPlanetaResto {
+	position: absolute;
+	padding-top:0px;
+	top: 441px;
+	left: 0px;
+	width: 230px;
+	height: 214px;
+	background-image: url(/images/estilos/goauld/planetaresto.png);
+	background-repeat: no-repeat;
+}
+
+#indexLblPlanetasLista {
+	position: absolute;
+	top: 0px;
+	left: 28px;
+	width: 180px;
+	text-align: center;
+}
+
+#indexLblPlanetasLista select{
+	background-color: #530b04;
+}
+
+#indexLblPlanetasLista select:focus{
+	background-color: #811107;
+}
+
+
+#layer {
+	position: absolute;
+	height: 18px;
+	top: 0px;
+	left: 0px;
+	width: 180px;
+}
+
+#divlistaplanetas {
+	background: #530b04;
+	border: 1px solid #FFFFFF;
+	left: 0px;
+	top: 18px;
+	overflow: auto;
+	position: absolute;
+	width: 235px;
+	margin-left: 2px;
+	margin-top: -1px;
+	display: none;
+	z-index: 10;
+	cursor:pointer;
+}
+
+#divlistaplanetas div {
+	display: block;
+	text-align: left;
+	width: 235px;
+	height: 54px;
+}
+
+#divlistaplanetas div:hover {
+	background-color: #811107;
+}
+
+#divlistaplanetas img {
+	float: left;
+	margin: 3px;
+	width: 48px;
+	height: 48px;
+}
+
+#divlistaplanetas span {
+	float: left;
+	margin-top: 17px;
+}
+
+#indexDivConstruccion {
+	position: absolute;
+	top: 25px;
+	left: 35px;
+	width: 170px;
+}
+
+#indexLblNoCons {
+	position: absolute;
+	top: 50px;
+	left: 0px;
+	width: 160px;
+	padding: 5px;
+	font-weight: bold;
+	border: 1px solid white;
+	background-color: #530b04;
+	text-align: center;
+}
+
+#indexDivConsTropas {
+	padding-top:3px;
+	padding-left: 0px;
+	float: left;
+}
+
+#indexDivConsNaves {
+	padding-top:3px;
+	padding-left: 2px;
+	float: left;
+}
+
+#indexDivConsDefensas {
+	padding-top:3px;
+	position:relative;
+	padding-left: 2px;
+	float: left;
+	z-index:1;
+}
+
+#especialesLblNoEsp {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:5px;
+	margin-bottom:5px;
+	
+	width: 200px;
+	padding: 5px;
+	font-weight: bold;
+	border: 1px solid white;
+	background-color: #530b04;
+	text-align: center;
+}
+
+.percentage{
+	height: 7px;
+	background-color: #530b04;
+}
+
+.box{
+	border: 1px white solid;
+	height: 7px;
+	width: 78px;
+	background-color: white;
+}
+
+/************************************************************************************************
+  Botones
+************************************************************************************************/
+#indexDivBotonera {
+	position: absolute;
+	top: 27px;
+	left: 197px;
+	width: 603px;
+	height: 100px;
+	background-image: url(/images/estilos/goauld/botonera.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivBoton1 {
+	text-align:center;
+	position: absolute;
+	width:102px;
+	height:15px;
+	top: 15px;
+	left: 152px;
+	font-weight: bold;
+}
+
+#indexDivBoton2 {
+	position: absolute;
+	top: 302px;
+	left: -125px;
+	font-weight: bold;
+}
+
+#indexDivBoton3 {
+	text-align:center;
+	width:102px;
+	height:15px;
+	position: absolute;
+	top: 15px;
+	left: 254px;
+	font-weight: bold;
+}
+
+#indexDivBoton4 {
+	text-align:right;
+	width:70px;
+	height:15px;
+	position: absolute;
+	top: -21px;
+	left: 505px;
+	font-weight: bold;
+}
+
+#indexDivBoton5 {
+	text-align:center;
+	position: absolute;
+	width:102px;
+	height:15px;
+	top: 32px;
+	left: 152px;
+	font-weight: bold;
+}
+
+#indexDivBoton6 {
+	text-align:center;
+	width:102px;
+	height:15px;
+	position: absolute;
+	top: 32px;
+	left: 254px;
+	font-weight: bold;
+}
+
+#indexDivBoton7 {
+	text-align:center;
+	width:91px;
+	height:15px;
+	position: absolute;
+	top: 32px;
+	left: 357px;
+	font-weight: bold;
+}
+
+#indexDivBoton8 {
+	text-align:center;
+	position: absolute;
+	width:102px;
+	height:15px;
+	top: 49px;
+	left: 152px;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+#indexDivBoton9 {
+	text-align:center;
+	width:91px;
+	height:15px;
+	position: absolute;
+	top: 15px;
+	left: 357px;
+	font-weight: bold;
+}
+
+#indexDivBoton10 {
+	text-align:center;
+	position: absolute;
+	width:102px;
+	height:15px;
+	top: 66px;
+	left: 152px;
+	font-weight: bold;
+}
+
+#indexDivBoton11 {
+	text-align:center;
+	width:102px;
+	height:15px;
+	position: absolute;
+	top: 49px;
+	left: 254px;
+	font-weight: bold;
+}
+
+#indexDivBoton12 {
+	text-align:center;
+	width:91px;
+	height:15px;
+	position: absolute;
+	top: 49px;
+	left: 357px;
+	font-weight: bold;
+}
+
+#indexDivBoton13 {
+	text-align:center;
+	width:102px;
+	height:15px;
+	position: absolute;
+	top: 66px;
+	left: 254px;
+	font-weight: bold;
+}
+
+#indexDivBoton14 {
+	text-align:center;
+	width:91px;
+	height:15px;
+	position: absolute;
+	top: 66px;
+	left: 357px;
+	font-weight: bold;
+}
+
+#indexDivBoton15 {
+	position: absolute;
+	top: 545px;
+	left: -92px;
+	font-weight: bold;
+	z-index: 0;
+}
+
+#indexDivBoton15 #indexImgSalir {
+	border: 0px;
+}
+
+/************************************************************************************************
+  Centro
+************************************************************************************************/
+#indexDivCentro {
+	margin-left: 188px;
+	padding-top: 127px;
+	width: 603px;
+	height: auto !important; /* para los browsers buenos */
+	height: 525px; /* para IE5+ */
+	min-height: 525px; /* para los browsers buenos */
+}
+
+#titulo {
+	width: 603px;
+	height: 99px;
+	background-image: url(/images/estilos/goauld/titulo.png);
+	background-repeat: no-repeat;
+	margin-left:9px;
+}
+
+#pestanas {
+	width: 603px;
+	height: 99px;
+	margin-left:9px;
+	background-image: url(/images/estilos/goauld/pestanas.png);
+	background-repeat: no-repeat;
+}
+
+#contenido {
+	width: 567px;
+	background-repeat: no-repeat;
+	margin-top: -20px;
+	margin-left: 45px;
+	z-index: 20;
+}
+
+.mensaje {
+	text-align: center;
+}
+
+.mensajes {
+	background-color: #613A1D;
+	border: 2px solid black;
+	border-top:  solid black;
+}
+
+#mensajesDivCabecera{
+	height: 25px;
+	background-color:black;
+	cursor: move;
+}
+
+#mensajesDivContenido {
+	margin-left: -7px;
+}
+
+#mensajesDivContenido a{
+	color:#FFFFFF;
+}
+
+#mensajesDivAviso {
+	position: relative;
+	float: left;
+	padding-left:15px;
+	padding-right:15px;
+	padding-top:3px;
+	padding-bottom:3px;
+	background-color: #811107;
+	border: 1px solid #FFFFFF;
+	color: #FFFFFF;
+	font-size: 11px;
+	font-weight: bold;
+	z-index: 50;
+	display:none;
+}
+
+.comercios {
+	background-color: #613A1D;
+	border: 2px solid black;
+	border-top:  solid black;
+}
+
+#comerciosDivCabecera{
+	height: 25px;
+	background-color:black;
+	cursor: move;
+}
+
+.especiales {
+	background-color: #b1651f;
+	border: 2px solid black;
+}
+
+.lblNoHay {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:5px;
+	margin-bottom:5px;
+	
+	width: 200px;
+	padding: 5px;
+	font-weight: bold;
+	border: 1px solid white;
+	background-color: #530b04;
+	text-align: center;
+}
+
+/************************************************************************************************
+  Pie
+************************************************************************************************/
+#indexDivPie {
+	position: relative;
+	margin: 0px auto;
+	width: 800px;
+	height: 28px;
+	background-image: url(/images/estilos/goauld/pie.png);
+	background-repeat: no-repeat;
+}
+
+/************************************************************************************************
+  Pestañas
+************************************************************************************************/
+.morphtabs_title {
+	list-style-image: none;
+	list-style-type: none;
+	margin-top:0px;
+	margin-left: 30px;
+	padding-top: 45px;
+	padding-left: 0px;
+	height: 54px;
+}
+
+.morphtabs_title li {
+	float: left;
+	font-weight: bold;
+	padding: 7px 8px 2px 8px;
+	cursor: pointer;
+	color: white;
+	height: 22px;
+	width: 93px;
+	line-height: 20px;
+	background-image: url(/images/estilos/goauld/tablanivel4.png);
+	text-align:center;
+}
+
+.morphtabs_title li.over {
+	background-image: url(/images/estilos/goauld/tablanivel5.png);
+}
+
+.morphtabs_title li.active {
+	background-image: url(/images/estilos/goauld/tablanivel3.png);
+}
+
+* :first-child+html .morphtabs_panelwrap {
+	margin-left: -20px; /* Hack para IE que valida*/
+}
+
+.morphtabs_panel div {
+
+}
+
+.morpthtabs_panel p {
+	
+}
+
+#pestanasBatalla ul{
+	list-style-image: none;
+	list-style-type: none;
+	margin-top:0px;
+	margin-left: 10px;
+	padding-top: 0px;
+	padding-left: 0px;
+	height: 30px;
+}
+
+/************************************************************************************************
+  Tablas
+************************************************************************************************/
+.tablaCentral {
+	width: 550px;
+	margin-left: 7px;
+	margin-bottom: 10px;
+	border: 0px solid black;
+	text-align:center;
+}
+
+.tablaTitulo {
+	height: 21px;
+	width: 550px;
+	margin-left: 7px;
+	margin-top: 10px;
+	background-image: url(/images/estilos/goauld/tablatitulo.png);
+	font-weight: bold;
+	padding-top: 10px;
+	text-align: center;
+}
+
+.tablaCentral td {
+	background-color: #613A1D;
+	padding: 3px;
+}
+
+.tablaCentral th {
+	padding: 5px;
+}
+
+.th1 {
+	font-weight: bold;
+	background-image: url(/images/estilos/goauld/tablanivel1.png);
+}
+
+.th2 {
+	font-weight: bold;
+	background-image: url(/images/estilos/goauld/tablanivel2.png);
+}
+
+.tablaSegundoNivel td {
+	background-color:#811107;
+}
+
+/************************************************************************************************
+  Preloader
+************************************************************************************************/
+#preloader div {
+	position: relative;
+	float: right;
+	width: 200px;
+	height: 18px;
+	background-color: #811107;
+	border: 1px solid #ffffff;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding-left: 5px;
+	padding-top: 2px;
+	z-index: 50;
+}
+
+.preloaderPlaneta {
+	background: url('/images/estilos/goauld/loaderPlaneta.gif');
+	position: relative;
+	top: 35%;
+	left: 50%;
+	width: 24px;
+	height: 24px;
+	margin-left: -12px;
+	margin-top: -12px;
+}
+
+/************************************************************************************************
+  Reportes
+************************************************************************************************/
+#sbox-overlay {
+	position: absolute;
+	background-color: #000;
+	left: 0px;
+	top: 0px;
+	zoom: 1;
+}
+
+#sbox-window {
+	margin-top:15px;
+	position: absolute;
+	background-color: #eb9647;
+	text-align: left;
+	overflow: visible;
+	padding: 10px;
+	/* invalid values, but looks smoother! */
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#sbox-btn-close {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	right: -10px;
+	top: -20px;
+	background: url(/images/SqueezeBox/goauld/closebox.png) no-repeat center;
+	border: none;
+}
+
+.sbox-window-ie6 #sbox-btn-close {
+	background-image: url(/images/SqueezeBox/goauld/closebox.gif);
+}
+
+.sbox-loading #sbox-content {
+	background-image: url(/images/SqueezeBox/goauld/spinner.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#sbox-content {
+	clear: both;
+	overflow:hidden;
+	background-color: #b1651f;
+	height: 100%;
+	width: 100%;
+}
+
+.sbox-content-image#sbox-content {
+	overflow: visible;
+}
+
+#sbox-image {
+	display: block;
+}
+
+.sbox-content-image img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.sbox-content-iframe#sbox-content {
+	overflow: visible;
+}
+
+/* Hides scrollbars */
+.body-overlayed {
+	overflow: hidden;
+}
+/* Hides flash (Firefox problem) and selects (IE) */
+.body-overlayed embed, .body-overlayed object, .body-overlayed select {
+	visibility: hidden;
+}
+#sbox-window embed, #sbox-window object, #sbox-window select {
+	visibility: visible;
+}
+
+/* Shadows */
+.sbox-bg {
+	position: absolute;
+	width: 82px;
+	height: 103px;
+}
+
+.sbox-bg-n {
+	left: 16px;
+	top: -92px;
+	width: 724px;
+	height: 103px;
+	background: url(/images/SqueezeBox/goauld/bg_n.png) no-repeat;
+}
+.sbox-bg-ne {
+	right: -78px;
+	top: -92px;
+	width:94px;
+	height:103px;
+	background: url(/images/SqueezeBox/goauld/bg_ne.png) no-repeat;
+}
+.sbox-bg-e {
+	right: -78px;
+	top: 9px;
+	width:94px;
+	height: 442px;
+	background: url(/images/SqueezeBox/goauld/bg_e.png) no-repeat;
+}
+.sbox-bg-se {
+	right: -78px;
+	bottom: -32px;
+	width: 94px;
+	height: 52px;
+	background: url(/images/SqueezeBox/goauld/bg_se.png) no-repeat;
+}
+.sbox-bg-s {
+	left: 16px;
+	bottom: -32px;
+	width: 724px;
+	height: 52px;
+	background: url(/images/SqueezeBox/goauld/bg_s.png) no-repeat;
+}
+.sbox-bg-sw {
+	left: -66px;
+	bottom: -32px;
+	width: 82px;
+	height: 52px;
+	background: url(/images/SqueezeBox/goauld/bg_sw.png) no-repeat;
+}
+.sbox-bg-w {
+	left: -66px;
+	top: 9px;
+	height: 442px;
+	width: 82px;
+	background: url(/images/SqueezeBox/goauld/bg_w.png) no-repeat;
+}
+.sbox-bg-nw {
+	width:82px;
+	height:103px;
+	left: -66px;
+	top: -92px;
+	background: url(/images/SqueezeBox/goauld/bg_nw.png) no-repeat;
+}
+
+/************************************************************************************************
+  Alertas
+************************************************************************************************/
+#SexyAlertBox-Box {
+  padding-bottom: 24px;
+  background: url('/images/alerta/goauld/bg-box-bottom.png') bottom left no-repeat;
+}
+
+#SexyAlertBox-InBox {
+  padding-top: 24px;
+  background: url('/images/alerta/goauld/bg-box-top.png') top left no-repeat;	
+}
+
+#SexyAlertBox-BoxContent {
+  background: url('/images/alerta/goauld/bg-box-body.png') top left repeat-y;
+  padding: 0px 25px;
+}
+
+#SexyAlertBox-BoxContenedor {
+  padding: 10px 10px 25px 150px;
+  text-align: left;
+  font-family:Verdana;
+  font-size:12px;
+  color:#000;
+}
+
+#SexyAlertBox-BoxContenedor h1,#SexyAlertBox-BoxContenedor h2,#SexyAlertBox-BoxContenedor h3,#SexyAlertBox-BoxContenedor b,#SexyAlertBox-BoxContenedor strong{
+  text-align: left;
+  font-family:Verdana;
+  font-size:12px;
+  color:#000;
+  font-weight:bold;
+  margin:0px;
+  padding:0px;
+}
+
+#SexyAlertBox-Buttons{
+  text-align:right;
+}
+
+#SexyAlertBox-Buttons input {
+  margin: 10px 10px;
+}
+
+#SexyAlertBox-BoxContenedor #BoxPromptInput{
+  margin-top:5px;
+}
+
+#SexyAlertBox-Box .BoxAlert {
+  background: url('/images/alerta/goauld/dialog-information.png') top left no-repeat;
+}
+
+#SexyAlertBox-Box .BoxConfirm {
+  background: url('/images/alerta/goauld/dialog-information.png') top left no-repeat;
+}
+
+#SexyAlertBox-Box .BoxPrompt {
+  background: url('/images/alerta/goauld/dialog-information.png') top left no-repeat;
+}
+
+#SexyAlertBox-Box .BoxInfo {
+  background: url('/images/alerta/goauld/dialog-information.png') top left no-repeat;
+}
+
+#SexyAlertBox-Box .BoxError {
+  background: url('/images/alerta/goauld/dialog-information.png') top left no-repeat;
+}
+
+/************************************************************************************************
+  Vacaciones y Bloqueo
+************************************************************************************************/
+#vacacionesMensaje{
+	background: url('/images/notificaciones/goauld.png') top left no-repeat;
+	margin:20px auto;
+	width: 650px;
+	height: 580px;
+}
+
+#vacacionesMensaje div{
+	padding-top:330px;
+	margin:0px auto;
+	width: 275px;
+	height: 100px;
+	color:#FFFFFF;
+	font-size:12px;
+}

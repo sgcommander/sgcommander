@@ -1,0 +1,383 @@
+<table class="infobox" style="float:right;margin:0px 0px 1em 10px;"> 
+<tr>
+  <th colspan="3" style="text-align: center;">
+    Datos  
+  </th>
+</tr> 
+<tr>
+  <td valign="top">Raza</td>
+  {{#if: {{{idraza|}}} |
+  <td colspan="2"  style="text-align:center;">[[{{{raza|}}}]]</td> | 
+  <td colspan="2"  style="text-align:center;">Ninguna</td>
+  }} 
+</tr>
+<tr> 
+  <td valign="top">Categoria</td>
+  <td colspan="2" style="text-align:center;">[[{{{categoria}}}]]</td>
+</tr>
+<tr> 
+  <td valign="top">Subcategoria</td>
+  <td colspan="2" style="text-align:center;">[[{{{subcategoria}}}]]</td>
+</tr>
+<tr> 
+  <th colspan="3" style="text-align: center;">
+    Costes
+  </th>
+</tr>
+{{#if: {{{recurso1cantidad|}}} |
+<tr> 
+  <td valign="top" style="text-align:center; ">http://static.sgcommander.com/images/recursos/{{{idraza}}}/1.png</td>
+  <td>[[{{{recurso1nombre}}}]]</td>
+  <td style="text-align:center;">{{{recurso1cantidad}}}</td>
+</tr>
+}}
+{{#if: {{{recurso2cantidad|}}} |
+<tr> 
+  <td valign="top" style="text-align:center; ">http://static.sgcommander.com/images/recursos/{{{idraza}}}/2.png</td>
+  <td>[[{{{recurso2nombre}}}]]</td>
+  <td style="text-align:center;">{{{recurso2cantidad}}}</td>
+</tr>
+}}
+{{#if: {{{recurso3nombre|}}} |
+<tr> 
+  <td valign="top" style="text-align:center; ">http://static.sgcommander.com/images/recursos/{{{idraza}}}/3.png</td>
+  <td>[[{{{recurso3nombre}}}]]</td>
+  <td style="text-align:center;">{{{recurso3cantidad}}}</td>
+</tr>
+}}
+<tr> 
+  <td valign="top" style="text-align:center; ">http://static.sgcommander.com/images/recursos/{{{idraza}}}/tiempo.png</td>
+  <td>[[Tiempo]]</td>
+  <td style="text-align:center;">{{{costetiempo}}}</td>
+</tr>
+<tr> 
+  <th colspan="3" style="text-align: center;">
+    Atributos
+  </th>
+</tr>
+{{#ifexpr: {{{ataque|0}}}>0 |
+<tr> 
+  <td valign="top" style="text-align:center; ">http://static.sgcommander.com/images/iconos/{{{idraza}}}/ataque.png</td>
+  <td>[[Ataque]]</td>
+  <td style="text-align:center;">{{{ataque}}}</td>
+</tr>
+}}
+{{#ifexpr: {{{resistencia|0}}}>0 |
+<tr> 
+  <td valign="top" style="text-align:center; ">http://static.sgcommander.com/images/iconos/{{{idraza}}}/resistencia.png</td>
+  <td>[[Resistencia]]</td>
+  <td style="text-align:center;">{{{resistencia}}}</td>
+</tr>
+}}
+{{#ifexpr: {{{escudo|0}}}>0 |
+<tr> 
+  <td valign="top" style="text-align:center; ">http://static.sgcommander.com/images/iconos/{{{idraza}}}/escudos.png</td>
+  <td>[[Escudos]]</td>
+  <td style="text-align:center;">{{{escudo}}}</td>
+</tr>
+}}
+{{#ifexpr: {{{velocidad|0}}}>0 |
+<tr> 
+  <td valign="top" style="text-align:center; ">http://static.sgcommander.com/images/iconos/{{{idraza}}}/velocidad.png</td>
+  <td>[[Velocidad]]</td>
+  <td style="text-align:center;">{{{velocidad}}}</td>
+</tr>
+}}
+{{#ifexpr: {{{cazas|0}}}>0 |
+<tr> 
+  <td valign="top" style="text-align:center; ">http://static.sgcommander.com/images/iconos/{{{idraza}}}/cazas.png</td>
+  <td>[[Cazas]]</td>
+  <td style="text-align:center;">{{{cazas}}}</td>
+</tr>
+}}
+{{#ifexpr: {{{carga|0}}}>0 |
+<tr> 
+  <td valign="top" style="text-align:center; ">http://static.sgcommander.com/images/iconos/{{{idraza}}}/carga.png</td>
+  <td>[[Carga]]</td>
+  <td style="text-align:center;">{{{carga}}}</td>
+</tr>
+}}
+{{#ifeq: {{{stargate}}} | 1 |
+<tr> 
+  <td valign="top" style="text-align:center; ">http://static.sgcommander.com/images/iconos/{{{idraza}}}/stargate.png</td>
+  <td colspan="2" style="text-align:left;">[[Atraviesa el stargate]]</td>
+</tr>
+}}
+{{#ifeq: {{{invisible}}} | 1 |
+<tr> 
+  <td valign="top" style="text-align:center; ">http://static.sgcommander.com/images/iconos/{{{idraza}}}/camuflaje.png</td>
+  <td colspan="2" style="text-align:left;">[[Camuflaje]]</td>
+</tr>
+}}
+{{#ifeq: {{{autodestruye}}} | 1 |
+<tr> 
+  <td valign="top" style="text-align:center; ">http://static.sgcommander.com/images/iconos/{{{idraza}}}/autodestruccion.png</td>
+  <td colspan="2" style="text-align:left;">[[Autodestrucción]]</td>
+</tr>
+}}
+{{#ifeq: {{{atraviesaEscudo}}} | 1 |
+<tr> 
+  <td valign="top" style="text-align:center; ">http://static.sgcommander.com/images/iconos/{{{idraza}}}/atraviesaescudo.png</td>
+  <td colspan="2" style="text-align:left;">[[Atraviesa escudos]]</td>
+</tr>
+}}
+</table>
+<div style="float:left;margin-right:10px;margin-bottom:10px;">http://static.sgcommander.com/images/unidades/{{{id}}}.jpg</div>
+<div style="text-align:justify;" class="descripcion">{{{descripcion}}}</div>
+<div>
+{{#if: {{{mejoraGeneral0nombre|}}} |
+	<table>
+		<tr>
+			<th colspan="2">
+			  <pre>Bonificadores generales</pre>
+			</th>
+		</tr>
+		{{#if: {{{mejoraGeneral0nombre|}}} |
+		<tr> 
+		  <td style="text-align:left;">{{{mejoraGeneral0nombre}}}</td>
+		  <td valign="top" style="text-align:center;">{{{mejoraGeneral0porcentaje}}}%</td>
+		</tr>
+		}}
+		{{#if: {{{mejoraGeneral1nombre|}}} |
+		<tr> 
+		  <td style="text-align:left;">{{{mejoraGeneral1nombre}}}</td>
+		  <td valign="top" style="text-align:center;">{{{mejoraGeneral1porcentaje}}}%</td>
+		</tr>
+		}}
+	</table>
+}}
+{{#if: {{{mejoraUnidad0nombre|}}} |
+	<table>
+		<tr>
+			<th colspan="2">
+			  <pre>Bonificadores a unidades</pre>
+			</th>
+		</tr>
+		{{#if: {{{mejoraUnidad0nombre|}}} |
+		<tr> 
+		  <td style="text-align:left;">{{{mejoraUnidad0nombre}}}</td>
+		  <td valign="top" style="text-align:center;">{{{mejoraUnidad0porcentaje}}}%</td>
+		</tr>
+		}}
+		{{#if: {{{mejoraUnidad1nombre|}}} |
+		<tr> 
+		  <td style="text-align:left;">{{{mejoraUnidad1nombre}}}</td>
+		  <td valign="top" style="text-align:center;">{{{mejoraUnidad1porcentaje}}}%</td>
+		</tr>
+		}}
+		{{#if: {{{mejoraUnidad2nombre|}}} |
+		<tr> 
+		  <td style="text-align:left;">{{{mejoraUnidad2nombre}}}</td>
+		  <td valign="top" style="text-align:center;">{{{mejoraUnidad2porcentaje}}}%</td>
+		</tr>
+		}}
+	</table>
+}}
+{{#if: {{{requisito0nombre|}}} |
+	<table>
+		<tr> 
+		  <th colspan="2">
+		    <pre>Requisitos</pre>
+		  </th>
+		</tr>
+		{{#if: {{{requisito0nombre|}}} |
+		<tr> 
+		  <td valign="top" style="text-align:left; ">[[{{{requisito0nombre}}}]]</td>
+		  <td style="text-align:center;">Nivel {{{requisito0nivel}}}</td>
+		</tr>
+		}}
+		{{#if: {{{requisito1nombre|}}} |
+		<tr> 
+		  <td valign="top" style="text-align:left; ">[[{{{requisito1nombre}}}]]</td>
+		  <td style="text-align:center;">Nivel {{{requisito1nivel}}}</td>
+		</tr>
+		}}
+		{{#if: {{{requisito2nombre|}}} |
+		<tr> 
+		  <td valign="top" style="text-align:left; ">[[{{{requisito2nombre}}}]]</td>
+		  <td style="text-align:center;">Nivel {{{requisito2nivel}}}</td>
+		</tr>
+		}}
+		{{#if: {{{requisito3nombre|}}} |
+		<tr> 
+		  <td valign="top" style="text-align:left; ">[[{{{requisito3nombre}}}]]</td>
+		  <td style="text-align:center;">Nivel {{{requisito3nivel}}}</td>
+		</tr>
+		}}
+		{{#if: {{{requisito4nombre|}}} |
+		<tr> 
+		  <td valign="top" style="text-align:left; ">[[{{{requisito4nombre}}}]]</td>
+		  <td style="text-align:center;">Nivel {{{requisito4nivel}}}</td>
+		</tr>
+		}}
+		{{#if: {{{requisito5nombre|}}} |
+		<tr> 
+		  <td valign="top" style="text-align:left; ">[[{{{requisito5nombre}}}]]</td>
+		  <td style="text-align:center;">Nivel {{{requisito5nivel}}}</td>
+		</tr>
+		}}
+		{{#if: {{{requisito6nombre|}}} |
+		<tr> 
+		  <td valign="top" style="text-align:left; ">[[{{{requisito6nombre}}}]]</td>
+		  <td style="text-align:center;">Nivel {{{requisito6nivel}}}</td>
+		</tr>
+		}}
+		{{#if: {{{requisito7nombre|}}} |
+		<tr> 
+		  <td valign="top" style="text-align:left; ">[[{{{requisito7nombre}}}]]</td>
+		  <td style="text-align:center;">Nivel {{{requisito7nivel}}}</td>
+		</tr>
+		}}
+		{{#if: {{{requisito8nombre|}}} |
+		<tr> 
+		  <td valign="top" style="text-align:left; ">[[{{{requisito8nombre}}}]]</td>
+		  <td style="text-align:center;">Nivel {{{requisito8nivel}}}</td>
+		</tr>
+		}}
+	</table>
+}}
+{{#if: {{{fuegoRapidoSoldado0nombre|}}} |
+	<table>
+		<tr>
+			<th colspan="2">
+			  <pre>Fuego rápido</pre>
+			</th>
+			<th>
+			  <pre>Nº Disparos</pre>
+			</th>
+		</tr>
+		{{#if: {{{fuegoRapidoSoldado0nombre|}}} |
+		<tr>
+			<td valign="top" colspan="2" style="text-align:left;">{{{fuegoRapidoSoldado0nombre}}}</td>
+			<td style="text-align:center;">{{{fuegoRapidoSoldado0disparos}}}</td>
+		</tr>
+		}}
+		{{#if: {{{fuegoRapidoSoldado1nombre|}}} |
+		<tr> 
+			<td valign="top" colspan="2" style="text-align:left;">{{{fuegoRapidoSoldado1nombre}}}</td>
+		  	<td style="text-align:center;">{{{fuegoRapidoSoldado1disparos}}}</td>
+		</tr>
+		}}
+		{{#if: {{{fuegoRapidoSoldado2nombre|}}} |
+		<tr> 
+		  	<td valign="top" colspan="2" style="text-align:left;">{{{fuegoRapidoSoldado2nombre}}}</td>
+		  	<td style="text-align:center;">{{{fuegoRapidoSoldado2disparos}}}</td>
+		</tr>
+		}}
+		{{#if: {{{fuegoRapidoSoldado3nombre|}}} |
+		<tr> 
+		  	<td valign="top" colspan="2" style="text-align:left;">{{{fuegoRapidoSoldado3nombre}}}</td>
+		  	<td style="text-align:center;">{{{fuegoRapidoSoldado0disparos}}}</td>
+		</tr>
+		}}
+		{{#if: {{{fuegoRapidoSoldado4nombre|}}} |
+		<tr> 
+		  	<td valign="top" colspan="2" style="text-align:left;">{{{fuegoRapidoSoldado4nombre}}}</td>
+		  	<td style="text-align:center;">{{{fuegoRapidoSoldado4disparos}}}</td>
+		</tr>
+		}}
+		{{#if: {{{fuegoRapidoSoldado5nombre|}}} |
+		<tr> 
+		  	<td valign="top" colspan="2" style="text-align:left;">{{{fuegoRapidoSoldado5nombre}}}</td>
+		  	<td style="text-align:center;">{{{fuegoRapidoSoldado5disparos}}}</td>
+		</tr>
+		}}
+	</table>
+}}
+{{#if: {{{fuegoRapidoNave0nombre|}}} |
+	<table>
+		<tr>
+			<th colspan="2">
+			  Fuego rápido
+			</th>
+			<th>
+			  Nº Disparos
+			</th>
+		</tr>	
+		{{#if: {{{fuegoRapidoNave0nombre|}}} |
+		<tr> 
+		  	<td valign="top" colspan="2" style="text-align:left;">{{{fuegoRapidoNave0nombre}}}</td>
+		  	<td style="text-align:center;">{{{fuegoRapidoNave0disparos}}}</td>
+		</tr>
+		}}
+		{{#if: {{{fuegoRapidoNave1nombre|}}} |
+		<tr> 
+		  	<td valign="top" colspan="2" style="text-align:left;">{{{fuegoRapidoNave1nombre}}}</td>
+		  	<td style="text-align:center;">{{{fuegoRapidoNave1disparos}}}</td>
+		</tr>
+		}}
+		{{#if: {{{fuegoRapidoNave2nombre|}}} |
+		<tr> 
+		  	<td valign="top" colspan="2" style="text-align:left;">{{{fuegoRapidoNave2nombre}}}</td>
+		  	<td style="text-align:center;">{{{fuegoRapidoNave2disparos}}}</td>
+		</tr>
+		}}
+		{{#if: {{{fuegoRapidoNave3nombre|}}} |
+		<tr> 
+		  	<td valign="top" colspan="2" style="text-align:left;">{{{fuegoRapidoNave3nombre}}}</td>
+		  	<td style="text-align:center;">{{{fuegoRapidoNave0disparos}}}</td>
+		</tr>
+		}}
+	</table>
+}}
+{{#if: {{{fuegoRapidoDefensa0nombre|}}} |
+	<table>
+		<tr>
+			<th colspan="2">
+			  Fuego rápido
+			</th>
+			<th>
+			  Nº Disparos
+			</th>
+		</tr>
+		{{#if: {{{fuegoRapidoDefensa0nombre|}}} |
+		<tr> 
+		  <td valign="top" colspan="2" style="text-align:left;">{{{fuegoRapidoDefensa0nombre}}}</td>
+		  <td style="text-align:center;">{{{fuegoRapidoDefensa0disparos}}}</td>
+		</tr>
+		}}
+		{{#if: {{{fuegoRapidoDefensa1nombre|}}} |
+		<tr> 
+		  <td valign="top" colspan="2" style="text-align:left;">{{{fuegoRapidoDefensa1nombre}}}</td>
+		  <td style="text-align:center;">{{{fuegoRapidoDefensa1disparos}}}</td>
+		</tr>
+		}}
+		{{#if: {{{fuegoRapidoDefensa2nombre|}}} |
+		<tr> 
+		  <td valign="top" colspan="2" style="text-align:left;">{{{fuegoRapidoDefensa2nombre}}}</td>
+		  <td style="text-align:center;">{{{fuegoRapidoDefensa2disparos}}}</td>
+		</tr>
+		}}
+	</table>
+}}
+</div>
+<noinclude>
+
+==Uso==
+Muestra la ficha de una unidad:
+<code><nowiki>
+{{Unidad | 
+ nombre=Guerreros Jaffa |
+ id=42 |
+ categoria=Tropa |
+ subcategoria=Recolección |
+ raza=Goa'uld |
+ idraza=2 |
+ recursopri=Naquadah |
+ costepri=40 |
+ recursosec=Anfitriones |
+ costesec=20 |
+ costetiempo=2 minutos 43 segundos |
+ ataque=64 |
+ resistencia=75 |
+ carga=108 |
+ stargate=1 |
+ requisito0nombre=Minas de Naquadah |
+ requisito0nivel=2 |
+ mejora1nombre=Ataque de las naves |
+ mejora1porcentaje=25 |
+ descripcion=Descripción
+}}
+</nowiki></code>
+raza, idraza, recurso1cantidad, recurso1nombre, recurso2cantidad, recurso2nombre, recurso3cantidad, recurso3nombre, ataque, resistencia, escudos, carga, velocidad, cazas, stargate, camuflaje, autodestruccion, atraviesaescudos son opcionales.
+</noinclude>

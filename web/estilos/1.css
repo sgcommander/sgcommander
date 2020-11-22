@@ -1,0 +1,950 @@
+@charset "UTF-8";
+
+/*********************************************
+  Asgard
+*********************************************/
+/************************************************************************************************
+  Enlaces
+************************************************************************************************/
+a:link {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+a:active {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+/************************************************************************************************
+  Formulario
+************************************************************************************************/
+select {
+	font-size: 11px;
+	color: white;
+	background-color: #202734;
+	border: 1px solid white;
+}
+
+option {
+	background-color: #202734;
+}
+
+select:focus {
+	background-color: #202734;
+}
+
+input, button {
+	cursor: pointer;
+	font-size: 12px;
+	background-color: #202734;
+	border: 1px solid white;
+	color: white;
+}
+
+input.disabled, input.disabled:hover {
+	cursor: default;
+	font-size: 12px;
+	background-color: #999999;
+	border: 1px solid #333333;
+	color: #666666;
+}
+
+input:hover, button:hover {
+	background-color: #425c88;
+}
+
+textarea {
+	font-size: 12px;
+	background-color: #202734;
+	border: 1px solid white;
+	color: white;
+}
+
+textarea:focus {
+	background-color: #425c88;
+}
+
+#indexLstPlanetas {
+	width: 237px;
+}
+
+/************************************************************************************************
+  Contenedores
+************************************************************************************************/
+body {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial,Helvetica, sans-serif;
+	font-size: 11px;
+	color: white;
+	text-align: center;
+	margin: 0px auto;
+	background-color: #333333;
+}
+
+#indexDivContenedor {
+	position: relative;
+	width: 800px;
+	min-height: 200px;
+	border: 1px solid black;
+	background-color: #565656;
+	margin: 0px auto;
+	text-align: left;
+}
+
+/************************************************************************************************
+  Recursos
+************************************************************************************************/
+#indexDivRecursoPri {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 239px;
+	height: 32px;
+	background-image: url(/images/estilos/tauri/recursopri.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivRecursoPri div.textoRecurso {
+	position: absolute;
+	top: 7px;
+	left: 100px;
+	font-weight: bold;
+}
+
+#indexDivRecursoSec {
+	position: absolute;
+	top: 0px;
+	left: 239px;
+	width: 200px;
+	height: 32px;
+	background-image: url(/images/estilos/tauri/recursosec.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivRecursoSec div.textoRecurso {
+	position: absolute;
+	top: 7px;
+	left: 60px;
+	font-weight: bold;
+}
+
+#indexDivRecursoEnergia {
+	position: absolute;
+	top: 0px;
+	left: 439px;
+	width: 361px;
+	height: 32px;
+	background-image: url(/images/estilos/tauri/recursoenergia.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivRecursoEnergia div.textoRecurso {
+	position: absolute;
+	top: 7px;
+	left: 60px;
+	font-weight: bold;
+}
+
+/************************************************************************************************
+  Logo
+************************************************************************************************/
+#indexDivLogo {
+	position: absolute;
+	top: 32px;
+	left: 0px;
+	width: 198px;
+	height: 171px;
+	background-repeat: no-repeat;
+}
+
+/************************************************************************************************
+  Planeta
+************************************************************************************************/
+#indexDivPlaneta {
+	position: absolute;
+	top: 32px;
+	left: 198px;
+	width: 602px;
+	height: 98px;
+}
+
+#indexDivPlanetaImagen {
+	padding-left: 14px;
+	padding-top: 7px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 106px;
+	height: 98px;
+	background-image: url(/images/estilos/tauri/planetaimagen.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivPlanetaDatos {
+	position: absolute;
+	top: 0px;
+	left: 106px;
+	width: 496px;
+	height: 98px;
+	background-image: url(/images/estilos/tauri/planetadatos.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivnombrePlaneta {
+	position: absolute;
+	top: 15px;
+	left: 24px;
+	font-size: 11px;
+	font-weight: bold;
+	color: white;
+}
+
+#indexDivcoordenadas {
+	position: absolute;
+	top: 36px;
+	left: 30px;
+}
+
+#indexDivBotonesPlaneta {
+	position: absolute;
+	top: 66px;
+	left: 0px;
+	width: 239px;
+	text-align: center;
+}
+
+#indexDivLogoPlanetaResto {
+	position: absolute;
+	top: 27px;
+	left: 549px;
+	width: 251px;
+	height: 103px;
+	background-image: url(/images/estilos/tauri/planetaresto.png);
+	background-repeat: no-repeat;
+}
+
+#indexLblPlanetasLista {
+	position: absolute;
+	top: 0px;
+	left: 5px;
+	width: 240px;
+	text-align: center;
+}
+
+#layer {
+	position: absolute;
+	height: 18px;
+	top: 0px;
+	left: 0px;
+	width: 240px;
+}
+
+#divlistaplanetas {
+	background: #202734;
+	border: 1px solid #FFFFFF;
+	left: 0px;
+	top: 18px;
+	overflow: auto;
+	position: absolute;
+	width: 235px;
+	margin-left: 2px;
+	margin-top: -1px;
+	display: none;
+	z-index: 10;
+	cursor:pointer;
+}
+
+#divlistaplanetas div {
+	display: block;
+	text-align: left;
+	width: 235px;
+	height: 54px;
+}
+
+#divlistaplanetas div:hover {
+	background-color: #425c88;
+}
+
+#divlistaplanetas img {
+	float: left;
+	margin: 3px;
+	width: 48px;
+	height: 48px;
+}
+
+#divlistaplanetas span {
+	float: left;
+	margin-top: 17px;
+}
+
+#indexDivConstruccion {
+	position: absolute;
+	top: 25px;
+	left: 5px;
+	width: 247px;
+}
+
+#indexLblNoCons {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	width: 200px;
+	padding: 5px;
+	font-weight: bold;
+	border: 1px solid white;
+	background-color: #202734;
+	text-align: center;
+}
+
+#indexDivConsTropas {
+	padding-left: 0px;
+	float: left;
+}
+
+#indexDivConsNaves {
+	padding-left: 2px;
+	float: left;
+}
+
+#indexDivConsDefensas {
+	padding-left: 2px;
+	float: left;
+}
+
+#especialesLblNoEsp {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:5px;
+	margin-bottom:5px;
+	
+	width: 200px;
+	padding: 5px;
+	font-weight: bold;
+	border: 1px solid white;
+	background-color: #202734;
+	text-align: center;
+}
+
+.percentage{
+	height: 7px;
+	background-color: #425c88;
+}
+
+.box{
+	border: 1px white solid;
+	height: 7px;
+	width: 78px;
+	background-color: white;
+}
+
+/************************************************************************************************
+  Botones
+************************************************************************************************/
+#indexDivBotonera {
+	position: absolute;
+	top: 203px;
+	left: 0px;
+	width: 235px;
+	min-height: 403px;
+	background-image: url(/images/estilos/tauri/botonera.png);
+	background-repeat: no-repeat;
+}
+
+#indexDivBoton1 {
+	position: absolute;
+	top: 32px;
+	left: 90px;
+	font-weight: bold;
+}
+
+#indexDivBoton2 {
+	position: absolute;
+	top: 51px;
+	left: 90px;
+	font-weight: bold;
+}
+
+#indexDivBoton3 {
+	position: absolute;
+	top: 70px;
+	left: 90px;
+	font-weight: bold;
+}
+
+#indexDivBoton4 {
+	position: absolute;
+	top: 89px;
+	left: 90px;
+	font-weight: bold;
+}
+
+#indexDivBoton5 {
+	position: absolute;
+	top: 155px;
+	left: 90px;
+	font-weight: bold;
+}
+
+#indexDivBoton6 {
+	position: absolute;
+	top: 175px;
+	left: 90px;
+	font-weight: bold;
+}
+
+#indexDivBoton7 {
+	position: absolute;
+	top: 195px;
+	left: 90px;
+	font-weight: bold;
+}
+
+#indexDivBoton8 {
+	position: absolute;
+	top: 215px;
+	left: 90px;
+	font-weight: bold;
+}
+
+#indexDivBoton9 {
+	position: absolute;
+	top: 108px;
+	left: 90px;
+	font-weight: bold;
+}
+
+#indexDivBoton10 {
+	position: absolute;
+	top: 266px;
+	left: 90px;
+	font-weight: bold;
+}
+
+#indexDivBoton11 {
+	position: absolute;
+	top: 287px;
+	left: 90px;
+	font-weight: bold;
+}
+
+#indexDivBoton12 {
+	position: absolute;
+	top: 307px;
+	left: 90px;
+	font-weight: bold;
+}
+
+#indexDivBoton13 {
+	position: absolute;
+	top: 327px;
+	left: 90px;
+	font-weight: bold;
+	z-index: 10;
+}
+
+#indexDivBoton14 {
+	position: absolute;
+	top: 345px;
+	left: 90px;
+	font-weight: bold;
+	z-index: 10;
+}
+
+#indexDivBoton15 {
+	position: absolute;
+	top: 321px;
+	left: 131px;
+	font-weight: bold;
+	z-index: 0;
+}
+
+#indexDivBoton15 #indexImgSalir {
+	border: 0px;
+}
+
+/************************************************************************************************
+  Centro
+************************************************************************************************/
+#indexDivCentro {
+	margin-left: 198px;
+	padding-top: 130px;
+	width: 602px;
+	height: auto !important; /* para los browsers buenos */
+	height: 476px; /* para IE5+ */
+	min-height: 476px; /* para los browsers buenos */
+}
+
+#titulo {
+	width: 602px;
+	height: 103px;
+	background-image: url(/images/estilos/tauri/titulo.png);
+	background-repeat: no-repeat;
+}
+
+#pestanas {
+	width: 602px;
+	height: 73px;
+	background-image: url(/images/estilos/tauri/pestanas.png);
+	background-repeat: no-repeat;
+}
+
+#contenido {
+	width: 567px;
+	background-repeat: no-repeat;
+	margin-top: -35px;
+	margin-left: 30px;
+	z-index: 20;
+}
+
+.mensaje {
+	text-align: center;
+}
+
+.mensajes {
+	background-color: #404549;
+	border: 2px solid black;
+	border-top:  solid black;
+}
+
+#mensajesDivCabecera{
+	height: 25px;
+	background-color:black;
+	cursor: move;
+}
+
+#mensajesDivContenido {
+	margin-left: -7px;
+}
+
+#mensajesDivAviso {
+	position: relative;
+	float: left;
+	padding-left:15px;
+	padding-right:15px;
+	padding-top:3px;
+	padding-bottom:3px;
+	background-color: #202734;
+	border: 1px solid #ffffff;
+	color: #ffffff;
+	font-size: 11px;
+	font-weight: bold;
+	z-index: 50;
+	display:none;
+}
+
+.comercios {
+	background-color: #404549;
+	border: 2px solid black;
+	border-top:  solid black;
+}
+
+#comerciosDivCabecera{
+	height: 25px;
+	background-color:black;
+	cursor: move;
+}
+
+.especiales {
+	background-color: #404549;
+	border: 2px solid black;
+}
+
+.lblNoHay {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:5px;
+	margin-bottom:5px;
+	
+	width: 200px;
+	padding: 5px;
+	font-weight: bold;
+	border: 1px solid white;
+	background-color: #202734;
+	text-align: center;
+}
+
+/************************************************************************************************
+  Pie
+************************************************************************************************/
+#indexDivPie {
+	position: relative;
+	margin: 0px auto;
+	width: 800px;
+	height: 31px;
+	background-image: url(/images/estilos/tauri/pie.png);
+	background-repeat: no-repeat;
+}
+
+/************************************************************************************************
+  Pestañas
+************************************************************************************************/
+.morphtabs_title {
+	list-style-image: none;
+	list-style-type: none;
+	margin-top:0px;
+	margin-left: 30px;
+	padding-top: 34px;
+	padding-left: 0px;
+	height: 76px;
+}
+
+.morphtabs_title li {
+	float: left;
+	font-weight: bold;
+	padding: 7px 8px 2px 8px;
+	cursor: pointer;
+	color: white;
+	height: 22px;
+	width: 93px;
+	line-height: 20px;
+	background-image: url(/images/estilos/tauri/tablanivel4.png);
+	text-align:center;
+}
+
+.morphtabs_title li.over {
+	background-image: url(/images/estilos/tauri/tablanivel5.png);
+}
+
+.morphtabs_title li.active {
+	background-image: url(/images/estilos/tauri/tablanivel3.png);
+}
+
+* :first-child+html .morphtabs_panelwrap {
+	margin-left: -20px; /* Hack para IE que valida*/
+}
+
+.morphtabs_panel div {
+
+}
+
+.morpthtabs_panel p {
+	
+}
+
+#pestanasBatalla ul{
+	list-style-image: none;
+	list-style-type: none;
+	margin-top:0px;
+	margin-left: 10px;
+	padding-top: 0px;
+	padding-left: 0px;
+	height: 30px;
+}
+
+/************************************************************************************************
+  Tablas
+************************************************************************************************/
+.tablaCentral {
+	width: 550px;
+	margin-left: 7px;
+	margin-bottom: 10px;
+	border: 0px solid black;
+	text-align:center;
+}
+
+.tablaTitulo {
+	height: 23px;
+	width: 550px;
+	margin-left: 7px;
+	margin-top: 10px;
+	background-image: url(/images/estilos/tauri/tablatitulo.png);
+	font-weight: bold;
+	padding-top: 8px;
+	text-align: center;
+}
+
+.tablaCentral td {
+	background-color: #404549;
+	padding: 3px;
+}
+
+.tablaCentral th {
+	padding: 5px;
+}
+
+.th1 {
+	font-weight: bold;
+	background-image: url(/images/estilos/tauri/tablanivel1.png);
+	
+}
+
+.th2 {
+	font-weight: bold;
+	background-image: url(/images/estilos/tauri/tablanivel2.png);
+}
+
+.tablaSegundoNivel td {
+	background-color:#202734;
+}
+
+/************************************************************************************************
+  Preloader
+************************************************************************************************/
+#preloader div {
+	position: relative;
+	float: right;
+	width: 200px;
+	height: 18px;
+	background-color: #202734;
+	border: 1px solid #ffffff;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding-left: 5px;
+	padding-top: 2px;
+	z-index: 50;
+}
+
+.preloaderPlaneta {
+	background: url('/images/estilos/tauri/loaderPlaneta.gif');
+	position: relative;
+	top: 50%;
+	left: 120px;
+	width: 24px;
+	height: 24px;
+	margin-left: -12px;
+	margin-top: -12px;
+}
+
+/************************************************************************************************
+  Reportes
+************************************************************************************************/
+#sbox-overlay {
+	position: absolute;
+	background-color: #000;
+	left: 0px;
+	top: 0px;
+	zoom: 1;
+}
+
+#sbox-window {
+	margin-top:15px;
+	position: absolute;
+	background-color: #565656;
+	text-align: left;
+	overflow: visible;
+	padding: 10px;
+	/* invalid values, but looks smoother! */
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#sbox-btn-close {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	/*right: -20px;*/
+	right:-10px;
+	top: -10px;
+	background: url(/images/SqueezeBox/tauri/closebox.png) no-repeat center;
+	border: none;
+}
+
+.sbox-window-ie6 #sbox-btn-close {
+	background-image: url(/images/SqueezeBox/tauri/closebox.gif);
+}
+
+.sbox-loading #sbox-content {
+	background-image: url(/images/SqueezeBox/tauri/spinner.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#sbox-content {
+	clear: both;
+	overflow:hidden;
+	background-color: #565656;
+	height: 100%;
+	width: 100%;
+}
+
+.sbox-content-image#sbox-content {
+	overflow: visible;
+}
+
+#sbox-image {
+	display: block;
+}
+
+.sbox-content-image img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.sbox-content-iframe#sbox-content {
+	overflow: visible;
+}
+
+/* Hides scrollbars */
+.body-overlayed {
+	overflow: hidden;
+}
+/* Hides flash (Firefox problem) and selects (IE) */
+.body-overlayed embed, .body-overlayed object, .body-overlayed select {
+	visibility: hidden;
+}
+#sbox-window embed, #sbox-window object, #sbox-window select {
+	visibility: visible;
+}
+
+/* Shadows */
+.sbox-bg {
+	position: absolute;
+	width: 80px;
+	height: 107px;
+}
+
+.sbox-bg-n {
+	left: 10px;
+	top: -97px;
+	width: 724px;
+	height: 107px;
+	background: url(/images/SqueezeBox/tauri/bg_n.png) no-repeat;
+}
+.sbox-bg-ne {
+	right: -73px;
+	top: -97px;
+	width:94px;
+	height:107px;
+	background: url(/images/SqueezeBox/tauri/bg_ne.png) no-repeat;
+}
+.sbox-bg-e {
+	right: -73px;
+	top: 10px;
+	width:94px;
+	height: 442px;
+	background: url(/images/SqueezeBox/tauri/bg_e.png) no-repeat;
+}
+.sbox-bg-se {
+	right: -73px;
+	bottom: -34px;
+	width: 94px;
+	height: 52px;
+	background: url(/images/SqueezeBox/tauri/bg_se.png) no-repeat;
+}
+.sbox-bg-s {
+	left: 12px;
+	bottom: -34px;
+	width: 724px;
+	height: 52px;
+	background: url(/images/SqueezeBox/tauri/bg_s.png) no-repeat;
+}
+.sbox-bg-sw {
+	left: -70px;
+	bottom: -34px;
+	width: 82px;
+	height: 52px;
+	background: url(/images/SqueezeBox/tauri/bg_sw.png) no-repeat;
+}
+.sbox-bg-w {
+	left: -70px;
+	top: 10px;
+	height: 442px;
+	width: 82px;
+	background: url(/images/SqueezeBox/tauri/bg_w.png) no-repeat;
+}
+.sbox-bg-nw {
+	width:82px;
+	height:107px;
+	left: -70px;
+	top: -97px;
+	background: url(/images/SqueezeBox/tauri/bg_nw.png) no-repeat;
+}
+
+/************************************************************************************************
+  Alertas
+************************************************************************************************/
+#SexyAlertBox-Box {
+  padding-bottom: 24px;
+  background: url('/images/alerta/tauri/bg-box-bottom.png') bottom left no-repeat;
+}
+
+#SexyAlertBox-InBox {
+  padding-top: 24px;
+  background: url('/images/alerta/tauri/bg-box-top.png') top left no-repeat;	
+}
+
+#SexyAlertBox-BoxContent {
+  background: url('/images/alerta/tauri/bg-box-body.png') top left repeat-y;
+  padding: 0px 25px;
+}
+
+#SexyAlertBox-BoxContenedor {
+  padding: 10px 10px 25px 150px;
+  text-align: left;
+  font-family:Verdana;
+  font-size:12px;
+  color:#FFFFFF;
+}
+
+#SexyAlertBox-BoxContenedor h1,#SexyAlertBox-BoxContenedor h2,#SexyAlertBox-BoxContenedor h3,#SexyAlertBox-BoxContenedor b,#SexyAlertBox-BoxContenedor strong{
+  text-align: left;
+  font-family:Verdana;
+  font-size:12px;
+  color:#000;
+  font-weight:bold;
+  margin:0px;
+  padding:0px;
+}
+
+#SexyAlertBox-Buttons{
+  text-align:right;
+}
+
+#SexyAlertBox-Buttons input {
+  margin: 10px 10px;
+}
+
+#SexyAlertBox-BoxContenedor #BoxPromptInput{
+  margin-top:5px;
+}
+
+#SexyAlertBox-Box .BoxAlert {
+  background: url('/images/alerta/tauri/dialog-information.png') top left no-repeat;
+}
+
+#SexyAlertBox-Box .BoxConfirm {
+  background: url('/images/alerta/tauri/dialog-information.png') top left no-repeat;
+}
+
+#SexyAlertBox-Box .BoxPrompt {
+  background: url('/images/alerta/tauri/dialog-information.png') top left no-repeat;
+}
+
+#SexyAlertBox-Box .BoxInfo {
+  background: url('/images/alerta/tauri/dialog-information.png') top left no-repeat;
+}
+
+#SexyAlertBox-Box .BoxError {
+  background: url('/images/alerta/tauri/dialog-information.png') top left no-repeat;
+}
+
+/************************************************************************************************
+  Vacaciones y Bloqueo
+************************************************************************************************/
+#vacacionesMensaje{
+	background: url('/images/notificaciones/tauri.png') top left no-repeat;
+	margin:20px auto;
+	width: 650px;
+	height: 580px;
+}
+
+#vacacionesMensaje div{
+	padding-top:200px;
+	margin:0px 85px;
+	width: 300px;
+	height: 100px;
+	color:#000000;
+	font-size:12px;
+}

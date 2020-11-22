@@ -1,0 +1,2298 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: SgCommander Catal&#224; 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-02-25 04:36+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Loki <loki@sgcommander.com>\n"
+"Language-Team: SgCommander team <info@sgcommander.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Catalan\n"
+"X-Poedit-Country: SPAIN\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Basepath: /var/www/sgcommander\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: app/models/MejoraModel.php:245
+msgid "Producci&#243;n de"
+msgstr "Producci&#243;"
+
+#: app/controllers/OpcionesController.php:116
+msgid "Email no v&#225;lido"
+msgstr "Correu no v&#224;lid"
+
+#: app/controllers/OpcionesController.php:118
+msgid "Contrase&#241;a no v&#225;lida, debe tener entre "
+msgstr "Contrasenya no valida, deu tindre entre"
+
+#: app/controllers/OpcionesController.php:120
+msgid "Las contrase&#241;as son diferentes"
+msgstr "Les contrasenyes son diferents"
+
+#: app/controllers/OpcionesController.php:123
+msgid "Datos cambiados"
+msgstr "Dades canviades"
+
+#: app/controllers/OpcionesController.php:127
+#: app/controllers/OpcionesController.php:159
+#: app/controllers/OpcionesController.php:229
+#: app/controllers/OpcionesController.php:262
+#: app/controllers/OpcionesController.php:295
+#: app/controllers/OpcionesController.php:335
+#: app/controllers/OpcionesController.php:386
+#: app/controllers/RecursosController.php:201
+msgid "Error"
+msgstr "Error"
+
+#: app/controllers/OpcionesController.php:152
+msgid "Idioma no v&#225;lido"
+msgstr "Idioma no v&#224;lid"
+
+#: app/controllers/OpcionesController.php:155
+msgid "Idioma cambiado, desconecte y vuelva a conectar para aplicar los cambios."
+msgstr "Idioma canviat, desconnecte i torne a connectar per aplicar els canvis."
+
+#: app/controllers/OpcionesController.php:207
+msgid "No puede activar el modo vacaciones si tiene alguna investigaci&#243;n en curso, cancele la investigaci&#243;n antes de activar el modo vacaciones"
+msgstr "No pot activar el mode vacances si te alguna investigaci&#243; en curs, cancel&#183;le la investigaci&#243; abans d&#39;activar el mode vacances"
+
+#: app/controllers/OpcionesController.php:211
+msgid "No puede activar el modo vacaciones si tiene alguna misi&#243;n en curso, cancele las misiones antes de activar el modo vacaciones"
+msgstr "No pot activar el mode vacances si te alguna misi&#243; en curs, cancel&#183;le les missions abans d&#39;activar el mode vacances"
+
+#: app/controllers/OpcionesController.php:214
+msgid "No puede activar el modo vacaciones si tiene alguna construcci&#243;n en curso, cancele las construcciones antes de activar el modo vacaciones"
+msgstr "No pot activar el mode vacances si te alguna construcci&#243; en curs, cancel&#183;le les construccions abans d&#39;activar el mode vacances"
+
+#: app/controllers/OpcionesController.php:217
+msgid "No puede activar el modo vacaciones si le est&#225;n conquistando, abandone el planeta antes de activar el modo vacaciones"
+msgstr "No pot activar el mode vacances si li estan conquistant, abandone el planeta abans d&#39;activar el mode vacances"
+
+#: app/controllers/OpcionesController.php:221
+msgid "Modo vacaciones activado"
+msgstr "Mode vacances activat"
+
+#: app/controllers/OpcionesController.php:253
+msgid "Cuenta borrada"
+msgstr "Compte esborrat"
+
+#: app/controllers/OpcionesController.php:291
+msgid "Logotipo cambiado"
+msgstr "Logotip canviat"
+
+#: app/controllers/OpcionesController.php:327
+msgid "Firma cambiada"
+msgstr "Firma canviada"
+
+#: app/controllers/OpcionesController.php:382
+msgid "Modo vacaciones desactivado"
+msgstr "Mode vacances desactivat"
+
+#: app/controllers/RecursosController.php:95
+msgid "El usuario que ha enviado el comercio no tiene recursos para llevarlo a cabo"
+msgstr "L&#39;usuari que ha enviat el comer&#231; no te recursos per dur-lo a cap"
+
+#: app/controllers/RecursosController.php:97
+msgid "No tienes recursos para llevar a cabo el comercio"
+msgstr "No tens recursos per a dur a cap el comer&#231;"
+
+#: app/controllers/RecursosController.php:100
+msgid "El comercio ha sido aceptado"
+msgstr "El comer&#231; ha sigut acceptat"
+
+#: app/controllers/RecursosController.php:104
+#: app/controllers/RecursosController.php:141
+#: app/controllers/RecursosController.php:297
+msgid "El usuario"
+msgstr "L&#39;usuari"
+
+#: app/controllers/RecursosController.php:104
+msgid "ha aceptado tu oferta de comercio"
+msgstr "ha acceptat la teva oferta de comer&#231;"
+
+#: app/controllers/RecursosController.php:105
+msgid "Comercio aceptado"
+msgstr "Comer&#231; acceptat"
+
+#: app/controllers/RecursosController.php:108
+msgid "Error al aceptar el comercio"
+msgstr "Error al acceptar el comer&#231;"
+
+#: app/controllers/RecursosController.php:134
+msgid "Error al rechazar"
+msgstr "Error al rebutjar"
+
+#: app/controllers/RecursosController.php:137
+#: app/controllers/RecursosController.php:142
+msgid "Comercio rechazado"
+msgstr "Comer&#231; rebutjat"
+
+#: app/controllers/RecursosController.php:141
+msgid "ha rechazado tu oferta de comercio"
+msgstr "ha rebutjat la teva oferta de comer&#231;"
+
+#: app/controllers/RecursosController.php:174
+#: app/controllers/RecursosController.php:176
+msgid "Cantidad no valida"
+msgstr "Quantitat no v&#224;lida"
+
+#: app/controllers/RecursosController.php:178
+#: app/controllers/RecursosController.php:180
+msgid "Te faltan recursos para aceptar el intercambio"
+msgstr "Et falten recursos per acceptar l&#39;intercanvi"
+
+#: app/controllers/RecursosController.php:197
+msgid "Intercambio realizado"
+msgstr "Intercanvi realitzat"
+
+#: app/controllers/RecursosController.php:278
+msgid "Todas las cantidades no pueden ser 0"
+msgstr "Totes les quantitats no poden ser 0"
+
+#: app/controllers/RecursosController.php:280
+msgid "Las cantidades son incorrectas"
+msgstr "Les quantitats son incorrectes"
+
+#: app/controllers/RecursosController.php:282
+msgid "Destino no v&#225;lido"
+msgstr "Dest&#237; no v&#224;lid"
+
+#: app/controllers/RecursosController.php:284
+msgid "No puedes enviarte comercios a ti mismo"
+msgstr "No pots enviar-te comer&#231; a tu mateix"
+
+#: app/controllers/RecursosController.php:286
+msgid "No puedes enviar un comercio a ese usuario"
+msgstr "No pots enviar un comer&#231; a eixe usuari"
+
+#: app/controllers/RecursosController.php:290
+#: app/controllers/MensajesController.php:181
+msgid "Error al enviar"
+msgstr "Error al enviar"
+
+#: app/controllers/RecursosController.php:293
+msgid "Comercio enviado"
+msgstr "Comer&#231; enviat"
+
+#: app/controllers/RecursosController.php:297
+msgid "te ha ofrecido un comercio"
+msgstr "t&#39;ha ofert un comer&#231;"
+
+#: app/controllers/RecursosController.php:298
+msgid "Nueva oferta de comercio"
+msgstr "Nova oferta de comer&#231;"
+
+#: app/controllers/RecursosController.php:323
+msgid "Error al cancelar"
+msgstr "Error al cancel&#183;lar"
+
+#: app/controllers/RecursosController.php:326
+msgid "Comercio cancelado"
+msgstr "Comer&#231; cancel&#183;lat"
+
+#: app/controllers/PlanetasController.php:248
+msgid "No puedes abandonar un planeta con construcciones. Cancela todas las construcciones antes de abandonarlo."
+msgstr "No pots abandonar un planeta amb construccions. Cancel&#183;la totes les construccions abans d&#39;abandonar-lo"
+
+#: app/controllers/PlanetasController.php:251
+msgid "No puedes abandonar un planeta con unidades o misiones activas. Cancela todas las misiones y licencia o traslada las unidades antes de abandonarlo."
+msgstr "No pots abandonar un planeta amb unitats o missions actives. Cancel&#183;la totes les missions i llicencia o trasllada les unitats abans d&#39;abandonar-lo"
+
+#: app/controllers/PlanetasController.php:259
+msgid "Error al abandonar"
+msgstr "Error al abandonar"
+
+#: app/controllers/PlanetasController.php:276
+msgid "Has abandonado el planeta"
+msgstr "Has abandonat el planeta"
+
+#: app/controllers/MisionesController.php:181
+#: app/controllers/NavesController.php:401
+msgid "Tus naves han sido eliminadas por una defensa de stargate al cruzar hacia el planeta"
+msgstr "Les teves naus han sigut eliminades per una defensa de stargate al creuar cap al planeta"
+
+#: app/controllers/MisionesController.php:182
+#: app/controllers/NavesController.php:402
+msgid "Perdida de naves"
+msgstr "P&#233;rduda de naus"
+
+#: app/controllers/MisionesController.php:186
+msgid "No puedes realizar este tipo de misi&#243;n con estas naves"
+msgstr "No pots realitzar aquest tipus de misi&#243; amb aquestes naus"
+
+#: app/controllers/MisionesController.php:189
+msgid "No puedes realizar viajes intergal&#225;cticos con estas naves"
+msgstr "No pots realitzar viatges ingergal&#224;ctics amb aquestes naus"
+
+#: app/controllers/MisionesController.php:244
+#: app/controllers/SoldadosController.php:325
+msgid "Tus tropas han sido eliminadas por una defensa de stargate al cruzar hacia el planeta"
+msgstr "Les teves tropes han sigut eliminades per una defensa de stargate al creuar cap al planeta"
+
+#: app/controllers/MisionesController.php:245
+#: app/controllers/SoldadosController.php:326
+msgid "Perdida de tropas"
+msgstr "P&#233;rduda de tropes"
+
+#: app/controllers/MisionesController.php:248
+msgid "No puedes realizar este tipo de misi&#243;n con estas tropas"
+msgstr "No pots realitzar aquest tipus de missi&#243; amb aquestes tropes"
+
+#: app/controllers/MisionesController.php:251
+msgid "No puedes realizar viajes intergal&#225;cticos con estas tropas"
+msgstr "No pots realitzar viatges intergatl&#224;ctics amb questes tropes"
+
+#: app/controllers/MisionesController.php:256
+msgid "El origen no puede ser igual que el destino"
+msgstr "L&#39;origen no pot ser igual que el dest&#237;"
+
+#: app/controllers/MisionesController.php:259
+msgid "No se puede desplegar despues de un segundo despliegue"
+msgstr "No es pot desplegar despr&#233;s d&#39;un segon desplegament"
+
+#: app/controllers/MisionesController.php:262
+msgid "La velocidad no es correcta"
+msgstr "La velocitat no es correcta"
+
+#: app/controllers/MisionesController.php:265
+msgid "No se puede iniciar una nueva misi&#243;n desde esta misi&#243;n"
+msgstr "No es pot inicial una nova missi&#243; des d&#39;aquesta missi&#243;"
+
+#: app/controllers/IndexController.php:184
+msgid "El nombre no debe estar vacio y debe tener entre "
+msgstr "El nom no deu estar buit i deu tindre entre"
+
+#: app/controllers/IndexController.php:191
+msgid "No puedes cambiar el nombre a un planeta especial."
+msgstr "No pots canviar el nom a un planeta especial."
+
+#: app/controllers/IndexController.php:199
+msgid "Se ha producido un error al cambiar el nombre del planeta."
+msgstr "S&#39;ha produït un error al canviar el nom del planeta"
+
+#: app/controllers/MensajesController.php:167
+msgid "No se permiten tantos mensajes seguidos"
+msgstr "No es permeten tants missatge seguits"
+
+#: app/controllers/MensajesController.php:170
+msgid "Los destinatarios no son correctos"
+msgstr "Els destinataris no son correctes"
+
+#: app/controllers/MensajesController.php:173
+msgid "El asunto no es correcto"
+msgstr "L&#39;assumpte no es correcte"
+
+#: app/controllers/MensajesController.php:176
+msgid "El contenido no es correcto"
+msgstr "El contingut no es correcte"
+
+#: app/controllers/MensajesController.php:184
+msgid "Mensaje enviado con &#233;xito"
+msgstr "Missatge enviat amb &#233;xit"
+
+#: app/controllers/AlianzaController.php:246
+msgid "No eres l&#237;der de una alianza"
+msgstr "No ets l&#237;der de una alian&#231;a"
+
+#: app/controllers/AlianzaController.php:249
+#: app/controllers/AlianzaController.php:593
+msgid "El t&#237;tulo no es correcto"
+msgstr "El t&#237;tol no es correcte"
+
+#: app/controllers/AlianzaController.php:252
+#: app/controllers/AlianzaController.php:596
+msgid "La URL de la imagen no es correcta"
+msgstr "L&#39;URL de la imatge no es correcta"
+
+#: app/controllers/AlianzaController.php:255
+#: app/controllers/AlianzaController.php:599
+msgid "La URL del foro/web no es correcta"
+msgstr "L&#39;URL del forum/web no es correcta"
+
+#: app/controllers/AlianzaController.php:258
+#: app/controllers/AlianzaController.php:602
+msgid "El texto no es correcto"
+msgstr "El text no es correcte"
+
+#: app/controllers/AlianzaController.php:263
+msgid "Error al cambiar los datos"
+msgstr "Error al canviar les dades"
+
+#: app/controllers/AlianzaController.php:266
+msgid "Datos cambiados con &#233;xito"
+msgstr "Dades canviades amb &#233;xit"
+
+#: app/controllers/AlianzaController.php:294
+msgid "Error al aceptar la solicitud de entrada"
+msgstr "Error al acceptar la sol&#183;licitud d&#39;entrada"
+
+#: app/controllers/AlianzaController.php:296
+msgid "Solicitud de entrada aceptada"
+msgstr "Sol&#183;licitud d&#39;entrada acceptada"
+
+#: app/controllers/AlianzaController.php:302
+#: app/controllers/AlianzaController.php:360
+msgid "Tu solicitud de entrada para la alianza"
+msgstr "La teva sol&#183;licitud d&#39;entrada per a l&#39;alian&#231;a"
+
+#: app/controllers/AlianzaController.php:302
+msgid "ha sido aceptada."
+msgstr "ha sigut acceptada"
+
+#: app/controllers/AlianzaController.php:303
+msgid "Solicitud aceptada"
+msgstr "Sol&#183;licitud acceptada"
+
+#: app/controllers/AlianzaController.php:317
+msgid "se ha unido a la alianza."
+msgstr "s&#39;ha unit a l&#39;alian&#231;a"
+
+#: app/controllers/AlianzaController.php:318
+msgid "Nuevo miembro"
+msgstr "Nou membre"
+
+#: app/controllers/AlianzaController.php:353
+msgid "Error al rechazar la solicitud de entrada"
+msgstr "Error al rebutjar la sol&#183;licitud d&#39;entrada"
+
+#: app/controllers/AlianzaController.php:355
+msgid "Solicitud de entrada rechazada"
+msgstr "Sol&#183;licitud d&#39;entrada rebutjada"
+
+#: app/controllers/AlianzaController.php:360
+msgid "ha sido rechazada."
+msgstr "ha sigut rebutjada."
+
+#: app/controllers/AlianzaController.php:361
+msgid "Solicitud rechazada"
+msgstr "Sol&#183;licitud rebutjada"
+
+#: app/controllers/AlianzaController.php:390
+msgid "Ya perteneces a una alianza"
+msgstr "Ja pertanys a una alian&#231;a"
+
+#: app/controllers/AlianzaController.php:393
+msgid "Ya has enviado una solicitud de entrada a esta alianza"
+msgstr "Ja has enviat una sol&#183;lictud d&#39;entrada en aquesta alian&#231;a"
+
+#: app/controllers/AlianzaController.php:398
+msgid "Error al enviar la solicitud de entrada"
+msgstr "Error a l&#39;envi&#224; la sol&#183;licitud d&#39;entrada"
+
+#: app/controllers/AlianzaController.php:401
+msgid "Solicitud de entrada enviada con &#233;xito"
+msgstr "Sol&#183;licitud d&#39;entrada enviada amb &#233;xit"
+
+#: app/controllers/AlianzaController.php:406
+msgid "Tienes una nueva solicitud de entrada a la alianza"
+msgstr "Tens una nova sol&#183;licitud d&#39;entrada a l&#39;alian&#231;a"
+
+#: app/controllers/AlianzaController.php:407
+msgid "Nueva solicitud entrada"
+msgstr "Nova sol&#183;licitud d&#39;entrada"
+
+#: app/controllers/AlianzaController.php:448
+msgid "Error al expulsar al jugador"
+msgstr "Error al expulsar al jugador"
+
+#: app/controllers/AlianzaController.php:450
+msgid "El jugador ya no pertenece a la alianza"
+msgstr "El jugador ja no pertany a l&#39;alian&#231;a"
+
+#: app/controllers/AlianzaController.php:458
+msgid "Abandono de alianza"
+msgstr "Aband&#243; d&#39;alian&#231;a"
+
+#: app/controllers/AlianzaController.php:461
+msgid "Has sido expulsado de tu alianza."
+msgstr "Has sigut expulsat de la teva alian&#231;a"
+
+#: app/controllers/AlianzaController.php:462
+#: app/controllers/AlianzaController.php:463
+msgid "Expulsi&#243;n de alianza"
+msgstr "Expulsi&#243; de alian&#231;a"
+
+#: app/controllers/AlianzaController.php:468
+msgid "ya no pertenece a la alianza."
+msgstr "ja no pertany a l&#39;alian&#231;a"
+
+#: app/controllers/AlianzaController.php:514
+msgid "Error al eliminar la alianza"
+msgstr "Error al eliminar l&#39;alian&#231;a"
+
+#: app/controllers/AlianzaController.php:516
+msgid "Alianza eliminada con &#233;xito"
+msgstr "Alian&#231;a eliminada amb &#233;xit"
+
+#: app/controllers/AlianzaController.php:525
+msgid "Tu alianza ha sido borrada, ya no perteneces a ninguna alianza."
+msgstr "La teva alian&#231;a ha sigut esborrada, ja no pertanys a cap alian&#231;a"
+
+#: app/controllers/AlianzaController.php:526
+msgid "Alianza borrada"
+msgstr "Alian&#231;a esborrada"
+
+#: app/controllers/AlianzaController.php:590
+msgid "Ya perteneces a una alianza, debes abandonarla antes de crear una"
+msgstr "Ja pertanys a una alian&#231;a, deus abandonar-la abans de crear una"
+
+#: app/controllers/AlianzaController.php:607
+msgid "Error al crear"
+msgstr "Error al crear"
+
+#: app/controllers/AlianzaController.php:609
+msgid "Alianza creada con &#233;xito"
+msgstr "Alian&#231;a creada amb &#233;xit"
+
+#: app/controllers/AlianzaController.php:639
+msgid "Error al ceder el liderazgo"
+msgstr "Error al cedir el lideratge"
+
+#: app/controllers/AlianzaController.php:641
+msgid "Has cedido el liderazgo al jugador"
+msgstr "Has cedir el lideratge al jugador"
+
+#: app/controllers/AlianzaController.php:645
+msgid "Ahora eres el lider de la alianza."
+msgstr "Ara ets el l&#237;der de l&#39;alian&#231;a"
+
+#: app/controllers/AlianzaController.php:646
+#: app/controllers/AlianzaController.php:661
+msgid "Cambio de liderazgo"
+msgstr "Canvi de lideratge"
+
+#: app/controllers/AlianzaController.php:660
+msgid "es el nuevo lider de la alianza."
+msgstr "es el nou l&#237;der de l&#39;alian&#231;a."
+
+#: app/controllers/GalaxiasController.php:145
+msgid "Sector"
+msgstr "Sector"
+
+#: app/controllers/GalaxiasController.php:169
+msgid "Cuadrante"
+msgstr "Cuadrant"
+
+#: app/views/NavesView.php:40
+#: app/views/DefensasView.php:620
+#: app/views/SoldadosView.php:677
+msgid "En el planeta"
+msgstr "En el planeta"
+
+#: app/views/NavesView.php:41
+#: app/views/NavesView.php:331
+#: app/views/NavesView.php:693
+#: app/views/DefensasView.php:43
+#: app/views/DefensasView.php:259
+#: app/views/DefensasView.php:621
+msgid "Construir"
+msgstr "construir"
+
+#: app/views/NavesView.php:42
+#: app/views/NavesView.php:718
+#: app/views/DefensasView.php:622
+#: app/views/DefensasView.php:652
+#: app/views/SoldadosView.php:679
+#: app/views/SoldadosView.php:709
+msgid "Requisitos"
+msgstr "Requisits"
+
+#: app/views/NavesView.php:84
+#: app/views/NavesView.php:334
+#: app/views/DefensasView.php:262
+#: app/views/DefensasView.php:323
+msgid "Construyendo"
+msgstr "construint"
+
+#: app/views/NavesView.php:85
+#: app/views/NavesView.php:335
+#: app/views/DefensasView.php:263
+#: app/views/DefensasView.php:324
+#: app/views/SoldadosView.php:311
+#: app/views/SoldadosView.php:372
+msgid "unidades"
+msgstr "unitats"
+
+#: app/views/NavesView.php:87
+#: app/views/NavesView.php:337
+#: app/views/MejorasView.php:174
+#: app/views/MejorasView.php:229
+#: app/views/DefensasView.php:265
+#: app/views/DefensasView.php:326
+#: app/views/RecursosView.php:201
+#: app/views/SoldadosView.php:313
+#: app/views/SoldadosView.php:374
+msgid "Cancelar"
+msgstr "Cancel&#183;lar"
+
+#: app/views/NavesView.php:119
+msgid "No puedes construir naves, consulta la secci&#243;n requisitos"
+msgstr "No pots construir naus, consulta la secci&#243; requisits"
+
+#: app/views/NavesView.php:151
+#: app/views/NavesView.php:451
+#: app/views/DefensasView.php:109
+#: app/views/DefensasView.php:409
+#: app/views/SoldadosView.php:128
+#: app/views/SoldadosView.php:460
+msgid "Ataque"
+msgstr "Atac"
+
+#: app/views/NavesView.php:152
+#: app/views/NavesView.php:164
+#: app/views/NavesView.php:176
+#: app/views/NavesView.php:188
+#: app/views/NavesView.php:200
+#: app/views/NavesView.php:452
+#: app/views/NavesView.php:464
+#: app/views/NavesView.php:476
+#: app/views/NavesView.php:488
+#: app/views/NavesView.php:500
+#: app/views/DefensasView.php:110
+#: app/views/DefensasView.php:122
+#: app/views/DefensasView.php:134
+#: app/views/DefensasView.php:410
+#: app/views/DefensasView.php:422
+#: app/views/DefensasView.php:434
+#: app/views/SoldadosView.php:129
+#: app/views/SoldadosView.php:141
+#: app/views/SoldadosView.php:153
+#: app/views/SoldadosView.php:165
+#: app/views/SoldadosView.php:461
+#: app/views/SoldadosView.php:473
+#: app/views/SoldadosView.php:485
+#: app/views/SoldadosView.php:497
+msgid "Base"
+msgstr "Base"
+
+#: app/views/NavesView.php:153
+#: app/views/NavesView.php:165
+#: app/views/NavesView.php:177
+#: app/views/NavesView.php:189
+#: app/views/NavesView.php:201
+#: app/views/NavesView.php:316
+#: app/views/NavesView.php:453
+#: app/views/NavesView.php:465
+#: app/views/NavesView.php:477
+#: app/views/NavesView.php:489
+#: app/views/NavesView.php:501
+#: app/views/DefensasView.php:111
+#: app/views/DefensasView.php:123
+#: app/views/DefensasView.php:135
+#: app/views/DefensasView.php:244
+#: app/views/DefensasView.php:411
+#: app/views/DefensasView.php:423
+#: app/views/DefensasView.php:435
+#: app/views/IndexView.php:195
+#: app/views/SoldadosView.php:130
+#: app/views/SoldadosView.php:142
+#: app/views/SoldadosView.php:154
+#: app/views/SoldadosView.php:166
+#: app/views/SoldadosView.php:292
+#: app/views/SoldadosView.php:462
+#: app/views/SoldadosView.php:474
+#: app/views/SoldadosView.php:486
+#: app/views/SoldadosView.php:498
+msgid "Mejoras"
+msgstr "Millores"
+
+#: app/views/NavesView.php:163
+#: app/views/NavesView.php:463
+#: app/views/DefensasView.php:121
+#: app/views/DefensasView.php:421
+#: app/views/SoldadosView.php:140
+#: app/views/SoldadosView.php:472
+msgid "Resistencia"
+msgstr "Resist&#232;ncia"
+
+#: app/views/NavesView.php:175
+#: app/views/NavesView.php:475
+#: app/views/DefensasView.php:133
+#: app/views/DefensasView.php:433
+#: app/views/SoldadosView.php:152
+#: app/views/SoldadosView.php:484
+msgid "Escudos"
+msgstr "Escuts"
+
+#: app/views/NavesView.php:187
+#: app/views/NavesView.php:487
+#: app/views/SoldadosView.php:164
+#: app/views/SoldadosView.php:496
+msgid "Capacidad de carga"
+msgstr "Capacitat de carga"
+
+#: app/views/NavesView.php:199
+#: app/views/NavesView.php:499
+msgid "Velocidad hiperespacial"
+msgstr "Velocitat hiperespacial"
+
+#: app/views/NavesView.php:209
+#: app/views/NavesView.php:509
+msgid "Capacidad de cazas"
+msgstr "Capacitat de caces"
+
+#: app/views/NavesView.php:214
+#: app/views/NavesView.php:514
+#: app/views/SoldadosView.php:173
+#: app/views/SoldadosView.php:505
+msgid "Atraviesa el stargate"
+msgstr "Travessa el stargate"
+
+#: app/views/NavesView.php:219
+#: app/views/NavesView.php:519
+#: app/views/DefensasView.php:147
+#: app/views/DefensasView.php:447
+#: app/views/SoldadosView.php:178
+#: app/views/SoldadosView.php:510
+msgid "Camuflaje"
+msgstr "Camuflatge"
+
+#: app/views/NavesView.php:224
+#: app/views/NavesView.php:524
+#: app/views/DefensasView.php:152
+#: app/views/DefensasView.php:452
+#: app/views/SoldadosView.php:183
+#: app/views/SoldadosView.php:515
+msgid "Atraviesa escudos"
+msgstr "Travessa escuts"
+
+#: app/views/NavesView.php:230
+#: app/views/DefensasView.php:158
+#: app/views/SoldadosView.php:189
+msgid "Fuego rápido"
+msgstr "Foc r&#224;pid"
+
+#: app/views/NavesView.php:231
+#: app/views/DefensasView.php:159
+#: app/views/SoldadosView.php:190
+msgid "Nº disparos"
+msgstr "Nº trets"
+
+#: app/views/NavesView.php:236
+#: app/views/NavesView.php:398
+#: app/views/NavesView.php:717
+#: app/views/DefensasView.php:164
+#: app/views/SoldadosView.php:195
+msgid "Nave"
+msgstr "Nau"
+
+#: app/views/NavesView.php:239
+#: app/views/DefensasView.php:167
+#: app/views/SoldadosView.php:198
+msgid "Soldado"
+msgstr "Soldats"
+
+#: app/views/NavesView.php:242
+#: app/views/DefensasView.php:170
+#: app/views/DefensasView.php:366
+#: app/views/DefensasView.php:651
+#: app/views/SoldadosView.php:201
+msgid "Defensa"
+msgstr "Defensa"
+
+#: app/views/NavesView.php:278
+#: app/views/MejorasView.php:123
+#: app/views/DefensasView.php:206
+#: app/views/IndexView.php:406
+#: app/views/IndexView.php:538
+#: app/views/SoldadosView.php:237
+msgid "Tiempo"
+msgstr "Temps"
+
+#: app/views/NavesView.php:332
+#: app/views/NavesView.php:694
+#: app/views/DefensasView.php:44
+#: app/views/DefensasView.php:260
+#: app/views/RecursosView.php:74
+#: app/views/SoldadosView.php:44
+#: app/views/SoldadosView.php:308
+msgid "M&#225;ximo"
+msgstr "M&#224;xim"
+
+#: app/views/NavesView.php:395
+#: app/views/NavesView.php:397
+msgid "Naves disponibles"
+msgstr "Naus disponibles"
+
+#: app/views/NavesView.php:397
+#: app/views/DefensasView.php:365
+#: app/views/IndexView.php:449
+#: app/views/SoldadosView.php:412
+msgid "Nueva misi&#243;n"
+msgstr "Nova missi&#243;"
+
+#: app/views/NavesView.php:399
+#: app/views/DefensasView.php:367
+#: app/views/SoldadosView.php:414
+msgid "Disponibles"
+msgstr "Disponibles"
+
+#: app/views/NavesView.php:400
+#: app/views/DefensasView.php:368
+#: app/views/SoldadosView.php:415
+msgid "Todas"
+msgstr "Totes"
+
+#: app/views/NavesView.php:401
+#: app/views/DefensasView.php:369
+#: app/views/SoldadosView.php:416
+msgid "Ninguna"
+msgstr "Cap"
+
+#: app/views/NavesView.php:402
+#: app/views/DefensasView.php:370
+#: app/views/SoldadosView.php:417
+msgid "Enviar en misi&#243;n"
+msgstr "Enviar en missi&#243;"
+
+#: app/views/NavesView.php:403
+#: app/views/DefensasView.php:371
+msgid "Desmantelar"
+msgstr "Desmantellar"
+
+#: app/views/NavesView.php:407
+msgid "No hay naves disponibles"
+msgstr "No hi ha naus disponibles"
+
+#: app/views/NavesView.php:416
+#: app/views/DefensasView.php:384
+#: app/views/SoldadosView.php:431
+msgid "L&#237;mite de misiones"
+msgstr "L&#237;mit de missions"
+
+#: app/views/NavesView.php:418
+#: app/views/DefensasView.php:386
+#: app/views/SoldadosView.php:433
+msgid "A alcanzado su l&#237;mite de misiones"
+msgstr "A aconseguit el seu l&#237;mit de missions"
+
+#: app/views/NavesView.php:418
+#: app/views/NavesView.php:420
+#: app/views/DefensasView.php:386
+#: app/views/DefensasView.php:388
+#: app/views/SoldadosView.php:89
+#: app/views/SoldadosView.php:97
+#: app/views/SoldadosView.php:433
+#: app/views/SoldadosView.php:435
+msgid "investigue la mejora"
+msgstr "investigui la millora"
+
+#: app/views/NavesView.php:418
+#: app/views/DefensasView.php:386
+#: app/views/SoldadosView.php:89
+#: app/views/SoldadosView.php:433
+msgid "para aumentarlo"
+msgstr "per augmentar-ho"
+
+#: app/views/NavesView.php:420
+#: app/views/DefensasView.php:388
+msgid "Actualmente esta realizando"
+msgstr "Actualment esta realitzant"
+
+#: app/views/NavesView.php:420
+#: app/views/DefensasView.php:388
+#: app/views/SoldadosView.php:435
+msgid "misiones"
+msgstr "missions"
+
+#: app/views/NavesView.php:420
+#: app/views/DefensasView.php:388
+#: app/views/SoldadosView.php:435
+msgid "para aumentar su l&#237;mite de misiones"
+msgstr "per augmentar el seu l&#237;mit de missions"
+
+#: app/views/NavesView.php:424
+msgid "&#191;Realmente desea desmantelar estas naves&#63; Las naves ser&#225;n destruidas"
+msgstr "Realment desitja desmantellar aquestes naus? Les naus seran destruïdes"
+
+#: app/views/NavesView.php:534
+msgid "Espacio necesario para cazas / Espacio total para cazas"
+msgstr "Espai necessari per a caces / Espai total per a caces"
+
+#: app/views/NavesView.php:543
+#: app/views/DefensasView.php:480
+#: app/views/SoldadosView.php:530
+msgid "Selecciona el planeta de destino"
+msgstr "Sel&#183;leciona el planeta de dest&#237;"
+
+#: app/views/NavesView.php:544
+#: app/views/DefensasView.php:481
+#: app/views/SoldadosView.php:531
+msgid "Destino de la misi&#243;n"
+msgstr "Dest&#237; de la missi&#243;"
+
+#: app/views/NavesView.php:557
+#: app/views/NavesView.php:559
+#: app/views/NavesView.php:600
+#: app/views/NavesView.php:602
+#: app/views/GalaxiasView.php:252
+#: app/views/GalaxiasView.php:399
+#: app/views/DefensasView.php:530
+#: app/views/DefensasView.php:532
+#: app/views/SoldadosView.php:544
+#: app/views/SoldadosView.php:546
+#: app/views/SoldadosView.php:587
+#: app/views/SoldadosView.php:589
+msgid "Riqueza"
+msgstr "Riquesa"
+
+#: app/views/NavesView.php:563
+#: app/views/NavesView.php:565
+#: app/views/NavesView.php:606
+#: app/views/NavesView.php:608
+#: app/views/EspecialesView.php:96
+#: app/views/EspecialesView.php:98
+#: app/views/DefensasView.php:493
+#: app/views/DefensasView.php:495
+#: app/views/DefensasView.php:536
+#: app/views/DefensasView.php:538
+#: app/views/SoldadosView.php:550
+#: app/views/SoldadosView.php:552
+#: app/views/SoldadosView.php:593
+#: app/views/SoldadosView.php:595
+msgid "Controlado por"
+msgstr "Controlat per"
+
+#: app/views/NavesView.php:584
+#: app/views/DefensasView.php:514
+#: app/views/SoldadosView.php:571
+msgid "Velocidad"
+msgstr "Velocitat"
+
+#: app/views/NavesView.php:585
+#: app/views/DefensasView.php:515
+#: app/views/SoldadosView.php:572
+msgid "Tipo de misi&#243;n"
+msgstr "Tipus de missi&#243;"
+
+#: app/views/NavesView.php:586
+#: app/views/DefensasView.php:516
+#: app/views/SoldadosView.php:573
+msgid "Selecciona misi&#243;n"
+msgstr "Sel&#183;lecciona missi&#243;"
+
+#: app/views/NavesView.php:630
+#: app/views/MensajesView.php:763
+#: app/views/DefensasView.php:560
+#: app/views/SoldadosView.php:617
+msgid "Sin propietario"
+msgstr "Sense propietari"
+
+#: app/views/NavesView.php:636
+#: app/views/MensajesView.php:380
+#: app/views/MensajesView.php:515
+#: app/views/MensajesView.php:598
+#: app/views/MensajesView.php:682
+#: app/views/GalaxiasView.php:173
+#: app/views/GalaxiasView.php:342
+#: app/views/GalaxiasView.php:439
+#: app/views/RankingView.php:149
+#: app/views/DefensasView.php:566
+#: app/views/SoldadosView.php:623
+msgid "Sin alianza"
+msgstr "Sense alian&#231;a"
+
+#: app/views/NavesView.php:642
+#: app/views/DefensasView.php:572
+#: app/views/SoldadosView.php:629
+msgid "Desplegar"
+msgstr "Desplegar"
+
+#: app/views/NavesView.php:644
+#: app/views/DefensasView.php:574
+#: app/views/SoldadosView.php:631
+msgid "Recolectar"
+msgstr "Recol&#183;lectar"
+
+#: app/views/NavesView.php:645
+#: app/views/NavesView.php:649
+#: app/views/NavesView.php:653
+#: app/views/NavesView.php:665
+#: app/views/DefensasView.php:575
+#: app/views/DefensasView.php:579
+#: app/views/DefensasView.php:583
+#: app/views/DefensasView.php:595
+#: app/views/SoldadosView.php:632
+#: app/views/SoldadosView.php:636
+#: app/views/SoldadosView.php:640
+#: app/views/SoldadosView.php:652
+msgid "Explorar"
+msgstr "Explorar"
+
+#: app/views/NavesView.php:646
+#: app/views/DefensasView.php:576
+#: app/views/SoldadosView.php:633
+msgid "Establecer base"
+msgstr "Establir base"
+
+#: app/views/NavesView.php:652
+#: app/views/DefensasView.php:582
+#: app/views/SoldadosView.php:639
+msgid "Atacar"
+msgstr "Atacar"
+
+#: app/views/NavesView.php:654
+#: app/views/DefensasView.php:584
+#: app/views/SoldadosView.php:641
+msgid "Conquistar"
+msgstr "Conquerir"
+
+#: app/views/NavesView.php:657
+#: app/views/DefensasView.php:587
+#: app/views/SoldadosView.php:644
+msgid "Contratacar"
+msgstr "Contraatacar"
+
+#: app/views/NavesView.php:722
+msgid "No hay naves construibles"
+msgstr "No hi han naus construïbles"
+
+#: app/views/NavesView.php:738
+#: app/views/MejorasView.php:171
+#: app/views/MejorasView.php:257
+#: app/views/DefensasView.php:672
+#: app/views/SoldadosView.php:731
+msgid "Nivel"
+msgstr "Nivell"
+
+#: app/views/MensajesView.php:44
+#: app/views/MensajesView.php:145
+#: app/views/MensajesView.php:204
+msgid "Asunto"
+msgstr "Assumpte"
+
+#: app/views/MensajesView.php:45
+#: app/views/RecursosView.php:156
+msgid "Enviado por"
+msgstr "Enviat per"
+
+#: app/views/MensajesView.php:46
+msgid "Fecha"
+msgstr "Data"
+
+#: app/views/MensajesView.php:47
+msgid "Hora"
+msgstr "Hora"
+
+#: app/views/MensajesView.php:48
+msgid "&#191;Realmente desea borrar los mensajes marcados?"
+msgstr "Realment desitja esborrar els missatges marcats?"
+
+#: app/views/MensajesView.php:51
+msgid "No hay mensajes"
+msgstr "No hi han missatges"
+
+#: app/views/MensajesView.php:102
+msgid "Leido"
+msgstr "Llegit"
+
+#: app/views/MensajesView.php:106
+msgid "Sin leer"
+msgstr "Sense llegir"
+
+#: app/views/MensajesView.php:138
+msgid "Reenviar mensaje"
+msgstr "Reexpedir missatge"
+
+#: app/views/MensajesView.php:140
+msgid "Responder mensaje"
+msgstr "Respondre missatge"
+
+#: app/views/MensajesView.php:142
+msgid "Nuevo mensaje"
+msgstr "Nou missatge"
+
+#: app/views/MensajesView.php:146
+msgid "Destinatarios"
+msgstr "Destinataris"
+
+#: app/views/MensajesView.php:147
+msgid "Contenido"
+msgstr "Contingut"
+
+#: app/views/MensajesView.php:148
+msgid "Enviar"
+msgstr "Enviar"
+
+#: app/views/MensajesView.php:175
+msgid "Bandeja entrada"
+msgstr "Safata d&#39;entrada"
+
+#: app/views/MensajesView.php:176
+msgid "Escribir mensaje"
+msgstr "Escriure missatge"
+
+#: app/views/MensajesView.php:177
+msgid "Borrar marcados"
+msgstr "Esborrar marcats"
+
+#: app/views/MensajesView.php:178
+#: app/views/EspecialesView.php:42
+msgid "Cerrar"
+msgstr "Tancar"
+
+#: app/views/MensajesView.php:201
+msgid "Borrar"
+msgstr "Esborrar"
+
+#: app/views/MensajesView.php:202
+msgid "Responder"
+msgstr "Respondre"
+
+#: app/views/MensajesView.php:203
+msgid "Reenviar"
+msgstr "Reexpedir"
+
+#: app/views/MensajesView.php:205
+msgid "enviado por"
+msgstr "enviat per"
+
+#: app/views/MensajesView.php:206
+msgid "el dia"
+msgstr "el d&#237;a"
+
+#: app/views/MensajesView.php:207
+msgid "a las"
+msgstr "a les"
+
+#: app/views/MensajesView.php:208
+msgid "&#191;Realmente desea borrar el mensaje?"
+msgstr "Realment desitja esborrar el missatge?"
+
+#: app/views/MensajesView.php:257
+msgid "General"
+msgstr "General"
+
+#: app/views/MensajesView.php:258
+#: app/views/MensajesView.php:505
+#: app/views/RankingView.php:97
+#: app/views/RankingView.php:246
+#: app/views/IndexView.php:191
+#: app/views/IndexView.php:627
+#: app/views/RecursosView.php:76
+msgid "Tropas"
+msgstr "Tropes"
+
+#: app/views/MensajesView.php:259
+#: app/views/MensajesView.php:588
+#: app/views/RankingView.php:93
+#: app/views/RankingView.php:242
+#: app/views/IndexView.php:192
+#: app/views/IndexView.php:562
+#: app/views/IndexView.php:628
+#: app/views/RecursosView.php:77
+msgid "Naves"
+msgstr "Naus"
+
+#: app/views/MensajesView.php:260
+#: app/views/MensajesView.php:672
+#: app/views/RankingView.php:101
+#: app/views/RankingView.php:250
+#: app/views/IndexView.php:193
+#: app/views/IndexView.php:563
+#: app/views/IndexView.php:629
+#: app/views/RecursosView.php:78
+msgid "Defensas"
+msgstr "Defenses"
+
+#: app/views/MensajesView.php:261
+msgid "Jugador"
+msgstr "Jugador"
+
+#: app/views/MensajesView.php:262
+#: app/views/RankingView.php:109
+#: app/views/RankingView.php:258
+msgid "Total"
+msgstr "Total"
+
+#: app/views/MensajesView.php:341
+msgid "Error inespedado 1: Envie este mensaje a un administrador lo antes posible, gracias."
+msgstr "Error inesperat 1: Enviï aquest missatge a un administrador lo abans possible, gracies."
+
+#: app/views/MensajesView.php:444
+#: app/views/MensajesView.php:450
+#: app/views/MensajesView.php:459
+#: app/views/MensajesView.php:465
+#: app/views/MensajesView.php:474
+#: app/views/MensajesView.php:480
+#: app/views/MensajesView.php:489
+#: app/views/MensajesView.php:495
+msgid "Puntos iniciales"
+msgstr "Punts inicials"
+
+#: app/views/MensajesView.php:444
+#: app/views/MensajesView.php:459
+#: app/views/MensajesView.php:474
+#: app/views/MensajesView.php:489
+msgid "Puntos ganados"
+msgstr "Punts guanyats"
+
+#: app/views/MensajesView.php:450
+#: app/views/MensajesView.php:465
+#: app/views/MensajesView.php:480
+#: app/views/MensajesView.php:495
+msgid "Puntos perdidos"
+msgstr "Punts perduts"
+
+#: app/views/MensajesView.php:521
+#: app/views/MensajesView.php:604
+#: app/views/MensajesView.php:688
+msgid "Iniciales"
+msgstr "Inicials"
+
+#: app/views/MensajesView.php:522
+#: app/views/MensajesView.php:605
+#: app/views/MensajesView.php:689
+msgid "Finales"
+msgstr "Finals"
+
+#: app/views/MensajesView.php:528
+#: app/views/MensajesView.php:611
+#: app/views/MensajesView.php:695
+msgid "Cantidad inicial"
+msgstr "Quantitat inicial"
+
+#: app/views/MensajesView.php:529
+#: app/views/MensajesView.php:612
+#: app/views/MensajesView.php:696
+msgid "Cantidad final"
+msgstr "Quantitat final"
+
+#: app/views/MensajesView.php:545
+#: app/views/MensajesView.php:560
+#: app/views/MensajesView.php:628
+#: app/views/MensajesView.php:644
+#: app/views/MensajesView.php:712
+#: app/views/MensajesView.php:727
+msgid "Cantidad"
+msgstr "Quantitat"
+
+#: app/views/MensajesView.php:549
+#: app/views/MensajesView.php:633
+#: app/views/MensajesView.php:716
+msgid "Destruidas"
+msgstr "Destruïdes"
+
+#: app/views/MensajesView.php:564
+#: app/views/MensajesView.php:648
+#: app/views/MensajesView.php:731
+msgid "Capturadas"
+msgstr "Capturades"
+
+#: app/views/MensajesView.php:754
+#: app/views/MensajesView.php:755
+#: app/views/GalaxiasView.php:397
+#: app/views/IndexView.php:620
+msgid "Planeta"
+msgstr "Planeta"
+
+#: app/views/MejorasView.php:86
+msgid "No hay mejoras"
+msgstr "No hi han millores"
+
+#: app/views/MejorasView.php:111
+msgid "Nivel actual"
+msgstr "Millora actual"
+
+#: app/views/MejorasView.php:129
+msgid "Mejoras por nivel"
+msgstr "Millores per nivell"
+
+#: app/views/MejorasView.php:134
+msgid "a nivel"
+msgstr "a nivell"
+
+#: app/views/MejorasView.php:170
+#: app/views/MejorasView.php:256
+msgid "Investigar"
+msgstr "Investigar"
+
+#: app/views/MejorasView.php:173
+#: app/views/MejorasView.php:228
+#: app/views/IndexView.php:536
+msgid "Investigando"
+msgstr "Investigant"
+
+#: app/views/MejorasView.php:190
+msgid "Recursos insuficientes"
+msgstr "Recursos insuficients"
+
+#: app/views/GalaxiasView.php:40
+#: app/views/IndexView.php:189
+msgid "Galaxias"
+msgstr "Gal&#224;xies"
+
+#: app/views/GalaxiasView.php:41
+#: app/views/RankingView.php:43
+msgid "Buscador"
+msgstr "Cercador"
+
+#: app/views/GalaxiasView.php:74
+msgid "Seleccione una galaxia"
+msgstr "Sel&#183;leccione una gal&#224;xia"
+
+#: app/views/GalaxiasView.php:75
+msgid "Seleccione un sector"
+msgstr "Sel&#183;leccione un sector"
+
+#: app/views/GalaxiasView.php:76
+msgid "Seleccione un cuadrante"
+msgstr "Sel&#183;leccione un quadrant"
+
+#: app/views/GalaxiasView.php:78
+#: app/views/GalaxiasView.php:182
+#: app/views/RankingView.php:75
+msgid "D&#233;bil"
+msgstr "Feble"
+
+#: app/views/GalaxiasView.php:79
+#: app/views/GalaxiasView.php:180
+#: app/views/GalaxiasView.php:349
+#: app/views/RankingView.php:76
+#: app/views/RankingView.php:164
+#: app/views/RankingView.php:389
+#: app/views/RankingView.php:432
+#: app/views/AlianzaView.php:240
+#: app/views/AlianzaView.php:440
+msgid "Inactivo"
+msgstr "Inactiu"
+
+#: app/views/GalaxiasView.php:80
+#: app/views/GalaxiasView.php:178
+#: app/views/GalaxiasView.php:347
+#: app/views/RankingView.php:77
+#: app/views/RankingView.php:433
+#: app/views/AlianzaView.php:241
+#: app/views/AlianzaView.php:441
+msgid "Vacaciones"
+msgstr "Vacances"
+
+#: app/views/GalaxiasView.php:82
+#: app/views/RankingView.php:79
+#: app/views/RankingView.php:436
+msgid "Los jugadores son d&#233;biles cuando tienen menos de "
+msgstr "Els jugadors son febles quan tenen menys de "
+
+#: app/views/GalaxiasView.php:83
+#: app/views/RankingView.php:80
+#: app/views/RankingView.php:437
+msgid "El usuario lleva sin entrar al juego mas de 15 dias."
+msgstr "L&#39;usuari du sense accedir al joc m&#233;s de 15 dies."
+
+#: app/views/GalaxiasView.php:84
+#: app/views/RankingView.php:81
+#: app/views/RankingView.php:438
+msgid "El usuario está en modo vacaciones, no participar&#225; en las batallas y permanecer&#225; en este modo al menos 48 horas."
+msgstr "L&#39;usuari est&#224; en mode vacances, no participar&#224; en les batalles i romandr&#224; amb aquest mode al menys 48 hores."
+
+#: app/views/GalaxiasView.php:139
+#: app/views/GalaxiasView.php:308
+#: app/views/GalaxiasView.php:447
+msgid "Enviar naves"
+msgstr "Enviar naus"
+
+#: app/views/GalaxiasView.php:140
+#: app/views/GalaxiasView.php:309
+#: app/views/GalaxiasView.php:446
+msgid "Enviar tropas"
+msgstr "Enviar tropes"
+
+#: app/views/GalaxiasView.php:141
+#: app/views/GalaxiasView.php:310
+msgid "Enviar defensas"
+msgstr "Enviar defenses"
+
+#: app/views/GalaxiasView.php:142
+#: app/views/GalaxiasView.php:311
+msgid "Enviar exploraci&#243;n"
+msgstr "Enviar exploraci&#243;"
+
+#: app/views/GalaxiasView.php:158
+#: app/views/GalaxiasView.php:327
+#: app/views/GalaxiasView.php:450
+msgid "Eliminar de Tu Lista"
+msgstr "Eliminar de La Teva Llista"
+
+#: app/views/GalaxiasView.php:160
+#: app/views/GalaxiasView.php:329
+#: app/views/GalaxiasView.php:452
+msgid "A&#241;adir a Tu Lista"
+msgstr "Afegir a La Teva Llista"
+
+#: app/views/GalaxiasView.php:248
+#: app/views/RankingView.php:434
+#: app/views/AlianzaView.php:59
+#: app/views/AlianzaView.php:89
+msgid "Buscar"
+msgstr "Cercar"
+
+#: app/views/GalaxiasView.php:249
+msgid "Propietario"
+msgstr "Propietari"
+
+#: app/views/GalaxiasView.php:250
+msgid "Nombre planeta"
+msgstr "Nom planeta"
+
+#: app/views/GalaxiasView.php:251
+msgid "Nombre planeta SGC"
+msgstr "Nom planeta SGC"
+
+#: app/views/GalaxiasView.php:253
+msgid "Todas las galaxias"
+msgstr "Totes les gal&#224;xies"
+
+#: app/views/GalaxiasView.php:254
+msgid "Utilice el buscador para buscar entre sus planetas explorados"
+msgstr "Utilitze el cercador per a cercar entre els seus planetes explorats"
+
+#: app/views/GalaxiasView.php:351
+#: app/views/RankingView.php:168
+#: app/views/RankingView.php:393
+#: app/views/RankingView.php:431
+#: app/views/AlianzaView.php:239
+#: app/views/AlianzaView.php:439
+msgid "Debil"
+msgstr "Feble"
+
+#: app/views/GalaxiasView.php:390
+msgid "No se han encontrado planetas"
+msgstr "No s&#39;hi han trobat planetes"
+
+#: app/views/GalaxiasView.php:396
+#: app/views/OpcionesView.php:70
+#: app/views/RankingView.php:89
+#: app/views/RankingView.php:357
+#: app/views/AlianzaView.php:243
+#: app/views/AlianzaView.php:365
+#: app/views/AlianzaView.php:443
+#: app/views/IndexView.php:411
+msgid "Usuario"
+msgstr "Usuari"
+
+#: app/views/GalaxiasView.php:398
+#: app/views/RankingView.php:90
+#: app/views/RankingView.php:238
+#: app/views/RankingView.php:358
+#: app/views/AlianzaView.php:44
+#: app/views/AlianzaView.php:148
+#: app/views/AlianzaView.php:408
+#: app/views/IndexView.php:197
+msgid "Alianza"
+msgstr "Alian&#231;a"
+
+#: app/views/GalaxiasView.php:400
+#: app/views/RankingView.php:112
+#: app/views/RankingView.php:261
+#: app/views/RankingView.php:359
+#: app/views/AlianzaView.php:151
+#: app/views/AlianzaView.php:245
+#: app/views/AlianzaView.php:368
+#: app/views/IndexView.php:200
+#: app/views/IndexView.php:409
+#: app/views/RecursosView.php:159
+#: app/views/RecursosView.php:187
+msgid "Opciones"
+msgstr "Opcions"
+
+#: app/views/GalaxiasView.php:401
+#: app/views/IndexView.php:188
+#: app/views/IndexView.php:619
+msgid "Planetas"
+msgstr "Planetes"
+
+#: app/views/GalaxiasView.php:448
+#: app/views/IndexView.php:185
+#: app/views/IndexView.php:250
+#: app/views/IndexView.php:558
+msgid "Ver planeta"
+msgstr "Veure planeta"
+
+#: app/views/OpcionesView.php:41
+#: app/views/OpcionesView.php:69
+msgid "Tus datos"
+msgstr "Dades"
+
+#: app/views/OpcionesView.php:42
+msgid "Personalizar"
+msgstr "Personalitzar"
+
+#: app/views/OpcionesView.php:71
+msgid "Contrase&#241;a"
+msgstr "Contrasenya"
+
+#: app/views/OpcionesView.php:72
+msgid "Repetir contrase&#241;a"
+msgstr "Repetir contrasenya"
+
+#: app/views/OpcionesView.php:73
+msgid "Correo electr&#243;nico"
+msgstr "Correu electr&#242;nic"
+
+#: app/views/OpcionesView.php:74
+msgid "Idioma"
+msgstr "Idioma"
+
+#: app/views/OpcionesView.php:75
+msgid "Idioma actual"
+msgstr "Idioma actual"
+
+#: app/views/OpcionesView.php:76
+msgid "Cambiar idioma"
+msgstr "Canviar idioma"
+
+#: app/views/OpcionesView.php:77
+#: app/views/AlianzaView.php:198
+msgid "Cambiar datos"
+msgstr "Canviar dades"
+
+#: app/views/OpcionesView.php:78
+msgid "Opciones de cuenta"
+msgstr "Opcions de compte"
+
+#: app/views/OpcionesView.php:79
+#: app/views/IndexView.php:664
+msgid "Modo vacaciones"
+msgstr "Mode vacacions"
+
+#: app/views/OpcionesView.php:80
+msgid "Borrar cuenta"
+msgstr "Esborrar compte"
+
+#: app/views/OpcionesView.php:81
+msgid "&#191;Realmente desea borrar su cuenta&#63; Este proceso es irreversible y no podr&#225; recuperar su cuenta de ningun modo."
+msgstr "Realment desitja esborrar el su compte? Aquest proces es irreversible i no podr&#224; recuperar el seu compte de cap manera."
+
+#: app/views/OpcionesView.php:82
+msgid "&#191;Esta totalmente seguro&#63;"
+msgstr "Estas totalment segur?"
+
+#: app/views/OpcionesView.php:83
+msgid "&#191;Desea activar el modo vacaciones&#63; El tiempo m&#237;nimo del modo vacaciones es 48 horas, durante este tiempo no podr&#225; interactuar con su cuenta pero tampoco recibira ataques de otros jugadores."
+msgstr "Desitja activar el mode vacances? El temps m&#237;nim del mode vacances es 48 hores, durant aquest temps no podra interaccion&#224; amb el seu compte per&#242; tampoc rebr&#224; atacs d&#39;altres jugadors."
+
+#: app/views/OpcionesView.php:87
+msgid "Desactivar protecci&#243;n IP"
+msgstr "Desactivar protecci&#243; IP"
+
+#: app/views/OpcionesView.php:88
+msgid "&#191;Desea desactivar la protecci&#243;n de IP de la cuenta&#63; (NO Recomendado)"
+msgstr "&#191;Desitja desactivar la protecci&#243; IP del compte&#63; (NO Recomanat)"
+
+#: app/views/OpcionesView.php:91
+msgid "Activar protecci&#243;n IP"
+msgstr "Activar protecci&#243; IP"
+
+#: app/views/OpcionesView.php:92
+msgid "&#191;Desea activar la protecci&#243;n de IP de la cuenta&#63; (Recomendado)"
+msgstr "&#191;Desitja activar la protecci&#243; IP del compte&#63; (Recomanat)"
+
+#: app/views/OpcionesView.php:136
+msgid "Logotipo"
+msgstr "Logotip"
+
+#: app/views/OpcionesView.php:137
+msgid "Cambiar logotipo"
+msgstr "Canviar logotip"
+
+#: app/views/OpcionesView.php:138
+msgid "Firma"
+msgstr "Firma"
+
+#: app/views/OpcionesView.php:139
+msgid "Cambiar firma"
+msgstr "Canviar firma"
+
+#: app/views/OpcionesView.php:140
+msgid "URL"
+msgstr "URL"
+
+#: app/views/OpcionesView.php:141
+msgid "Foros"
+msgstr "F&#242;rums"
+
+#: app/views/OpcionesView.php:142
+msgid "HTML"
+msgstr "HTML"
+
+#: app/views/RankingView.php:41
+msgid "Usuarios"
+msgstr "Usuaris"
+
+#: app/views/RankingView.php:42
+msgid "Alianzas"
+msgstr "Aliances"
+
+#: app/views/RankingView.php:83
+#: app/views/RankingView.php:232
+msgid "Puntuaci&#243;n Total"
+msgstr "Puntuaci&#243; Total"
+
+#: app/views/RankingView.php:84
+#: app/views/RankingView.php:233
+msgid "Puntuaci&#243;n Naves"
+msgstr "Puntuaci&#243; Naus"
+
+#: app/views/RankingView.php:85
+#: app/views/RankingView.php:234
+msgid "Puntuaci&#243;n Tropas"
+msgstr "Puntuaci&#243; Tropes"
+
+#: app/views/RankingView.php:86
+#: app/views/RankingView.php:235
+msgid "Puntuaci&#243;n Defensas"
+msgstr "Puntuaci&#243; Defenses"
+
+#: app/views/RankingView.php:87
+#: app/views/RankingView.php:236
+msgid "Puntuaci&#243;n Investigaci&#243;n"
+msgstr "Puntuaci&#243; Investigaci&#243;"
+
+#: app/views/RankingView.php:91
+#: app/views/RankingView.php:240
+#: app/views/AlianzaView.php:150
+#: app/views/AlianzaView.php:244
+#: app/views/AlianzaView.php:366
+#: app/views/AlianzaView.php:444
+#: app/views/IndexView.php:625
+msgid "Puntuaci&#243;n"
+msgstr "Puntuaci&#243;"
+
+#: app/views/RankingView.php:105
+#: app/views/RankingView.php:254
+msgid "Investigaci&#243;n"
+msgstr "Investigaci&#243;"
+
+#: app/views/RankingView.php:123
+#: app/views/RankingView.php:272
+msgid "naves"
+msgstr "naus"
+
+#: app/views/RankingView.php:125
+#: app/views/RankingView.php:274
+msgid "tropas"
+msgstr "tropes"
+
+#: app/views/RankingView.php:127
+#: app/views/RankingView.php:276
+msgid "defensas"
+msgstr "defenses"
+
+#: app/views/RankingView.php:129
+#: app/views/RankingView.php:278
+msgid "investigacion"
+msgstr "investigaci&#243;"
+
+#: app/views/RankingView.php:131
+#: app/views/RankingView.php:280
+msgid "total"
+msgstr "total"
+
+#: app/views/RankingView.php:160
+#: app/views/RankingView.php:385
+msgid "De vacaciones"
+msgstr "De vacances"
+
+#: app/views/RankingView.php:189
+#: app/views/RankingView.php:401
+#: app/views/AlianzaView.php:286
+msgid "Enviar mensaje"
+msgstr "Enviar missatge"
+
+#: app/views/RankingView.php:191
+#: app/views/RankingView.php:403
+#: app/views/AlianzaView.php:288
+#: app/views/RecursosView.php:236
+msgid "Enviar comercio"
+msgstr "Enviar comer&#231;"
+
+#: app/views/RankingView.php:226
+msgid "No hay alianzas"
+msgstr "No hi han alian&#231;es"
+
+#: app/views/RankingView.php:239
+#: app/views/AlianzaView.php:88
+#: app/views/AlianzaView.php:149
+#: app/views/AlianzaView.php:268
+#: app/views/AlianzaView.php:464
+msgid "L&#237;der"
+msgstr "L&#237;der"
+
+#: app/views/RankingView.php:313
+msgid "Enviar mensaje al l&#237;der"
+msgstr "Enviar missatje al l&#237;der"
+
+#: app/views/RankingView.php:315
+#: app/views/AlianzaView.php:161
+msgid "Enviar solicitud de entrada"
+msgstr "Enviar sol&#183;licitud d&#39;entrada"
+
+#: app/views/RankingView.php:316
+#: app/views/AlianzaView.php:162
+msgid "Escribe un mensaje en la solicitud"
+msgstr "Escriu un missatge en la sol&#183;licitud"
+
+#: app/views/RankingView.php:351
+msgid "No se han encontrado usuarios"
+msgstr "No s&#39;han trobat usuaris"
+
+#: app/views/RankingView.php:372
+msgid "Puntos de naves"
+msgstr "Punts de naus"
+
+#: app/views/RankingView.php:373
+msgid "Puntos de tropas"
+msgstr "Punts de tropes"
+
+#: app/views/RankingView.php:374
+msgid "Puntos de defensas"
+msgstr "Punts de defenses"
+
+#: app/views/RankingView.php:375
+msgid "Puntos de tecnolog&#237;as"
+msgstr "Punts de tecnolog&#237;a"
+
+#: app/views/RankingView.php:376
+msgid "Puntos totales"
+msgstr "Punts totals"
+
+#: app/views/RankingView.php:435
+msgid "Utilice el buscador para buscar usuarios"
+msgstr "Utilitze el cercador per a cercar usuaris"
+
+#: app/views/AlianzaView.php:45
+#: app/views/AlianzaView.php:409
+msgid "Miembros"
+msgstr "Membres"
+
+#: app/views/AlianzaView.php:49
+msgid "Solicitudes"
+msgstr "Sol&#183;licituds"
+
+#: app/views/AlianzaView.php:50
+msgid "Editar"
+msgstr "Editar"
+
+#: app/views/AlianzaView.php:60
+msgid "Crear"
+msgstr "Crear"
+
+#: app/views/AlianzaView.php:87
+msgid "Nombre"
+msgstr "Nom"
+
+#: app/views/AlianzaView.php:90
+msgid "No perteneces a ninguna alianza, puedes buscar una alianza y enviar una solictud de ingreso mediante el buscador"
+msgstr "No pertanys a cap alian&#231;a, pots cercar una alian&#231;a i enviar una sol&#183;licitud d&#39;ingr&#233;s mitjan&#231;ant el cercador"
+
+#: app/views/AlianzaView.php:113
+msgid "Datos de la nueva alianza"
+msgstr "Dades de la nova alian&#231;a"
+
+#: app/views/AlianzaView.php:114
+#: app/views/AlianzaView.php:194
+msgid "T&#237;tulo"
+msgstr "T&#237;tol"
+
+#: app/views/AlianzaView.php:115
+#: app/views/AlianzaView.php:195
+msgid "URL Imagen"
+msgstr "URL Imatge"
+
+#: app/views/AlianzaView.php:116
+#: app/views/AlianzaView.php:196
+msgid "URL Foro/Web"
+msgstr "URL F&#242;rum/Web"
+
+#: app/views/AlianzaView.php:117
+#: app/views/AlianzaView.php:197
+msgid "Texto"
+msgstr "Text"
+
+#: app/views/AlianzaView.php:118
+msgid "Crear alianza"
+msgstr "Crear alian&#231;a"
+
+#: app/views/AlianzaView.php:119
+#: app/views/AlianzaView.php:199
+msgid "Opcional"
+msgstr "Opcional"
+
+#: app/views/AlianzaView.php:142
+msgid "No se han encontrado alianzas"
+msgstr "No s&#39;han trobat alian&#231;es"
+
+#: app/views/AlianzaView.php:193
+msgid "Datos de la alianza"
+msgstr "Dades de l&#39;alian&#231;a"
+
+#: app/views/AlianzaView.php:208
+msgid "Opciones de alianza"
+msgstr "Opcions d&#39;alian&#231;a"
+
+#: app/views/AlianzaView.php:209
+msgid "Borrar alianza"
+msgstr "Esborrar alian&#231;a"
+
+#: app/views/AlianzaView.php:210
+msgid "&#191;Realmente desea borrar la alianza&#63; Este proceso es irreversible."
+msgstr "Realment desitja esborrar l&#39;alian&#231;a? Aquest proces es irreversible."
+
+#: app/views/AlianzaView.php:247
+msgid "&#191;Realmente desea expulsar a este jugador&#63;"
+msgstr "Realment desitja expulsar aquest jugador?"
+
+#: app/views/AlianzaView.php:248
+msgid "&#191;Realmente desea ceder el control de la alianza a este jugador&#63;"
+msgstr "Realment desitja cedir el control de l&#39;alian&#231;a a aquest jugador?"
+
+#: app/views/AlianzaView.php:249
+msgid "&#191;Realmente desea abandonar la alianza&#63;"
+msgstr "Realment desitja abandonar l&#39;alian&#231;a?"
+
+#: app/views/AlianzaView.php:282
+msgid "Abandonar la alianza"
+msgstr "Abandonar l&#39;alian&#231;a"
+
+#: app/views/AlianzaView.php:290
+msgid "Expulsar miembro"
+msgstr "Expulsar membre"
+
+#: app/views/AlianzaView.php:291
+msgid "Ceder liderazgo de la alianza"
+msgstr "cedir lideratge de l&#39;alian&#231;a"
+
+#: app/views/AlianzaView.php:333
+msgid "Foro/Web"
+msgstr "F&#242;rum/web"
+
+#: app/views/AlianzaView.php:359
+msgid "No hay solicitudes de entrada"
+msgstr "No hi han sol&#183;licituds d&#39;entrada"
+
+#: app/views/AlianzaView.php:367
+msgid "Mensaje"
+msgstr "Missatge"
+
+#: app/views/AlianzaView.php:380
+#: app/views/RecursosView.php:173
+msgid "Aceptar"
+msgstr "Acceptar"
+
+#: app/views/AlianzaView.php:381
+msgid "Denegar"
+msgstr "Denegar"
+
+#: app/views/EspecialesView.php:45
+msgid "No hay especiales"
+msgstr "No hi han especials"
+
+#: app/views/EspecialesView.php:62
+msgid "Efecto"
+msgstr "Efecte"
+
+#: app/views/EspecialesView.php:63
+msgid "Duraci&#243;n"
+msgstr "Duraci&#243;"
+
+#: app/views/EspecialesView.php:64
+msgid "Recarga"
+msgstr "Recarrega"
+
+#: app/views/EspecialesView.php:69
+msgid "Activo"
+msgstr "Actiu"
+
+#: app/views/EspecialesView.php:70
+msgid "Recargando"
+msgstr "Recarregant"
+
+#: app/views/EspecialesView.php:71
+msgid "Activar"
+msgstr "Activar"
+
+#: app/views/EspecialesView.php:90
+msgid "Elija el planeta de destino del especial"
+msgstr "Triï el planeta de dest&#237; del especial"
+
+#: app/views/EspecialesView.php:91
+#: app/views/IndexView.php:186
+msgid "Seleccionar Planeta"
+msgstr "Seleccionar Planeta"
+
+#: app/views/DefensasView.php:77
+msgid "No puedes construir defensas, consulta la secci&#243;n requisitos"
+msgstr "No pots construir defenses, consulta la secci&#243; requisits"
+
+#: app/views/DefensasView.php:142
+#: app/views/DefensasView.php:442
+msgid "Se autodestruye al atacar"
+msgstr "S&#39;autodestrueix al atacar"
+
+#: app/views/DefensasView.php:363
+#: app/views/DefensasView.php:365
+msgid "Defensas disponibles"
+msgstr "Defenses disponibles"
+
+#: app/views/DefensasView.php:375
+msgid "No hay defensas disponibles"
+msgstr "No hi han defenses disponibles"
+
+#: app/views/DefensasView.php:392
+msgid "&#191;Realmente desea desmantelar estas defensas&#63; Las defensas ser&#225;n destruidas"
+msgstr "Realment desitja desmantellar aquestes defenses? Les defenses seran destruides"
+
+#: app/views/DefensasView.php:458
+#: app/views/DefensasView.php:463
+msgid "Esta defensa no puede moverse"
+msgstr "Aquesta defensa no pot moure&#39;s"
+
+#: app/views/DefensasView.php:464
+msgid "Desmantelar defensa"
+msgstr "Desmantellar defensa"
+
+#: app/views/DefensasView.php:656
+msgid "No hay defensas construibles"
+msgstr "No hi han defenses construïbles"
+
+#: app/views/IndexView.php:119
+#: app/views/IndexView.php:315
+#: app/views/IndexView.php:571
+msgid "No hay construcciones"
+msgstr "No hi han construccions"
+
+#: app/views/IndexView.php:179
+msgid "Tienes"
+msgstr "Tens"
+
+#: app/views/IndexView.php:181
+msgid "mensajes nuevos"
+msgstr "missatges nous"
+
+#: app/views/IndexView.php:184
+msgid "Cargando"
+msgstr "Carregant"
+
+#: app/views/IndexView.php:187
+msgid "Inicio"
+msgstr "Inici"
+
+#: app/views/IndexView.php:190
+#: app/views/RecursosView.php:41
+#: app/views/RecursosView.php:81
+msgid "Recursos"
+msgstr "Recursos"
+
+#: app/views/IndexView.php:194
+msgid "Especiales"
+msgstr "Especials"
+
+#: app/views/IndexView.php:196
+msgid "Foro"
+msgstr "F&#242;rum"
+
+#: app/views/IndexView.php:198
+msgid "Mensajes"
+msgstr "Missatges"
+
+#: app/views/IndexView.php:199
+msgid "Ranking"
+msgstr "R&#224;nquing"
+
+#: app/views/IndexView.php:201
+msgid "Salir"
+msgstr "Sortir"
+
+#: app/views/IndexView.php:403
+msgid "Misi&#243;n"
+msgstr "Missi&#243;"
+
+#: app/views/IndexView.php:404
+msgid "Origen"
+msgstr "Origen"
+
+#: app/views/IndexView.php:405
+msgid "Destino"
+msgstr "Dest&#237;"
+
+#: app/views/IndexView.php:423
+msgid "Conquistando"
+msgstr "Conquerint"
+
+#: app/views/IndexView.php:446
+msgid "Regresar"
+msgstr "Regressar"
+
+#: app/views/IndexView.php:513
+msgid "Misiones"
+msgstr "Missions"
+
+#: app/views/IndexView.php:519
+msgid "Propias"
+msgstr "Pr&#242;pies"
+
+#: app/views/IndexView.php:526
+msgid "Aliadas/Enemigas"
+msgstr "Aliades/Enemigues"
+
+#: app/views/IndexView.php:537
+msgid "Mejora"
+msgstr "Millora"
+
+#: app/views/IndexView.php:539
+msgid "nivel"
+msgstr "nivell"
+
+#: app/views/IndexView.php:561
+msgid "Soldados"
+msgstr "Soldats"
+
+#: app/views/IndexView.php:621
+msgid "Construcciones"
+msgstr "Construccions"
+
+#: app/views/IndexView.php:622
+#: app/views/RecursosView.php:73
+msgid "Unidades"
+msgstr "Unitats"
+
+#: app/views/IndexView.php:623
+msgid "Estad&#237;sticas"
+msgstr "Estad&#237;stiques"
+
+#: app/views/IndexView.php:624
+msgid "Tecnolog&#237;as"
+msgstr "Tecnologies"
+
+#: app/views/IndexView.php:626
+msgid "Posici&#243;n"
+msgstr "Posici&#243;"
+
+#: app/views/IndexView.php:666
+msgid "El modo vacaciones est&#225; activado, pasadas 48 horas aparecer&#225; un bot&#243;n para desactivarlo"
+msgstr "El mode vacances est&#224; activat, pasades 48 hores apareixer&#224; un bot&#243; per a desactivar-lo"
+
+#: app/views/IndexView.php:689
+msgid "Cuenta bloqueada"
+msgstr "Compte bloquejat"
+
+#: app/views/IndexView.php:692
+msgid "Su cuenta a sido bloqueada por los administradores hasta el "
+msgstr "El seu compte ha sigut bloquejat pels administradors fins el"
+
+#: app/views/RecursosView.php:42
+msgid "Comercios"
+msgstr "Comer&#231;os"
+
+#: app/views/RecursosView.php:69
+msgid "Recurso"
+msgstr "Recurs"
+
+#: app/views/RecursosView.php:70
+msgid "Producci&#243;n"
+msgstr "Producci&#243;"
+
+#: app/views/RecursosView.php:71
+#: app/views/RecursosView.php:75
+msgid "Disponible"
+msgstr "Disponible"
+
+#: app/views/RecursosView.php:80
+msgid "Intercambiar"
+msgstr "Intercanviar"
+
+#: app/views/RecursosView.php:82
+msgid "de"
+msgstr "de"
+
+#: app/views/RecursosView.php:83
+msgid "por"
+msgstr "per"
+
+#: app/views/RecursosView.php:89
+#: app/views/RecursosView.php:110
+#: app/views/RecursosView.php:112
+#: app/views/RecursosView.php:118
+msgid "und"
+msgstr "unt"
+
+#: app/views/RecursosView.php:150
+msgid "No hay comercios"
+msgstr "No hi han comer&#231;os"
+
+#: app/views/RecursosView.php:155
+msgid "Recibidos"
+msgstr "Rebuts"
+
+#: app/views/RecursosView.php:157
+msgid "Ofrece"
+msgstr "Ofereix"
+
+#: app/views/RecursosView.php:158
+msgid "Pide"
+msgstr "Demana"
+
+#: app/views/RecursosView.php:174
+msgid "Rechazar"
+msgstr "Rebutja"
+
+#: app/views/RecursosView.php:183
+msgid "Enviados"
+msgstr "Enviats"
+
+#: app/views/RecursosView.php:184
+msgid "Enviado a"
+msgstr "Enviat a"
+
+#: app/views/RecursosView.php:185
+#: app/views/RecursosView.php:233
+msgid "Ofreces"
+msgstr "Ofereixes"
+
+#: app/views/RecursosView.php:186
+#: app/views/RecursosView.php:234
+msgid "Pides"
+msgstr "Demanes"
+
+#: app/views/RecursosView.php:235
+msgid "Enviar comercio a"
+msgstr "Enviar comer&#231;"
+
+#: app/views/SoldadosView.php:43
+msgid "Entrenar"
+msgstr "Entrenar"
+
+#: app/views/SoldadosView.php:79
+msgid "No puedes entrenar tropas, consulta la secci&#243;n requisitos"
+msgstr "No pots entrenar tropes, consulta la secci&#243; requisits"
+
+#: app/views/SoldadosView.php:89
+msgid "A alcanzado su l&#237;mite de tropas"
+msgstr "A aconsseguit el seu m&#237;mit de tropes"
+
+#: app/views/SoldadosView.php:90
+msgid "L&#237;mite de tropas"
+msgstr "L&#237;mit de tropes"
+
+#: app/views/SoldadosView.php:97
+msgid "Actualmente tiene"
+msgstr "Actualment te"
+
+#: app/views/SoldadosView.php:97
+msgid "soldados"
+msgstr "soldats"
+
+#: app/views/SoldadosView.php:97
+msgid "para aumentar su l&#237;mite de tropas"
+msgstr "per augmentar el seu l&#237;mit de tropes"
+
+#: app/views/SoldadosView.php:307
+#: app/views/SoldadosView.php:678
+msgid "Reclutar"
+msgstr "Reclutar"
+
+#: app/views/SoldadosView.php:310
+msgid "Reclutando"
+msgstr "Reclutant"
+
+#: app/views/SoldadosView.php:371
+msgid "Entrenando"
+msgstr "Entrenant"
+
+#: app/views/SoldadosView.php:410
+#: app/views/SoldadosView.php:412
+msgid "Tropas disponibles"
+msgstr "Tropes disponibles"
+
+#: app/views/SoldadosView.php:413
+#: app/views/SoldadosView.php:708
+msgid "Tropa"
+msgstr "Tropa"
+
+#: app/views/SoldadosView.php:418
+msgid "Licenciar"
+msgstr "Llicenciar"
+
+#: app/views/SoldadosView.php:422
+msgid "No hay tropas disponibles"
+msgstr "No hi han tropes disponibles"
+
+#: app/views/SoldadosView.php:435
+msgid "Actualmente est&#225; realizando"
+msgstr "Actualment est&#225; realitzant"
+
+#: app/views/SoldadosView.php:439
+msgid "&#191;Realmente desea licenciar estas tropas&#63; Los soldados ser&#225;n eliminados"
+msgstr "Realment desitja llicenciar aquestes tropes? Els soldats seran eliminats"
+
+#: app/views/SoldadosView.php:715
+msgid "No hay tropas entrenables"
+msgstr "No hi han tropes per entrenar"
+
+#: app/views/PlanetasView.php:41
+msgid "Tu lista"
+msgstr "La Teva Llista"
+
+#: app/views/PlanetasView.php:42
+msgid "Propios"
+msgstr "Propis"
+
+#: app/views/PlanetasView.php:43
+msgid "Aliados"
+msgstr "Aliats"
+
+#: app/views/PlanetasView.php:44
+msgid "Enemigos"
+msgstr "Enemics"
+
+#: app/views/PlanetasView.php:45
+msgid "Neutrales"
+msgstr "Neutrals"
+
+#: app/views/PlanetasView.php:86
+msgid "planetas ocultos"
+msgstr "planetes ocults"
+
+#: app/views/PlanetasView.php:90
+msgid "No hay planetas en Tu Lista"
+msgstr "No hi han planetes en La teva Llista"
+
+#: app/views/PlanetasView.php:99
+msgid "&#191;Realmente desea abandonar el planeta&#63; Este proceso es irreversible y perder&#225;s los h&#233;roes construidos en el planeta."
+msgstr "Realment desitja abandonar el planeta&#63; Aquest proces es irreversible i perdr&#224;s els heroes construits al planeta"
+
+#: app/views/PlanetasView.php:190
+msgid "No hay planetas propios"
+msgstr "No hi han planetes propis"
+
+#: app/views/PlanetasView.php:199
+msgid "Actualmente controlas"
+msgstr "Actualment controles"
+
+#: app/views/PlanetasView.php:199
+msgid "planetas"
+msgstr "planetes"
+
+#: app/views/PlanetasView.php:203
+msgid "&#191;Realmente desea abandonar el planeta&#63; Este proceso es irreversible."
+msgstr "Realment desitges abandonar el planeta? Este proces es irreversible."
+
+#: app/views/PlanetasView.php:230
+msgid "Abandonar"
+msgstr "Abandonar"
+
+#: app/views/PlanetasView.php:275
+msgid "No hay planetas aliados"
+msgstr "No hi han planetes aliats"
+
+#: app/views/PlanetasView.php:374
+msgid "No hay planetas enemigos"
+msgstr "No hi han planetes enemics"
+
+#: app/views/PlanetasView.php:472
+msgid "No hay planetas neutrales"
+msgstr "No hi han planetes neutrals"
+
+#: app/views/MisionesView.php:209
+msgid "Tiempo de misi&#243;n"
+msgstr "Temps de missi&#243;"
+
+#: app/views/MisionesView.php:232
+msgid "Naves de la misi&#243;n"
+msgstr "Naus de la missi&#243;"
+
+#: app/views/MisionesView.php:236
+msgid "Soldados de la misi&#243;n"
+msgstr "Soldats de la missi&#243;"
+
+#: libs/Funciones.php:22
+msgid "Dias"
+msgstr "Dies"
+
+#: libs/Firma.php:171
+msgid "Tecnologia"
+msgstr "Tecnologia"
+
+#: libs/ControllerBase.php:54
+msgid "El controlador no existe - 404 not found"
+msgstr "El controlador no existeix - 404 not found"
+
+#: libs/Mision/MisionViewLib.php:43
+#: libs/Mision/MisionViewLib.php:110
+msgid "Planeta de la misi&#243;n"
+msgstr "Planeta de la missi&#243;"
+
+#: libs/Mision/MisionViewLib.php:56
+#: libs/Mision/MisionViewLib.php:123
+msgid "Recursos ganados"
+msgstr "Recursos guanyats"
+
+#: libs/Mision/MisionViewLib.php:74
+msgid "Unidades enviadas a la misi&#243;n"
+msgstr "Unitats enviades a la missi&#243;"
+
+#: libs/Mision/MisionViewLib.php:135
+msgid "Unidades en el planeta"
+msgstr "Unitats en el planeta"
+
+#: libs/Mision/MisionViewLib.php:161
+msgid "No hay unidades"
+msgstr "No hi han unitats"
+
+#: libs/Mision/Mision.php:193
+msgid "Informe de recolecci&#243;n"
+msgstr "Informe de recol&#183;lecci&#243;"
+
+#: libs/Mision/Mision.php:210
+msgid "Informe de exploraci&#243;n"
+msgstr "Informe d&#39;exploraci&#243;"
+
+#: libs/Mision/Mision.php:246
+#: libs/Mision/Mision.php:247
+msgid "Alerta de conquista"
+msgstr "Alerta de conquista"
+
+#: libs/Mision/Mision.php:246
+msgid "Has conquistado el planeta "
+msgstr "Has conquistat el planeta"
+
+#: libs/Mision/Mision.php:246
+msgid " al jugador "
+msgstr "al jugador"
+
+#: libs/Mision/Mision.php:247
+msgid "Tu planeta "
+msgstr "El teu planeta"
+
+#: libs/Mision/Mision.php:247
+msgid " ha sido conquistado por un jugador enemigo."
+msgstr "has sigut conquistat per un jugador enemic"
+
+#: libs/Mision/Mision.php:304
+#: libs/Mision/Mision.php:309
+#: libs/Mision/Mision.php:315
+msgid "El planeta"
+msgstr "El planeta"
+
+#: libs/Mision/Mision.php:304
+msgid "esta bajo tu control, puedes seleccionarlo en tu lista de planetas para realizar acciones en el."
+msgstr "esta baix el teu control, pots sel&#183;leccionar-lo en la teva llista de planetes per a realitzar accions amb ell."
+
+#: libs/Mision/Mision.php:309
+msgid "no se pudo colonizar porque ya controlas tu m&#225;ximo de planetas."
+msgstr "no s&#39;ha pogut colonitzar perqu&#232; ja controles el teu m&#224;xim de planetes."
+
+#: libs/Mision/Mision.php:315
+msgid "no se pudo colonizar porque esta bajo el control de"
+msgstr "no s&#39;ha pogut col&#183;lonitzar perqu&#232; esta baix el control de"
+
+#: libs/Mision/Mision.php:319
+msgid "Alerta de establecer base"
+msgstr "Alerta d&#39;establir base"
+
+#~ msgid "Selecciona velocidad"
+#~ msgstr "Sel&#183;leccionar velocitat"
+

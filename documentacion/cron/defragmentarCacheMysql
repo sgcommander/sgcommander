@@ -1,0 +1,2 @@
+#!/bin/sh
+echo "FLUSH QUERY CACHE" | mysql -u root -pp4ssw0rd dev
