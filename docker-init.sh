@@ -1,7 +1,12 @@
 #!/bin/sh
 
+RESULT=`mysql --default-character-set=utf8 -h $DB_HOST -u $DB_USERROOT -p$DB_PASSWORDROOT --skip-column-names -e "SELECT COUNT(*) FROM information_schema.TABLES WHERE table_schema='$DB_DATABASE' AND table_name='fuegoSoldadoSoldado';"`
+
 # Initial config
-if [ ! -f /var/.initialized ]; then
+if [ $RESULT = 1 ]
+then
+    echo "Ya se realizó la configuración inicial"
+else
     echo "Initializing container"
 
     echo "Permissions"
@@ -9,11 +14,9 @@ if [ ! -f /var/.initialized ]; then
 
     echo "Database"
     /var/www/scripts/ReconstruirBD.sh
-
-    touch /var/.initialized
 fi
 
-# Daemons
+# Daemon
 php /var/www/app/eventosServer.php
 
 exec "$@"

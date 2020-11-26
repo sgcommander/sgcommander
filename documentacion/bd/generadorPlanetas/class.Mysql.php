@@ -1,4 +1,7 @@
 <?php
+  require_once('../../../constants.php');
+  require_once('../../../config.php');
+
 	//Comprueba que no se accese directamente a la pagina
 	//define('CORRECTO',1);
 	if(!defined('CORRECTO')){
@@ -78,13 +81,14 @@ class Mysql {
   //@param string $clave Password del usuario
   //@return self
 
-  public static function getInstancia($bd= 'dev', $servidor= 'sgcommander-db', $usuario= 'sgcommander', $clave= 'password')
+  public static function getInstancia()
   {
     // Bouml preserved body begin 00023602
 
 			//Comprueba si se ha instanciado ya la clase
-			if (self::$instancia == NULL)
-				self::$instancia = new self($bd, $servidor, $usuario, $clave);//Crea una instancia de la clase
+			if (self::$instancia == NULL) {
+        self::$instancia = new self($_ENV['config']->get('dbName'), $_ENV['config']->get('dbHost'), $_ENV['config']->get('dbUser'), $_ENV['config']->get('dbPass'));//Crea una instancia de la clase
+      }
 
 			//Devuelve la clase
 			return self::$instancia;
@@ -105,20 +109,28 @@ class Mysql {
   private function __construct($bd, $servidor, $usuario, $clave)
   {
     // Bouml preserved body begin 00023682
-
-			try{
+        
+			try {
 				//No se han producido errores de momento
 				$this->error=false;
 
         //Realiza la conexion y selecciona la bd
-				$this->conectionID = mysqli_connect($servidor, $usuario, $clave);
-				mysqli_select_db($this->conectionID, $bd);
-			}
-			catch(Excepcion $e){
+        $this->conectionID = mysqli_connect($servidor, $usuario, $clave);
+        if (!$this->conectionID) {
+          Excepcion::errorHandler(mysqli_errno($this->conectionID), mysqli_error($this->conectionID), __FILE__, __LINE__);
+        }
+
+        $result = mysqli_select_db($this->conectionID, $bd);
+        if (!$result) {
+          Excepcion::errorHandler(mysqli_errno($this->conectionID), mysqli_error($this->conectionID), __FILE__, __LINE__);
+        }
+			} catch(Exception $e) {
 				//Si se ha producido un error se ejecuta su excepcion
 				//y se marca para denegar la transaccion
-				$this->error=true;
-				$e->enviarExcepcion();
+        $this->error=true;
+
+        $e = new Excepcion(mysqli_error($this->conectionID), mysqli_errno($this->conectionID));
+        $e->enviarExcepcion();
 			}
 
 			//Inicio de la transaccion
@@ -171,7 +183,24 @@ class Mysql {
   public function query($sql)
   {
     // Bouml preserved body begin 00023802
-			return mysqli_query($this->conectionID, $sql);
+
+    try {
+      $result = mysqli_query($this->conectionID, $sql);
+      
+      if (!$result) {
+        Excepcion::errorHandler(mysqli_errno($this->conectionID), mysqli_error($this->conectionID) . ' - ' . $sql, __FILE__, __LINE__);
+      }
+    } catch(Exception $e) {
+      //Si se ha producido un error se ejecuta su excepcion
+      //y se marca para denegar la transaccion
+      $this->error=true;
+
+      $e = new Excepcion(mysqli_error($this->conectionID) . ' - ' . $sql, mysqli_errno($this->conectionID));
+      $e->enviarExcepcion();
+    }
+
+    return $result;
+      
     // Bouml preserved body end 00023802
   }
 
@@ -192,10 +221,12 @@ class Mysql {
 			try{
 				return mysqli_fetch_assoc($resultado);
 			}
-			catch(Excepcion $e){
+			catch(Exception $e){
 				//Si se ha producido un error se ejecuta su excepcion
 				//y se marca para denegar la transaccion
-				$this->error = true;
+        $this->error = true;
+
+        $e = new Excepcion(mysqli_error($this->conectionID), mysqli_errno($this->conectionID));
 				$e->enviarExcepcion();
 			}
     // Bouml preserved body end 00023882
@@ -218,11 +249,13 @@ class Mysql {
 			try{
 				return mysqli_fetch_row($resultado);
 			}
-			catch(Excepcion $e){
+			catch(Exception $e){
 				//Si se ha producido un error se ejecuta su excepcion
 				//y se marca para denegar la transaccion
-				$this->error = true;
-				$e->enviarExcepcion();
+        $this->error = true;
+        
+        $e = new Excepcion(mysqli_error($this->conectionID), mysqli_errno($this->conectionID));
+        $e->enviarExcepcion();
 			}
     // Bouml preserved body end 00023902
   }
@@ -239,15 +272,16 @@ class Mysql {
   public function numRows($resultado)
   {
     // Bouml preserved body begin 00023982
-
 			try{
 				return mysqli_num_rows($resultado);
 			}
-			catch(Excepcion $e){
+			catch(Exception $e){
 				//Si se ha producido un error se ejecuta su excepcion
 				//y se marca para denegar la transaccion
-				$this->error = true;
-				$e->enviarExcepcion();
+        $this->error = true;
+        
+        $e = new Excepcion(mysqli_error($this->conectionID), mysqli_errno($this->conectionID));
+        $e->enviarExcepcion();
 			}
     // Bouml preserved body end 00023982
   }
@@ -280,34 +314,4 @@ class Mysql {
 
  //fin de la Clase mysql
 
-	/************
-	 * TEST
-	*/
-
-	/*
-	 include('class.Excepcion.php');
-	 function getmicrotime(){
-   		list($usec, $sec) = explode(' ',microtime());
-   		return ((float)$usec + (float)$sec);
-   	}
-
-    $time_start = getmicrotime();
-
-    $p=Mysql::getInstancia();
-
-    for($i=0;$i<5000;++$i){
-	    //Consultas de prueba
-		$res=$p->query("SELECT * FROM usuario LEFT JOIN jugador ON usuario.id=jugador.idUsuario");
-		while($p->fetchAssoc($res));
-		$res=$p->query("SELECT * FROM usuario WHERE nombre='J5'");
-		while($p->fetchRow($res));
-		$res=$p->query("SELECT * FROM usuario");
-		$p->numRows($res);
-		$p->lastID();
-    }
-
-	$time_end = getmicrotime();
-	$time = $time_end - $time_start;
-	echo $time;
-	*/
 ?>

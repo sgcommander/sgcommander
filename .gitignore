@@ -26,5 +26,7 @@ docker/mysql/data/empty
 !/templates/default/cache/empty
 /web/images/firmas/jugador/*
 !/web/images/firmas/jugador/empty
-/config.php
-/docker-compose-production.yml
+/.env
+/docker-compose.dev.yml
+/docker-compose.prod.yml
+/docker-compose.staging.yml

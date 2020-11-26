@@ -4,7 +4,6 @@
  * Librerias necesarias
  */
 include_once '../libs/Config.php';
-//include '../../../libs/Config.php';
 
 $staticServer='';
 
@@ -53,57 +52,51 @@ $_ENV['config']->set(array(
 		/**
 		 * URL Externas
 		 */
-		//Redireccionamiento
-		/*'urlLogin' => 'http://www.sgcommander.com',
+		'urlLogin' => getenv('URL_HOMEPAGE'),
 		'urlForo' => 'http://foro.sgcommander.com', //Actualmente en desuso
-		'urlFirmas' => 'http://firma.sg1.sgcommander.com',
-		'urlImagenes' => 'http://static.sgcommander.com', //Actualmente en desuso
-		'urlServidor' => 'http://sg1.sgcommander.com',*/
-		
-		'urlLogin' => 'http://localhost:8888',
-		'urlForo' => 'http://foro.sgcommander.com', //Actualmente en desuso
-		'urlFirmas' => 'http://localhost:8889/images/firmas/jugador',
+		'urlFirmas' => getenv('URL_SIGNS'),
 		'urlImagenes' => '', //Actualmente en desuso
-		'urlServidor' => 'http://localhost:8889',
+		'urlServidor' => getenv('URL_SERVER'),
 
 		/**
 		 * Base de datos
 		 */
-		'dbHost' => 'sgcommander-db',
-		'dbPort' => 3306,
-		'dbName' => 'dev',
-		'dbUser' => 'sgcommander',
-		'dbPass' => 'password',
+		'dbHost' => getenv('DB_HOST'),
+		'dbPort' => getenv('DB_PORT'),
+		'dbName' => getenv('DB_DATABASE'),
+		'dbUser' => getenv('DB_USER'),
+		'dbPass' => getenv('DB_PASSWORD'),
 
 		/**
-			* Internacionalizacion
-			*/
+		 * Internacionalizacion
+		 */
 		'lang' => 'es_ES',
 		'moFile' => 'messages',
 	
 		/**
-			* Mensajeria
-			*/
+		 * Mensajeria
+		 */
 		'longitudAsuntoMensajeRecortar' => 15,
 
 		/**
-			* Paginaciones
-			*/
+		 * Paginaciones
+		 */
 		'rankingUsuariosNumPag' => 50,
 		'rankingAlianzasNumPag' => 50,
 	
 		/**
-			* JUEGOlibs
-			*/
+		 * JUEGOlibs
+		 */
 
 		/**
-			* Galaxia
-			*/
+		 * Galaxia
+		 */
 		'numGalaxias' => 3,
-		'numSectores' => Array( 1 => 55, 2 => 40, 3 => 20, 4 => 1),
-		'numCuadrantes' => 36,
+		'numSectores' => Array( 1 => getenv('GALAXY_1_SECTORS'), 2 => getenv('GALAXY_2_SECTORS'), 3 => getenv('GALAXY_3_SECTORS'), 4 => getenv('GALAXY_4_SECTORS')),
+		'numCuadrantes' => getenv('GALAXY_SQUARES'),
 		'numPlanetas' => 16,
 		
+		// Universo pequeño
 		/*'numGalaxias' => 3,
 		'numSectores' => Array( 1 => 5, 2 => 3, 3 => 2, 4 => 1),
 		'numCuadrantes' => 1,
@@ -114,14 +107,16 @@ $_ENV['config']->set(array(
 		'distanciaSector' => 3500,
 		'distanciaGalaxia' => 5000,
 		'distanciaInterGalactica' => 50000,*/
-		'distanciaCuadrante' => 30,
-		'distanciaSector' => 350,
-		'distanciaGalaxia' => 500,
-		'distanciaInterGalactica' => 5000,
+
+		// Distancias cortas
+		'distanciaCuadrante' => getenv('TIME_SQUARES'),
+		'distanciaSector' => getenv('TIME_SECTORS'),
+		'distanciaGalaxia' => getenv('TIME_GALAXY'),
+		'distanciaInterGalactica' => getenv('TIME_INTERGALAXY'),
 		
 		/**
-			* Longitudes de caracteres
-			*/
+		 * Longitudes de caracteres
+		 */
 		//Longitud nombre planeta
 		'minNomPlaneta' => 5,
 		'maxNomPlaneta' => 15,
@@ -131,19 +126,19 @@ $_ENV['config']->set(array(
 		'maxNomAlianza' => 25,
 
 		/**
-			* MISIONES
-			*/
+		 * MISIONES
+		 */
 
 		/**
-			* Recoleccion
-			*/
+		 * Recoleccion
+		 */
 		//Recoleccion maxima y minima, entre la cual se elegira aleatoriamente
 		'minRecoleccion' => 80,
 		'maxRecoleccion' => 100,
 
 		/**
-			* Batallas
-			*/
+		 * Batallas
+		 */
 		//BATALLAS
 		'numeroRondas' => 10, //Numero de rondas en las que se decide la batalla
 		'precisionFuegoMinima' => 90, //Indica el ataque efectivo de una unidad tendra como minimo 0.9*ataque
@@ -166,7 +161,7 @@ $_ENV['config']->set(array(
 			* Conquista
 			*/
 		//'tiempoConquista' => 86400,
-		'tiempoConquista' => 8640,
+		'tiempoConquista' => getenv('TIME_CONQUEST'),
 
 		/**
 			* CUENTA
@@ -189,10 +184,10 @@ $_ENV['config']->set(array(
 		/**
 		* Registro
 		*/
-		'secretWordToken' => 'KCVASAMORIR', 
-		'maxUsuarios' => 5000,
-		'emailRegistro' => 'noreply@sgcommander.com',
-		'correoConfirmacion' => false
+		'secretWordToken' => getenv('SECRET_WORD'), 
+		'maxUsuarios' => getenv('MAX_USERS'),
+		'emailRegistro' => getenv('SIGNUP_EMAIL'),
+		'correoConfirmacion' => getenv('SIGNUP_CONFIRMATION_EMAIL') === 'true' ? true : false
 	)
 );
 

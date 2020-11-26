@@ -5,9 +5,9 @@
 		define('PLANETASESPECIALESPORGALAXIA', '');
 		require_once('class.Excepcion.php');
 		require_once('class.Mysql.php');
-		require_once('../../../constants.php');
-		require_once('../../../config.php');
 
+		$mysql = Mysql::getInstancia();
+		
 		function microtime_float()
 		{
 		    list($useg, $seg) = explode(" ", microtime());
@@ -22,15 +22,15 @@
 		$letra=Array('V','P','A');
 		$nRiquezas=count($riquezas)-1;
 
-		$mysql = Mysql::getInstancia();
-
 		//Preaparamos las tablas
+		$mysql->query('SET FOREIGN_KEY_CHECKS = 0');
 		$mysql->query('TRUNCATE planetaExplorado');
 		$mysql->query('TRUNCATE planetaColonizado');
 		$mysql->query('TRUNCATE planetaEspecial');
 		$mysql->query('TRUNCATE planeta');
+		$mysql->query('SET FOREIGN_KEY_CHECKS = 1');
 		//Seteamos el tamano de la tabla en RAM a un valor suficientemente alto
-		$mysql->query('set max_heap_table_size=1048576000');
+		$mysql->query('SET max_heap_table_size=536870912');
 		//Reconstruimos la tabla para que acepte la neuva cantidad de tuplas 
 		$mysql->query('ALTER TABLE tPlanetaMem ENGINE MEMORY;');
 
@@ -50,26 +50,27 @@
 						$nombreSGC=$letra[$i-1].$s.substr($sectores,$s-1,1).'-'.str_pad($c, 2, '0', STR_PAD_LEFT).str_pad($p, 2, '0', STR_PAD_LEFT);
 						$coordenadas=get_rand_num(7, false, $_ENV['config']->get('numGalaxias'), mb_strlen($sectores, 'UTF-8')+$_ENV['config']->get('numGalaxias'));
 						$result=$mysql->query(
-								'INSERT INTO tPlanetaMem VALUES ('.$idp.','.$i.',NULL,\''.$nombreSGC.'\','.$coordenadas[0].','.$coordenadas[1].','.$coordenadas[2].','.$coordenadas[3].','.$coordenadas[4].','.$coordenadas[5].','.$coordenadas[6].','.$riqueza.')'
+							'INSERT INTO tPlanetaMem VALUES ('.$idp.','.$i.',NULL,\''.$nombreSGC.'\','.$coordenadas[0].','.$coordenadas[1].','.$coordenadas[2].','.$coordenadas[3].','.$coordenadas[4].','.$coordenadas[5].','.$coordenadas[6].','.$riqueza.')'
 						);
 						$idp++;
 					}
 				}
 			}
-
+			
 			$mysql->query('INSERT INTO planeta SELECT * FROM tPlanetaMem');
 			$mysql->query('DELETE FROM tPlanetaMem');
 
 			//Insertamos aleatoriamente los planetas especiales de la galaxia actual
 			$sql='SELECT idPlaneta, idGalaxia, nombrePlaneta, imagen, riqueza '. 
 										'FROM tPlaneta '. 
-										'WHERE idGalaxia=\''.$i.'\' '.
-										'ORDER BY RAND()';
+										'WHERE idGalaxia=\''.$i.'\' ';
 			//Si hay limite de planetas por galaxia
-			if(PLANETASESPECIALESPORGALAXIA!='')
+			if(PLANETASESPECIALESPORGALAXIA!='') {
 				$sql.=' LIMIT '.PLANETASESPECIALESPORGALAXIA;
+			}
 
 			$result=$mysql->query($sql);
+
 			if($mysql->numRows($result)>0){
 				//Generamos posiciones aleatorias para todos los planetas especiales
 				$posiciones=get_rand_num($q = $mysql->numRows($result), $rep = false, $min = 1, $max = $numSectores[$i]*$_ENV['config']->get('numCuadrantes')*$_ENV['config']->get('numPlanetas'));
@@ -84,7 +85,7 @@
 						'INSERT INTO planetaEspecial (idPlanetaEsp, idGalaxia, imagen) VALUES ('.$idp.','.$i.',\''.$row['imagen'].'\')'
 					);
 					$result2=$mysql->query(
-						'UPDATE planeta SET nombrePlaneta=\''.$row['nombrePlaneta'].'\', riqueza='.$row['riqueza'].' WHERE idGalaxia='.$i.' AND idPlaneta='.$idp
+						'UPDATE planeta SET nombrePlaneta=\''.addslashes($row['nombrePlaneta']).'\', riqueza='.$row['riqueza'].' WHERE idGalaxia='.$i.' AND idPlaneta='.$idp
 					);
 
 					//Insertamos las unidades del planeta
@@ -92,6 +93,7 @@
 										'FROM tPlanetaUnidad '. 
 										'WHERE idGalaxia=\''.$i.'\' '.
 										'AND idPlanetaEsp='.$idpant);
+
 					if($mysql->numRows($result2)>0){
 						//Recorremos la lista
 						while($row2 = $mysql->fetchAssoc($result2)){
@@ -107,6 +109,7 @@
 										'FROM tEspecialRequierePlaneta '. 
 										'WHERE idGalaxia=\''.$i.'\' '.
 										'AND idPlanetaEsp='.$idpant);
+
 					if($mysql->numRows($result2)>0){
 						//Recorremos la lista
 						while($row2 = $mysql->fetchAssoc($result2)){
