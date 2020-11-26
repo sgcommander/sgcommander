@@ -129,6 +129,7 @@ END
 #############################################################################
 CREATE FUNCTION `cantidadProporcional` (proporcion FLOAT, tiempoInicial TIMESTAMP, tiempoFinal TIMESTAMP, cantidad FLOAT)
 RETURNS FLOAT
+NOT DETERMINISTIC READS SQL DATA
 BEGIN
 	SET cantidad = cantidad-(((proporcion*cantidad)/(UNIX_TIMESTAMP(tiempoFinal)-UNIX_TIMESTAMP(tiempoInicial)))*(UNIX_TIMESTAMP(CURRENT_TIMESTAMP)-UNIX_TIMESTAMP(tiempoInicial)));
 	IF cantidad < 0 THEN

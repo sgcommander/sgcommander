@@ -68,7 +68,7 @@ class SPDO extends mysqli
 
 	public function __clone( )
 	{
-		trigger_error( 'No se esta permitido clonar la clase.', E_USER_ERROR );
+		trigger_error( 'No está permitido clonar la clase.', E_USER_ERROR );
 	}
 
 	/**
@@ -98,9 +98,7 @@ class SPDO extends mysqli
 		//Si la conexion falla, envio un error
 		if ( $this->connect_error )
 		{
-			trigger_error(
-					'Connect Error (' . $this->connect_errno . ') '
-							. $this->connect_error, E_USER_ERROR );
+			trigger_error('Connect Error (' . $this->connect_errno . ') ' . $this->connect_error, E_USER_ERROR );
 		}
 
 		//Si las transacciones estan activas,

@@ -1,8 +1,38 @@
 version: "3.5"
 services:
   sgcommander:
-    build: docker/php
+    build:
+      context: ./
+      dockerfile: docker/php/Dockerfile
+    #image: sgcommander/sgcommander:latest
     container_name: sgcommander
+    environment:
+      - URL_HOMEPAGE=${URL_HOMEPAGE}
+      - URL_SERVER=${URL_SERVER}
+      - URL_SIGNS=${URL_SIGNS}
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_DATABASE=${DB_DATABASE}
+      - DB_USERROOT=${DB_USERROOT}
+      - DB_PASSWORDROOT=${DB_PASSWORDROOT}
+      - DB_CREATE=${DB_CREATE}
+      - GALAXY_1_SECTORS=${GALAXY_1_SECTORS}
+      - GALAXY_2_SECTORS=${GALAXY_2_SECTORS}
+      - GALAXY_3_SECTORS=${GALAXY_3_SECTORS}
+      - GALAXY_4_SECTORS=${GALAXY_4_SECTORS}
+      - GALAXY_SQUARES=${GALAXY_SQUARES}
+      - TIME_SQUARES=${TIME_SQUARES}
+      - TIME_SECTORS=${TIME_SECTORS}
+      - TIME_GALAXY=${TIME_GALAXY}
+      - TIME_INTERGALAXY=${TIME_INTERGALAXY}
+      - TIME_CONQUEST=${TIME_CONQUEST}
+      - SECRET_WORD=${SECRET_WORD}
+      - MAX_USERS=${MAX_USERS}
+      - SIGNUP_EMAIL=${SIGNUP_EMAIL}
+      - SIGNUP_CONFIRMATION_EMAIL=${SIGNUP_CONFIRMATION_EMAIL}
+      - DOPING=${DOPING}
     volumes:
       - ./:/var/www
     restart: always
@@ -14,24 +44,24 @@ services:
       - sgcommander-db
     depends_on:
       - sgcommander-db
-    command: sh -c "dockerize -wait tcp://sgcommander-db:3306 -timeout 300s -wait-retry-interval 8s /sbin/my_init"
+    command: sh -c "dockerize -wait tcp://${DB_HOST}:${DB_PORT} -timeout 300s -wait-retry-interval 8s /sbin/my_init"
     networks:
       - sgcommander-network
   sgcommander-db:
-    image: mysql:5.5.62
+    image: mysql:5.6
     container_name: sgcommander-db
+    environment:
+      - MYSQL_ROOT_PASSWORD=${DB_PASSWORDROOT}
+      - MYSQL_DATABASE=${DB_DATABASE}
+      - MYSQL_USER=${DB_USER}
+      - MYSQL_PASSWORD=${DB_PASSWORD}
     volumes:
       - "./docker/mysql/data:/var/lib/mysql"
     restart: always
     ports:
-      - 3306:3306
+      - ${DB_PORT}:${DB_PORT}
     expose:
-      - 3306
-    environment:
-      MYSQL_ROOT_PASSWORD: p4ssw0rd
-      MYSQL_DATABASE: dev
-      MYSQL_USER: sgcommander
-      MYSQL_PASSWORD: password
+      - ${DB_PORT}
     networks:
       - sgcommander-network
 

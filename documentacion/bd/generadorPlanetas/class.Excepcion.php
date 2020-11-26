@@ -48,7 +48,7 @@ class Excepcion extends Exception {
 			$this->grabarExcepcion();
 				
 			//Salgo de la pagina actual y carga la pagina correspondiente al error
-			header('Location: /error.php?codigo='.$this->code);
+			//header('Location: /error.php?codigo='.$this->code);
 			die();//Mata el proceso por haber encontrado un error critico
     // Bouml preserved body end 00020002
   }

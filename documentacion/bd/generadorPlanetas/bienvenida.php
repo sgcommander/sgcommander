@@ -4,11 +4,10 @@
 	define('CORRECTO',true);
 	require_once('class.Excepcion.php');
 	require_once('class.Mysql.php');
-
 	$mysql = Mysql::getInstancia();
-
+	
 	//Mensaje de bienvenida para todos los usuarios
-	$mysql->query("INSERT INTO dev.mensaje (idJugador, idTipoMensaje, nombreUsuario, asunto, fecha, contenido)
+	$mysql->query("INSERT INTO mensaje (idJugador, idTipoMensaje, nombreUsuario, asunto, fecha, contenido)
 						VALUES (2, 1, 'damarte', '03/03/2011 - Nuevas mejoras', NOW(), 
 '
 Nuevas cosas:
@@ -27,5 +26,5 @@ damarte
 ');
 						");
 
-	$mysql->query("INSERT INTO dev.recibeMensaje (idMensaje, idJugador, nombreUsuario)
+	$mysql->query("INSERT INTO recibeMensaje (idMensaje, idJugador, nombreUsuario)
 						SELECT 1, id, nombre FROM usuario;");
