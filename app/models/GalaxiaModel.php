@@ -56,7 +56,8 @@
 							LEFT JOIN jugadorInfoPuntuaciones AS pu ON pu.idJugador=pe.idPropietario
 							LEFT JOIN planetaEspecial pes ON p.idPlaneta=pes.idPlanetaEsp AND p.idGalaxia=pes.idGalaxia
 						WHERE p.idGalaxia=\''.$idGalaxia.'\' 
-							AND p.idPlaneta BETWEEN \''.$inicio.'\' AND \''.$fin.'\'');
+							AND p.idPlaneta BETWEEN \''.$inicio.'\' AND \''.$fin.'\'
+						ORDER BY p.idPlaneta');
 	       
 	        $datos=Array();
 	        
