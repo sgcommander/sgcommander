@@ -30,7 +30,7 @@
 		$mysql->query('TRUNCATE planeta');
 		$mysql->query('SET FOREIGN_KEY_CHECKS = 1');
 		//Seteamos el tamano de la tabla en RAM a un valor suficientemente alto
-		$mysql->query('SET max_heap_table_size=536870912');
+		$mysql->query('SET max_heap_table_size=1048576000');
 		//Reconstruimos la tabla para que acepte la neuva cantidad de tuplas 
 		$mysql->query('ALTER TABLE tPlanetaMem ENGINE MEMORY;');
 
@@ -63,7 +63,9 @@
 			//Insertamos aleatoriamente los planetas especiales de la galaxia actual
 			$sql='SELECT idPlaneta, idGalaxia, nombrePlaneta, imagen, riqueza '. 
 										'FROM tPlaneta '. 
-										'WHERE idGalaxia=\''.$i.'\' ';
+										'WHERE idGalaxia=\''.$i.'\' '.
+										'ORDER BY RAND()';
+
 			//Si hay limite de planetas por galaxia
 			if(PLANETASESPECIALESPORGALAXIA!='') {
 				$sql.=' LIMIT '.PLANETASESPECIALESPORGALAXIA;
