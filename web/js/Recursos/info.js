@@ -64,51 +64,51 @@ function calcular(){
 	}
 	else if(idRaza==1){
 		if(modo==1)
-			cantidad=Math.floor(valor*3/8);
+			cantidad=valor*3/8;
 		else
-			cantidad=Math.floor(valor*8/3);
+			cantidad=valor*8/3;
 	}
 	else if(idRaza==2){
 		if(modo==1)
-			cantidad=Math.floor(valor*2/9);
+			cantidad=valor*2/9;
 		else
-			cantidad=Math.floor(valor*9/2);
+			cantidad=valor*9/2;
 	}
 	else if(idRaza==3){
 		if(modo==1)
-			cantidad=Math.floor(valor*10/1);
+			cantidad=valor*10/1;
 		else
-			cantidad=Math.floor(valor*1/10);
+			cantidad=valor*1/10;
 	}
 	else if(idRaza==4){
 		if(modo==1)
-			cantidad=Math.floor(valor*3/8);
+			cantidad=valor*3/8;
 		else
-			cantidad=Math.floor(valor*8/3);
+			cantidad=valor*8/3;
 	}
 	else if(idRaza==5){
 		if(modo==1)
-			cantidad=Math.floor(valor*3/8);
+			cantidad=valor*3/8;
 		else
-			cantidad=Math.floor(valor*8/3);
+			cantidad=valor*8/3;
 	}
 	else if(idRaza==6){
 		if(modo==1)
-			cantidad=Math.floor(valor*2/9);
+			cantidad=valor*2/9;
 		else
-			cantidad=Math.floor(valor*9/2);
+			cantidad=valor*9/2;
 	}
 	else if(idRaza==7){
 		if(modo==1)
-			cantidad=Math.floor(valor*1/10);
+			cantidad=valor*1/10;
 		else
-			cantidad=Math.floor(valor*10/1);
+			cantidad=valor*10/1;
 	}
 	else if(idRaza==8){
 		if(modo==1)
-			cantidad=Math.floor(valor*2/9);
+			cantidad=valor*2/9;
 		else
-			cantidad=Math.floor(valor*9/2);
+			cantidad=valor*9/2;
 	}
 	
 	//Aplicamos cargo por intercambio
