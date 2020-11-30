@@ -63,9 +63,68 @@ ini_set('include_path', ini_get('include_path').':..');
 error_reporting(E_STRICT);
 require_once 'libs/Daemon.php';
 
+ /**
+ * Clase base para la creacion de controladores
+ * @author David & Jose
+ * @since 27/01/2009
+ */
+include(dirname(__FILE__).'/../libs/ControllerBase.php');
+
+/**
+ * Clase base para la creacion de modelos
+ * @author David & Jose
+ * @since 27/01/2009
+ */
+include(dirname(__FILE__).'/../libs/ModelBase.php');
+
+/**
+ * Clase con variadas funciones para dar soporte.
+ * @author David & Jose
+ * @since 27/01/2009
+ */
+include(dirname(__FILE__).'/../libs/Funciones.php');
+
+/**
+ * Clase de configuracion
+ * @author David & Jose
+ * @since 27/01/2009
+ */
+include(dirname(__FILE__).'/../constants.php');
+include(dirname(__FILE__).'/../libs/Config.php');
+include(dirname(__FILE__).'/../config.php');
+
+/**
+ * Clase para conectar a la bd
+ * @author David & Jose
+ * @since 27/01/2009
+ */
+include(dirname(__FILE__).'/../libs/SPDO.php');
+
+/**
+ * Clase de templates
+ * @author David & Jose
+ * @since 27/01/2009
+ */
+include(dirname(__FILE__).'/../libs/HTML_Template_Sigma.php');
+
+//Clases para resolver eventos
+include(dirname(__FILE__).'/../libs/Firma.php');
+include(dirname(__FILE__).'/../libs/Mision/UnidadMision.php');
+include(dirname(__FILE__).'/../libs/Mision/JugadorMision.php');
+include(dirname(__FILE__).'/../libs/Mision/BandoMision.php');
+include(dirname(__FILE__).'/../libs/Mision/BatallaMision.php');
+include(dirname(__FILE__).'/../libs/Mision/MisionModelLib.php');
+include(dirname(__FILE__).'/../libs/Mision/MisionViewLib.php');
+include(dirname(__FILE__).'/../libs/Mision/Mision.php');
+include(dirname(__FILE__).'/../app/models/RecursosModel.php');
+include(dirname(__FILE__).'/../app/models/UnidadModel.php');
+include(dirname(__FILE__).'/../app/models/NaveModel.php');
+include(dirname(__FILE__).'/../app/models/ResumirEventosModel.php');
+include(dirname(__FILE__).'/../app/controllers/ResumirEventosController.php');
+
 // Setup
 $options = array(
-    'appName' => 'sg1',
+    'appName' => 'sgcommander',
     'appDir' => dirname(__FILE__),
     'appDescription' => 'Resuelve eventos de Stargate: Galactic Commander',
     'authorName' => 'damarte',
@@ -75,10 +134,12 @@ $options = array(
     'sysMemoryLimit' => '512M',
     'appRunAsGID' => 1000,
     'appRunAsUID' => 1000,
+    'logVerbosity' => $_ENV['config']->get('logVerbose') ? 7 : 4,
+    'logLocation' => $_ENV['config']->get('logPath').'daemon.log',
+    'logFilePosition' => true,
 );
- 
 System_Daemon::setOptions($options);
- 
+
 // This program can also be run in the forground with runmode --no-daemon
 if (!$runmode['no-daemon']) {
     // Spawn Daemon
@@ -114,66 +175,6 @@ $cnt = 1;
 // While checks on 3 things in this case:
 // - That the Daemon Class hasn't reported it's dying
 // - That your own code has been running Okay
-
-/**
- * Clase base para la creacion de controladores
- * @author David & Jose
- * @since 27/01/2009
- */
-include(dirname(__FILE__).'/../libs/ControllerBase.php');
-
-/**
- * Clase base para la creacion de modelos
- * @author David & Jose
- * @since 27/01/2009
- */
-include(dirname(__FILE__).'/../libs/ModelBase.php');
-
-/**
- * Clase con variadas funciones para dar soporte.
- * @author David & Jose
- * @since 27/01/2009
- */
-include(dirname(__FILE__).'/../libs/Funciones.php');
-
-/**
- * Clase de configuracion
- * @author David & Jose
- * @since 27/01/2009
- */
-include(dirname(__FILE__).'/../constants.php');
-include(dirname(__FILE__).'/../libs/Config.php');
-include(dirname(__FILE__).'/../config.php');
-
-
-/**
- * Clase para conectar a la bd
- * @author David & Jose
- * @since 27/01/2009
- */
-include(dirname(__FILE__).'/../libs/SPDO.php');
-
-/**
- * Clase de templates
- * @author David & Jose
- * @since 27/01/2009
- */
-include(dirname(__FILE__).'/../libs/HTML_Template_Sigma.php');
-
-//Clases para resolver eventos
-include(dirname(__FILE__).'/../libs/Firma.php');
-include(dirname(__FILE__).'/../libs/Mision/UnidadMision.php');
-include(dirname(__FILE__).'/../libs/Mision/JugadorMision.php');
-include(dirname(__FILE__).'/../libs/Mision/BandoMision.php');
-include(dirname(__FILE__).'/../libs/Mision/BatallaMision.php');
-include(dirname(__FILE__).'/../libs/Mision/MisionModelLib.php');
-include(dirname(__FILE__).'/../libs/Mision/MisionViewLib.php');
-include(dirname(__FILE__).'/../libs/Mision/Mision.php');
-include(dirname(__FILE__).'/../app/models/RecursosModel.php');
-include(dirname(__FILE__).'/../app/models/UnidadModel.php');
-include(dirname(__FILE__).'/../app/models/NaveModel.php');
-include(dirname(__FILE__).'/../app/models/ResumirEventosModel.php');
-include(dirname(__FILE__).'/../app/controllers/ResumirEventosController.php');
 
 //Objeto para resolver eventos
 System_Daemon::info('-- Creando demonio de SGCommander --');

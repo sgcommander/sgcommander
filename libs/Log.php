@@ -14,7 +14,7 @@
 		}
 		
 		public function write($datos){
-			$this->info.=implode(';', $datos).'|';
+			$this->info.='['.date('M d H:i:s').'] '.implode(' ', $datos).PHP_EOL;
 		}
 		
 		public function __destruct(){
