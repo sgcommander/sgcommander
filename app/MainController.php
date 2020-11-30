@@ -111,13 +111,12 @@ class MainController
 		 ***************************************/
 		if($_ENV['config']->get('logVerbose')){
 			$_ENV['logAction']= new Log($_ENV['config']->get('logPath').'access-'.date('Ymd', $_SERVER['REQUEST_TIME']).'.log');
-			$_ENV['logAction']->write(array('['.(isset($_SESSION['infoJugador']['idUsuario']) ? $_SESSION['infoJugador']['idUsuario'] : '0').']','['.$_SERVER['REMOTE_ADDR'].']','['.$_SERVER['REQUEST_METHOD'].']','['.@$_SERVER['HTTP_REFERER'].']','['.@$_SERVER['HTTP_USER_AGENT'].']','['.$_SERVER['REQUEST_TIME'].']',ACCION,$_SERVER['QUERY_STRING'],file_get_contents('php://input')));
+			$_ENV['logAction']->write(array('['.(isset($_SESSION['infoJugador']['idUsuario']) ? $_SESSION['infoJugador']['idUsuario'] : '0').']','['.(isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : '0.0.0.0').']','['.$_SERVER['REQUEST_METHOD'].']','['.(isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '-').']','['.(isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '-').']','['.$_SERVER['REQUEST_TIME'].']',ACCION,$_SERVER['QUERY_STRING'],file_get_contents('php://input')));
 		}
 		
 		$_ENV['logError']= new Log($_ENV['config']->get('logPath').'errors-'.date('Ymd', $_SERVER['REQUEST_TIME']).'.log');
 		function handleError($code, $description, $file = null, $line = null, $context = null) {
 			$_ENV['logError']->write(array("[$file (line $line)]", "[error]", "[code $code]", $description));
-			die();
 		}
 		function handleException($exception) {
 			$code = $exception->getCode();
@@ -125,7 +124,6 @@ class MainController
 			$line = $exception->getLine();
 			$description = $exception->getMessage();
 			$_ENV['logError']->write(array("[$file (line $line)]", "[exception]", "[code $code]", $description));
-			die();
 		}
 		function handleFatal() {
 			$error = error_get_last();
@@ -138,6 +136,8 @@ class MainController
 
 				$_ENV['logError']->write(array("[$file (line $line)]", "[fatal]", "[code $code]", $description));
 			}
+
+			die();
 		}
 		set_error_handler('handleError');
 		set_exception_handler('handleException');
@@ -246,7 +246,7 @@ class MainController
 
     		//Refrescamos el JS
     		$this->view = new ResumirEventosView();
-    		$this->view->actualizarJS($_SESSION['infoRecursos'], $planetasPropios,$_SESSION['infoJugador']['galaxiaSel'],$_SESSION['infoJugador']['planetaSel']);
+    		$this->view->actualizarJS($_SESSION['infoRecursos'], $planetasPropios,isset($_SESSION['infoJugador']['galaxiaSel']) ? $_SESSION['infoJugador']['galaxiaSel'] : null,isset($_SESSION['infoJugador']['planetaSel']) ? $_SESSION['infoJugador']['planetaSel'] : null);
     	}
 					
 		/***********************************************

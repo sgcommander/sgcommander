@@ -2,9 +2,9 @@
 
 Este proyecto contiene todo lo necesario para correr una instancia de un universo del juego.
 
-![Screenshot](documentacion/screenshot01.png?raw=true "Stargate: Galactic Commander Tau'ri Home")
+![Screenshot](https://raw.githubusercontent.com/sgcommander/sgcommander/main/documentacion/screenshot01.png?raw=true "Stargate: Galactic Commander Tau'ri Home")
 
-![Screenshot](documentacion/screenshot02.png?raw=true "Stargate: Galactic Commander Goauld Home")
+![Screenshot](https://raw.githubusercontent.com/sgcommander/sgcommander/main/documentacion/screenshot02.png?raw=true "Stargate: Galactic Commander Goauld Home")
 
 ## Comenzando 🚀
 

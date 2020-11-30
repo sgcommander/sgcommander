@@ -150,13 +150,15 @@
 	        
 	        $datos=array();
 	        
-			for($i=0; $i<$consulta->num_rows; $i++)
-	        	$datos[$i]=$consulta->fetch_assoc();
+			for($i=0; $i<$consulta->num_rows; $i++) {
+				$datos[$i]=$consulta->fetch_assoc();
+			}
 	        
 	        $consulta->close();
 	        
-			return $datos;
-	        
+			return array_filter($datos, function($element) {
+				return $element['activo'];
+			});
 	    }
 	
 	    /**
