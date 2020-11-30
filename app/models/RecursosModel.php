@@ -174,55 +174,55 @@
 			switch($idRaza){
 	        	case 1:
 		        	if($modo)
-		        		$cantidad=floor($cantidad*TAURIPRIMARIO/TAURISECUNDARIO);
+		        		$cantidad=$cantidad*TAURIPRIMARIO/TAURISECUNDARIO;
 		        	else
-		        		$cantidad=floor($cantidad*TAURISECUNDARIO/TAURIPRIMARIO);
+		        		$cantidad=$cantidad*TAURISECUNDARIO/TAURIPRIMARIO;
 		        	break;
 	        	case 2:
 		        	if($modo)
-		        		$cantidad=floor($cantidad*GOAULDPRIMARIO/GOAULDSECUNDARIO);
+		        		$cantidad=$cantidad*GOAULDPRIMARIO/GOAULDSECUNDARIO;
 		        	else
-		        		$cantidad=floor($cantidad*GOAULDSECUNDARIO/GOAULDPRIMARIO);
+		        		$cantidad=$cantidad*GOAULDSECUNDARIO/GOAULDPRIMARIO;
 		        	break;
 	        	case 3:
 		        	if($modo)
-		        		$cantidad=floor($cantidad*ASGARDPRIMARIO/ASGARDSECUNDARIO);
+		        		$cantidad=$cantidad*ASGARDPRIMARIO/ASGARDSECUNDARIO;
 		        	else
-		        		$cantidad=floor($cantidad*ASGARDSECUNDARIO/ASGARDPRIMARIO);
+		        		$cantidad=$cantidad*ASGARDSECUNDARIO/ASGARDPRIMARIO;
 		        	break;
 	        	case 4:
 		        	if($modo)
-		        		$cantidad=floor($cantidad*JAFFAPRIMARIO/JAFFASECUNDARIO);
+		        		$cantidad=$cantidad*JAFFAPRIMARIO/JAFFASECUNDARIO;
 		        	else
-		        		$cantidad=floor($cantidad*JAFFASECUNDARIO/JAFFAPRIMARIO);
+		        		$cantidad=$cantidad*JAFFASECUNDARIO/JAFFAPRIMARIO;
 	        		break;
 	        	case 5:
 		        	if($modo)
-		        		$cantidad=floor($cantidad*ATLANTISPRIMARIO/ATLANTISSECUNDARIO);
+		        		$cantidad=$cantidad*ATLANTISPRIMARIO/ATLANTISSECUNDARIO;
 		        	else
-		        		$cantidad=floor($cantidad*ATLANTISSECUNDARIO/ATLANTISPRIMARIO);
+		        		$cantidad=$cantidad*ATLANTISSECUNDARIO/ATLANTISPRIMARIO;
 		        	break;
 	        	case 6:
 		        	if($modo)
-		        		$cantidad=floor($cantidad*WRAITHPRIMARIO/WRAITHSECUNDARIO);
+		        		$cantidad=$cantidad*WRAITHPRIMARIO/WRAITHSECUNDARIO;
 		        	else
-		        		$cantidad=floor($cantidad*WRAITHSECUNDARIO/WRAITHPRIMARIO);
+		        		$cantidad=$cantidad*WRAITHSECUNDARIO/WRAITHPRIMARIO;
 		        	break;
 		        case 7:
 		        	if($modo)
-		        		$cantidad=floor($cantidad*REPLICANTESPRIMARIO/REPLICANTESSECUNDARIO);
+		        		$cantidad=$cantidad*REPLICANTESPRIMARIO/REPLICANTESSECUNDARIO;
 		        	else
-		        		$cantidad=floor($cantidad*REPLICANTESSECUNDARIO/REPLICANTESPRIMARIO);
+		        		$cantidad=$cantidad*REPLICANTESSECUNDARIO/REPLICANTESPRIMARIO;
 		        	break;
 	        	case 8:
 		        	if($modo)
-		        		$cantidad=floor($cantidad*ORIPRIMARIO/ORISECUNDARIO);
+		        		$cantidad=$cantidad*ORIPRIMARIO/ORISECUNDARIO;
 		        	else
-		        		$cantidad=floor($cantidad*ORISECUNDARIO/ORIPRIMARIO);
+		        		$cantidad=$cantidad*ORISECUNDARIO/ORIPRIMARIO;
 		        	break;
 	        }
 			//Aplicamos cargo por intercambiar
-			return intval($cantidad*0.9);
+			return intval(floor($cantidad*0.9));
 	        
 	    }
 	    
