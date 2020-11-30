@@ -17,6 +17,6 @@ else
 fi
 
 # Daemon
-php /var/www/app/eventosServer.php
+php /var/www/app/eventosDaemon.php
 
 exec "$@"

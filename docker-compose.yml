@@ -33,6 +33,7 @@ services:
       - SIGNUP_EMAIL=${SIGNUP_EMAIL}
       - SIGNUP_CONFIRMATION_EMAIL=${SIGNUP_CONFIRMATION_EMAIL}
       - DOPING=${DOPING}
+      - LOG_VERBOSE=${LOG_VERBOSE}
     volumes:
       - ./:/var/www
     restart: always

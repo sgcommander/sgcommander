@@ -179,7 +179,8 @@ $_ENV['config']->set(array(
 		/**
 		* Log
 		*/
-		'logPath' => $_SERVER["DOCUMENT_ROOT"].'/../logs',
+		'logPath' => '/var/www/logs/',
+		'logVerbose' => getenv('LOG_VERBOSE') === 'true' ? true : false,
 	
 		/**
 		* Registro

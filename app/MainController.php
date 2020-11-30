@@ -109,9 +109,40 @@ class MainController
 		/***************************************
 		 * LOG DE ACCIONES
 		 ***************************************/
-		//$_ENV['log']= new Log($_ENV['config']->get('logPath').date('dmY', $_SERVER['REQUEST_TIME']));
-		//$_ENV['log']->write(array(@$_SESSION['infoJugador']['idUsuario'],$_SERVER['REMOTE_ADDR'],$_SERVER['REQUEST_METHOD'],@$_SERVER['HTTP_REFERER'],@$_SERVER['HTTP_USER_AGENT'],$_SERVER['REQUEST_TIME'],ACCION,$_SERVER['QUERY_STRING'],file_get_contents('php://input')));
+		if($_ENV['config']->get('logVerbose')){
+			$_ENV['logAction']= new Log($_ENV['config']->get('logPath').'access-'.date('Ymd', $_SERVER['REQUEST_TIME']).'.log');
+			$_ENV['logAction']->write(array('['.(isset($_SESSION['infoJugador']['idUsuario']) ? $_SESSION['infoJugador']['idUsuario'] : '0').']','['.$_SERVER['REMOTE_ADDR'].']','['.$_SERVER['REQUEST_METHOD'].']','['.@$_SERVER['HTTP_REFERER'].']','['.@$_SERVER['HTTP_USER_AGENT'].']','['.$_SERVER['REQUEST_TIME'].']',ACCION,$_SERVER['QUERY_STRING'],file_get_contents('php://input')));
+		}
 		
+		$_ENV['logError']= new Log($_ENV['config']->get('logPath').'errors-'.date('Ymd', $_SERVER['REQUEST_TIME']).'.log');
+		function handleError($code, $description, $file = null, $line = null, $context = null) {
+			$_ENV['logError']->write(array("[$file (line $line)]", "[error]", "[code $code]", $description));
+			die();
+		}
+		function handleException($exception) {
+			$code = $exception->getCode();
+			$file = $exception->getFile();
+			$line = $exception->getLine();
+			$description = $exception->getMessage();
+			$_ENV['logError']->write(array("[$file (line $line)]", "[exception]", "[code $code]", $description));
+			die();
+		}
+		function handleFatal() {
+			$error = error_get_last();
+
+			if($error !== NULL) {
+				$code = $error["type"];
+				$file = $error["file"];
+				$line = $error["line"];
+				$description = $error["message"];
+
+				$_ENV['logError']->write(array("[$file (line $line)]", "[fatal]", "[code $code]", $description));
+			}
+		}
+		set_error_handler('handleError');
+		set_exception_handler('handleException');
+		register_shutdown_function('handleFatal');
+
 		/*************************************************
 		 * COMPRUEBA QUE ESTE LOGEADO
 		 *************************************************/
