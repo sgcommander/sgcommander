@@ -46,15 +46,15 @@ abstract class ControllerBase
     	$controllerPath = $_ENV['config']->get('appPath').$_ENV['config']->get('controllerPath').$controllerName.'.php';
     	
     	//Compruebo que el contolador exista
-		if(!is_file($controllerPath)){
-			trigger_error(_('El controlador no existe - 404 not found'), E_USER_ERROR);
-		}
+      if(!is_file($controllerPath)){
+        trigger_error(_('El controlador no existe - 404 not found'), E_USER_ERROR);
+      }
 
-		//Si no existe la clase que buscamos y su accion, tiramos un error 404
-		if (!method_exists($controllerName, $action)) 
-		{
-			trigger_error ($controllerName . '->' . $action . '` no existe', E_USER_ERROR);
-		}
+      //Si no existe la clase que buscamos y su accion, tiramos un error 404
+      if (!method_exists($controllerName, $action)) 
+      {
+        trigger_error ($controllerName . '->' . $action . '` no existe', E_USER_ERROR);
+      }
     }
     
     /**
@@ -76,8 +76,8 @@ abstract class ControllerBase
     	$this->testController($controllerName, $action);
     	
     	//Si el controlador y la accion es correcta, paso a su ejecucion
-		$controller = new $controllerName();
-		$controller->$action();
+      $controller = new $controllerName();
+      $controller->$action();
     }
 }
 

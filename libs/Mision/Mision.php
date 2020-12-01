@@ -54,7 +54,7 @@ class Mision
     	$this->datos = new MisionModelLib();
 
     	//Creamos la vista de misiones
-    	$this->view=new MisionViewLib();
+    	$this->view=new MisionViewLib(false);
 
     	//Indica el id de mision a resolver
     	$this->idMision = $idMision;
