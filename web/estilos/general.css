@@ -995,7 +995,7 @@ td.tablaCantidad{
 ************************************************************************************************/
 #publicidad480x60 object{
 	width: 480px;
-	height: 60px;
+	height: 0;
 	margin-left: 43px;
 	margin-bottom:10px;
 	overflow:hidden;
