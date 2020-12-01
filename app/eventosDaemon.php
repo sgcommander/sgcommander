@@ -134,7 +134,7 @@ $options = array(
     'sysMemoryLimit' => '512M',
     'appRunAsGID' => 1000,
     'appRunAsUID' => 1000,
-    'logVerbosity' => $_ENV['config']->get('logVerbose') ? 7 : 4,
+    'logVerbosity' => $_ENV['config']->get('logVerbose') ? 6 : 4,
     'logLocation' => $_ENV['config']->get('logPath').'daemon.log',
     'logFilePosition' => true,
 );
