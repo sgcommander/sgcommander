@@ -17,8 +17,8 @@ dead.letter
 .idea
 
 ## Docker
-docker/mysql/data/*
-docker/mysql/data/empty
+/docker/mysql/data/*
+!docker/mysql/data/empty
 
 ## SGCommander
 /logs/*

@@ -126,6 +126,11 @@ $_ENV['config']->set(array(
 		'maxNomAlianza' => 25,
 
 		/**
+		 * DAEMON
+		 */
+		'daemonRestartWait' => getenv('DAEMON_RESTART_WAIT'), //Tiempo en segundos para esperar antes de reiniciar el daemon tras un error
+
+		/**
 		 * MISIONES
 		 */
 
@@ -179,7 +184,7 @@ $_ENV['config']->set(array(
 		/**
 		* Log
 		*/
-		'logPath' => '/var/www/logs/',
+		'logPath' => dirname(__FILE__).'/logs/',
 		'logVerbose' => getenv('LOG_VERBOSE') === 'true' ? true : false,
 	
 		/**

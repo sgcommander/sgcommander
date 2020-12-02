@@ -72,10 +72,8 @@ class MainController
      */
     public function main()
     {
-        //Comprobamos que el proceso del juego esta corriendo
-        $existe=exec('pgrep php');
-
-        if (!$existe) {
+		//Comprobamos que el proceso del juego esta corriendo
+		if (!exec('pgrep php') && !exec('pgrep eventos')) {
             //Si no esta corriendo deslogueamos
     		session_destroy();
 			echo 'Se ha producido un error grave en el juego, comuniqueselo a los administradores.';
@@ -111,7 +109,7 @@ class MainController
 		 ***************************************/
 		if($_ENV['config']->get('logVerbose')){
 			$_ENV['logAction']= new Log($_ENV['config']->get('logPath').'access-'.date('Ymd', $_SERVER['REQUEST_TIME']).'.log');
-			$_ENV['logAction']->write(array('['.(isset($_SESSION['infoJugador']['idUsuario']) ? $_SESSION['infoJugador']['idUsuario'] : '0').']','['.(isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : '0.0.0.0').']','['.$_SERVER['REQUEST_METHOD'].']','['.(isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '-').']','['.(isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '-').']','['.$_SERVER['REQUEST_TIME'].']',ACCION,$_SERVER['QUERY_STRING'],file_get_contents('php://input')));
+			$_ENV['logAction']->write(array('['.(isset($_SESSION['infoJugador']['idUsuario']) ? $_SESSION['infoJugador']['idUsuario'] : '0').']','['.(isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : '0.0.0.0').']','['.$_SERVER['REQUEST_METHOD'].']','['.(isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '-').']','['.(isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '-').']','['.$_SERVER['REQUEST_TIME'].']',$_SERVER['QUERY_STRING'],file_get_contents('php://input')));
 		}
 		
 		$_ENV['logError']= new Log($_ENV['config']->get('logPath').'errors-'.date('Ymd', $_SERVER['REQUEST_TIME']).'.log');
@@ -157,7 +155,9 @@ class MainController
     	
     	//Compruebo realmente si estoy autenticado o si lo estoy y tengo la proteccion de ip activada, que conserve la IP
     	if(!array_key_exists('infoJugador', $_SESSION) || ($_SESSION['infoJugador']['proteccionIP'] && $_SESSION['infoJugador']['ip']!=$_SERVER['REMOTE_ADDR'])){
-    		//Si la sesion es robada, se destruye y se redirige al login
+			//Si la sesion es robada, se destruye y se redirige al login
+			$_SESSION=array();
+    		session_regenerate_id(); 
     		session_destroy();
     		header('Location: '.$_ENV['config']->get('urlLogin'));
 			exit;

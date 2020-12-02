@@ -4,7 +4,7 @@
 	 * ten los metodos cesarios paraescribir 
 	 * lineas en el log
 	 */
-	class Log{
+	class Log {
 		private $ruta;
 		private $info;
 		
@@ -19,7 +19,9 @@
 		
 		public function __destruct(){
 			$f = fopen($this->ruta, 'a');
-			fwrite($f, $this->info);
-			fclose($f);
+			if($f !== false) {
+				fwrite($f, $this->info);
+				fclose($f);
+			}
 		}
 	}

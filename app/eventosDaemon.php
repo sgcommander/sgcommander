@@ -162,8 +162,12 @@ if (!$runmode['write-initd']) {
     }
 }
  
-// Run your code
-// Here comes your own actual code
+// En caso de error grave relanzamos
+function handleFatal() {
+    System_Daemon::iterate($_ENV['config']->get('daemonRestartWait'));
+    System_Daemon::restart();
+}
+register_shutdown_function('handleFatal');
  
 // This variable gives your own code the ability to breakdown the daemon:
 $runningOkay = true;
@@ -207,12 +211,12 @@ try{
 	// Shut down the daemon nicely
 	// This is ignored if the class is actually running in the foreground
 	System_Daemon::stop();
-	
-	die;
-	pcntl_exec($_, $argv);
+    
+    System_Daemon::iterate($_ENV['config']->get('daemonRestartWait'));
+	System_Daemon::restart();
 }
 catch (Exception $e) {
-	die;
-	pcntl_exec($_, $argv);
+    System_Daemon::iterate($_ENV['config']->get('daemonRestartWait'));
+	System_Daemon::restart();
 }
 
