@@ -899,7 +899,7 @@
 	    }
 	    
 		/**
-	     * Devuelve el id de la tropa exploradora o false si no hay tropas exploradoras en el planeta
+	     * Devuelve el id de la tropa exploradora o false si no hay tropas exploradoras
 	     * en el planeta. FALSE en caso contrario.
 	     *
 	     * @access public
