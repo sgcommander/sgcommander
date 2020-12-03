@@ -50,7 +50,7 @@
 						$nombreSGC=$letra[$i-1].$s.substr($sectores,$s-1,1).'-'.str_pad($c, 2, '0', STR_PAD_LEFT).str_pad($p, 2, '0', STR_PAD_LEFT);
 						$coordenadas=get_rand_num(7, false, $_ENV['config']->get('numGalaxias'), mb_strlen($sectores, 'UTF-8')+$_ENV['config']->get('numGalaxias'));
 						$result=$mysql->query(
-							'INSERT INTO tPlanetaMem VALUES ('.$idp.','.$i.',NULL,\''.$nombreSGC.'\','.$coordenadas[0].','.$coordenadas[1].','.$coordenadas[2].','.$coordenadas[3].','.$coordenadas[4].','.$coordenadas[5].','.$coordenadas[6].','.$riqueza.')'
+							'INSERT INTO tPlanetaMem VALUES ('.$idp.','.$i.',\'\',\''.$nombreSGC.'\','.$coordenadas[0].','.$coordenadas[1].','.$coordenadas[2].','.$coordenadas[3].','.$coordenadas[4].','.$coordenadas[5].','.$coordenadas[6].','.$riqueza.')'
 						);
 						$idp++;
 					}

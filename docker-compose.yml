@@ -49,7 +49,7 @@ services:
     networks:
       - sgcommander-network
   sgcommander-db:
-    image: mysql:5.6
+    image: mysql:5.7.32
     container_name: sgcommander-db
     environment:
       - MYSQL_ROOT_PASSWORD=${DB_PASSWORDROOT}
