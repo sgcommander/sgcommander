@@ -145,10 +145,10 @@
 					if($datos['idGalaxia']!=$idGalaxiaOrigen && !$stargateIntergalactico)
 						$this->tpl->hideBlock('tSoldados');
 					//Si no es tu planeta
-					if(!$datos['propio'] || $datos['idGalaxia']!=$idGalaxiaOrigen && !$stargateIntergalactico)
+					if(!$datos['propio'] || ($datos['idGalaxia']!=$idGalaxiaOrigen && !$stargateIntergalactico))
 						$this->tpl->hideBlock('tDefensas');
 					//Si no tienes exploradores
-					if(!intval($hayExplorador) || $datos['propio'] || $numMisiones>=$mejoraLimiteMisiones)
+					if(!intval($hayExplorador) || $datos['propio'] || $numMisiones>=$mejoraLimiteMisiones || ($datos['idGalaxia']!=$idGalaxiaOrigen && !$stargateIntergalactico))
 						$this->tpl->hideBlock('tExplorar');
 					//Si ya esta en la lista
 					if($datos['explorado']){
