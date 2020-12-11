@@ -545,7 +545,7 @@ class MisionModelLib
 	public function enviarAviso($asunto, $destinatarios, $mensaje){
 
         $this->db->query('INSERT INTO mensaje (asunto, contenido, idTipoMensaje)
-        								VALUES (\''.$asunto.'\', \''.$mensaje.'\', \''.MENSAJEAVISO.'\')');
+        								VALUES (\''.$asunto.'\', \''.addslashes($mensaje).'\', \''.MENSAJEAVISO.'\')');
 
         //Capturamos el id del mensaje
         $idMensaje=$this->db->insert_id;
