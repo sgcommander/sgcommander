@@ -5,11 +5,11 @@
 	$mysql = Mysql::getInstancia();
 	
 	//Bajamos los tiempos
-	$mysql->query("UPDATE unidad SET tiempo=tiempo/10");
-	$mysql->query("UPDATE mejoraNormal SET tiempo=tiempo/10");
-	$mysql->query("UPDATE tipoMision SET tiempo=tiempo/10");
+	$mysql->query("UPDATE unidad SET tiempo=tiempo/20");
+	$mysql->query("UPDATE mejoraNormal SET tiempo=tiempo/20");
+	$mysql->query("UPDATE tipoMision SET tiempo=tiempo/20");
 	$mysql->query("UPDATE tipoMision SET tiempo=60 WHERE id=7");
-	$mysql->query("UPDATE especial SET tiempoRecarga=tiempoRecarga/10, tiempoDuracion=tiempoDuracion/10");
+	$mysql->query("UPDATE especial SET tiempoRecarga=tiempoRecarga/20, tiempoDuracion=tiempoDuracion/20");
 
 	//Consulta
 	/*$sql='SELECT idUsuario, idRaza FROM jugador ORDER BY idUsuario';
