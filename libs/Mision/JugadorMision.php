@@ -324,7 +324,7 @@ class JugadorMision
 				(idMensaje, idJugador, idRaza, idAlianza, nombreJugador, nombreRaza, nombreAlianza)
 				VALUES
 				(\''.$idMensaje.'\', \''.$this->id.'\', \''.$this->infoGeneral['idRaza'].'\',
-					\''.$this->infoGeneral['idAlianza'].'\', \''.$this->infoGeneral['nombreJugador'].'\',
+					'.($this->infoGeneral['idAlianza'] === '' ? 'NULL' : ("'".$this->infoGeneral['idAlianza']."'")).', \''.$this->infoGeneral['nombreJugador'].'\',
 					"'.$this->infoGeneral['nombreRaza'].'", \''.$this->infoGeneral['nombreAlianza'].'\')
 		');
 

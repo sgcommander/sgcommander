@@ -36,7 +36,7 @@ services:
       - LOG_VERBOSE=${LOG_VERBOSE}
     volumes:
       - ./:/var/www
-    restart: always
+    #restart: always
     ports:
       - "8889:80"
     expose:
