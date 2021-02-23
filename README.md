@@ -48,7 +48,7 @@ Una vez ejecutados ambos proyectos abre en tu navegador [http://localhost:8888](
 * **David** - [damarte](https://github.com/damarte)
 * **Rodrigo** - [rodrimtz](https://github.com/rodrimtz)
 * **Iván** - [ivoroz](https://github.com/ivoroz)
-* **Jose Manuel** - Loki
+* **Jose Manuel** - [Loki](https://github.com/joskfg)
 
 ## Agradecimientos 🎁
 
