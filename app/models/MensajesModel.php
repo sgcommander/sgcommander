@@ -114,10 +114,12 @@
 	    public function marcarLeidos($idJugador, $idMensajes, $leido)
 	    {
 	        
-	    	$this->db->query('UPDATE recibeMensaje SET leido=\''.$leido.'\'
+	    	$this->db->query('UPDATE recibeMensaje SET leido='.$leido.'
 	    					WHERE idMensaje IN (\''.implode('\',\'',$idMensajes).'\')
 	    						AND idJugador=\''.$idJugador.'\'');
 	    	return $this->db->errno==0;
+
+			
 	        
 	    }
 	
