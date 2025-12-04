@@ -1,8 +1,15 @@
 services:
+  sgcommander-homepage:
+    image: sgcommander/homepage:latest
+    container_name: sgcommander-homepage
+    restart: unless-stopped
+    environment:
+      - UNIVERSE_HOSTS=http://localhost:8889::http://sgcommander
+    ports:
+      - "8888:80"
+    networks:
+      - sgcommander-network
   sgcommander:
-    #build:
-    #  context: ./
-    #  dockerfile: docker/php/Dockerfile
     image: sgcommander/sgcommander:latest
     container_name: sgcommander
     environment:
@@ -34,7 +41,8 @@ services:
       - DOPING=${DOPING:-false}
       - LOG_VERBOSE=${LOG_VERBOSE:-false}
     volumes:
-      - ./:/var/www
+      - sgcommander-signs-data:/var/www/web/images/firmas/jugador
+      #- sgcommander-template-cache:/var/www/templates/default/cache
     restart: unless-stopped
     ports:
       - "8889:80"
@@ -56,7 +64,7 @@ services:
       - MYSQL_USER=${DB_USER:-sgcommander}
       - MYSQL_PASSWORD=${DB_PASSWORD:-password}
     volumes:
-      - "./docker/mysql/data:/var/lib/mysql"
+      - "sgcommander-db-data:/var/lib/mysql"
     restart: unless-stopped
     ports:
       - ${DB_PORT:-3306}:${DB_PORT:-3306}
@@ -64,6 +72,11 @@ services:
       - ${DB_PORT:-3306}
     networks:
       - sgcommander-network
+
+volumes:
+  sgcommander-db-data:
+  sgcommander-signs-data:
+  #sgcommander-template-cache:
 
 networks:
   sgcommander-network:

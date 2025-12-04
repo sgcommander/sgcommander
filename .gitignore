@@ -29,5 +29,4 @@ dead.letter
 !/web/images/firmas/jugador/empty
 /.env
 /docker-compose.dev.yml
-/docker-compose.prod.yml
 /docker-compose.staging.yml

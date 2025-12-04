@@ -26,7 +26,13 @@ Este fichero contiene las configuraciones para arrancar el proyecto en Docker, d
 
 ### Ejecución ⚙️
 
-Para ejecutar el proyecto con Docker Compose situate en el directorio raiz del proyecto y ejecuta:
+Para ejecutar el proyecto con Docker Compose en modo producción situate en el directorio raiz del proyecto y ejecuta:
+
+```
+docker-compose -f docker-compose.prod.yml up
+```
+
+Para ejecutar el proyecto con Docker Compose en modo desarrollo situate en el directorio raiz del proyecto y ejecuta:
 
 ```
 docker-compose -f docker-compose.yml up
